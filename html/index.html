@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="07ZR - Page d'accueil">
+  <link rel="stylesheet" href="./style/style.css">
+  <title>07ZR | Page d'accueil</title>
+</head>
+<body>
+  <section id="menu">
+    <div class="container">
+      <div class="logo">
+        <a href="/"><img src="./assets/07zr-logo.svg" alt="Logo 07ZR"></a>
+      </div>
+
+      <!-- Hamburger Menu Button -->
+      <div class="hamburger-menu mobile-only">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div class="mobile-nav">
+        <div class="mobile-logo">
+          <a href="/"><img src="./assets/07zr-logo.svg" alt="Logo 07ZR"></a>
+        </div>
+        <ul class="mobile-nav-list">
+          <li><a href="/Batteries">Batteries</a></li>
+          <li><a href="/Equipements">Equipements</a></li>
+          <li><a href="/07ZR/about">À propos</a></li>
+          <li><a href="/07ZR/services">Services</a></li>
+          <li><a href="/07ZR/contact">Contact</a></li>
+          <li><a href="/07ZR">Tous les services</a></li>
+          <li><a href="/sign-up" class="button red">S'inscrire</a></li>
+          <li><a href="/login" class="button blue">Se connecter</a></li>
+        </ul>
+      </div>
+
+      <nav>
+        <ul class="nav-list desktop-only">
+          <!-- <li><a href="/Pneus">Pneus</a></li> -->
+          <li><a href="/Pièces">Pièces</a></li>
+          <li><a href="/Fluides">Fluides</a></li>
+          <li><a href="/Jantes">Jantes</a></li>
+          <li><a href="/Chaines">Chaines</a></li>
+          <li><a href="/Batteries">Batteries</a></li>
+          <li><a href="/Equipements">Equipements</a></li>
+          <li class="dropdown">
+            <a href="javascript:void(0)" class="dropdown-toggle">07ZR <span class="arrow">&#9662;</span></a>
+            <div class="dropdown-container">
+              <ul class="dropdown-menu">
+                <li><a href="/07ZR/about">À propos</a></li>
+                <li><a href="/07ZR/services">Services</a></li>
+                <li><a href="/07ZR/contact">Contact</a></li>
+                <li><a href="/07ZR">Tous les services</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+
+        <div class="auth desktop-only">
+          <a href="/sign-up" class="button red">S'inscrire</a>
+          <a href="/login" class="button blue">Se connecter</a>
+        </div>
+      </nav>
+    </div>
+  </section>
+
+  <section id="hero">
+    <div class="container-fluid">
+      <div class="video-background">
+        <video muted loop playsinline autoplay>
+          <source src="./assets/hero-homepage.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content">
+          <h1>La plateforme B2B leader</h1>
+          <h2>dédiée aux professionnels de l'automobile</h2>
+          <p>Ateliers de réparation et centres automobiles, garages, commerces de pneus et carrossiers.</p>
+          <div class="create-account">
+            <h3>Créer votre compte</h3>
+            <form action="#" class="form">
+              <div class="form-group">
+                <input type="text" id="tva" name="tva" placeholder="TVA *" required>
+                <input type="email" id="email" name="email" placeholder="Email *" required>
+                <input type="tel" id="phone" name="phone" placeholder="Téléphone *" required>
+
+                <button class="button red">
+                  Je teste 07ZR <span class="bold">sans engagement !</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="workshops">
+    <div class="container">
+      <h2>Approuvé par les plus grands ateliers de réparation automobile</h2>
+      <div class="workshops">
+        <!-- First set of logos -->
+        <div class="workshop" style="background-image: url('./assets/norauto.svg');"></div>
+        <div class="workshop" style="background-image: url('./assets/feuvert.svg');"></div>
+        <div class="workshop" style="background-image: url('./assets/firststop.svg');"></div>
+        <div class="workshop" style="background-image: url('./assets/euromaster.svg');"></div>
+        <div class="workshop" style="background-image: url('./assets/points.svg');"></div>
+        <div class="workshop" style="background-image: url('./assets/vulco.svg');"></div>
+
+        <!-- Second set for continuous scrolling -->
+        <!-- <div class="workshop" style="background-image: url('./assets/norauto.svg');"></div>
+        <div class="workshop" style="background-image: url('./assets/feuvert.svg');"></div>
+        <div class="workshop" style="background-image: url('./assets/firststop.svg');"></div>
+        <div class="workshop" style="background-image: url('./assets/euromaster.svg');"></div>
+        <div class="workshop" style="background-image: url('./assets/points.svg');"></div>
+        <div class="workshop" style="background-image: url('./assets/vulco.svg');"></div> -->
+      </div>
+    </div>
+  </section>
+
+  <section id="partner">
+    <div class="container">
+      <h2>Un partenaire de confiance, une expérience unique, un service à la hauteur.</h2>
+      <div class="partners">
+        <div class="partner-card">
+          <div class="image" style="background-image: url('./assets/partner1.jpg');"></div>
+          <div class="title">Multiproduits</div>
+        </div>
+        <div class="partner-card">
+          <div class="image" style="background-image: url('./assets/partner2.jpg');"></div>
+          <div class="title">Meilleurs prix</div>
+        </div>
+        <div class="partner-card">
+          <div class="image" style="background-image: url('./assets/partner3.jpg');"></div>
+          <div class="title">Flexibilité de paiement</div>
+        </div>
+        <div class="partner-card">
+          <div class="image" style="background-image: url('./assets/partner4.jpg');"></div>
+          <div class="title">Services premium</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="catalogue">
+    <div class="container">
+      <h2>Le catalogue multi-produits le plus complet en Europe</h2>
+      <h3>Accédez à une gamme étendue de produits de qualité, proposés à des prix attractifs, pour garantir des interventions efficaces et rapides.</h3>
+      <div class="catalogues">
+        <div class="catalogue">
+          <div class="head">
+            <div class="icon" style="background-image: url('./assets/catalogue/roues.png');"></div>
+            <div class="title">Roues</div>
+          </div>
+          <div class="body">
+            <div class="item">
+              <div class="icon" style="background-image: url('./assets/catalogue/pneu.png');"></div>
+              <div class="title">Pneus</div>
+            </div>
+            <div class="item">
+              <div class="icon" style="background-image: url('./assets/catalogue/chambre.png');"></div>
+              <div class="title">Chambre à air</div>
+            </div>
+            <div class="item">
+              <div class="icon" style="background-image: url('./assets/catalogue/jantes.png');"></div>
+              <div class="title">Jantes</div>
+            </div>
+            <div class="item">
+              <div class="icon" style="background-image: url('./assets/catalogue/chaines.png');"></div>
+              <div class="title">Chaînes</div>
+            </div>
+          </div>
+        </div>
+        <div class="catalogue">
+          <div class="head">
+            <div class="icon" style="background-image: url('./assets/catalogue/pieces.png');"></div>
+            <div class="title">Pièces</div>
+          </div>
+          <div class="body">
+            <div class="item">
+              <div class="icon" style="background-image: url('./assets/catalogue/piece-detache.png');"></div>
+              <div class="title">Pièces détachées</div>
+            </div>
+            <div class="item">
+              <div class="icon" style="background-image: url('./assets/catalogue/piece-remploie.png');"></div>
+              <div class="title">Pièces de réemploi</div>
+            </div>
+            <div class="item">
+              <div class="icon" style="background-image: url('./assets/catalogue/batteries.png');"></div>
+              <div class="title">Batteries</div>
+            </div>
+            <div class="item">
+              <div class="icon" style="background-image: url('./assets/catalogue/fluides.png');"></div>
+              <div class="title">Fluides</div>
+            </div>
+          </div>
+        </div>
+        <div class="catalogue">
+          <div class="head">
+            <div class="icon" style="background-image: url('./assets/catalogue/equipements.png');"></div>
+            <div class="title">Equipements</div>
+          </div>
+          <div class="body">
+            <div class="item">
+              <div class="icon" style="background-image: url('./assets/catalogue/machines.png');"></div>
+              <div class="title">Machines</div>
+            </div>
+            <div class="item">
+              <div class="icon" style="background-image: url('./assets/catalogue/materiel.png');"></div>
+              <div class="title">Matériels</div>
+            </div>
+            <div class="item">
+              <div class="icon" style="background-image: url('./assets/catalogue/consomables.png');"></div>
+              <div class="title">Consommables</div>
+            </div>
+            <div class="item">
+              <div class="icon" style="background-image: url('./assets/catalogue/outillages.png');"></div>
+              <div class="title">Outillages</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="brands">
+    <div class="container">
+      <div class="brands-slider">
+        <!-- First set of brand logos -->
+        <div class="brand" style="background-image: url('./assets/brands/goodyear.png');"></div>
+        <div class="brand" style="background-image: url('./assets/brands/michelin.png');"></div>
+        <div class="brand" style="background-image: url('./assets/brands/shell.png');"></div>
+        <div class="brand" style="background-image: url('./assets/brands/bosch.png');"></div>
+        <div class="brand" style="background-image: url('./assets/brands/mecafilter.png');"></div>
+
+        <!-- Second set for continuous scrolling on mobile -->
+        <div class="brand mobile-only" style="background-image: url('./assets/brands/goodyear.png');"></div>
+        <div class="brand mobile-only" style="background-image: url('./assets/brands/michelin.png');"></div>
+        <div class="brand mobile-only" style="background-image: url('./assets/brands/shell.png');"></div>
+        <div class="brand mobile-only" style="background-image: url('./assets/brands/bosch.png');"></div>
+        <div class="brand mobile-only" style="background-image: url('./assets/brands/mecafilter.png');"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="propel">
+    <div class="container">
+      <h2>Propulsez votre garage avec 07ZR</h2>
+      <div class="propels">
+        <div class="propel">
+          <div class="number">+32K</div>
+          <div class="text">utilisateurs nous font confiance</div>
+        </div>
+        <div class="propel big">
+          <div class="number">1100</div>
+          <div class="text">marques équipementiers et constructeurs</div>
+        </div>
+        <div class="propel small">
+          <div class="number">+80%</div>
+          <div class="text">de remise à l’unité !</div>
+        </div>
+        <div class="propel">
+          <div class="number">24H</div>
+          <div class="text">Livraison express à partir de 24h</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <h2>Des services pensés pour les professionnels de l'automobile</h2>
+      <div class="services">
+        <div class="service">
+          <div class="image" style="background-image: url('./assets/service1.png');"></div>
+          <div class="text">Service client premium</div>
+        </div>
+        <div class="service">
+          <div class="image" style="background-image: url('./assets/service4.png');"></div>
+          <div class="text">Chat support pièces</div>
+        </div>
+        <div class="service">
+          <div class="image" style="background-image: url('./assets/service1.png');"></div>
+          <div class="text">Carnets d’entretien à jour</div>
+        </div>
+        <div class="service">
+          <div class="image" style="background-image: url('./assets/service4.png');"></div>
+          <div class="text">Devis en ligne personnalisé</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- <section id="premium">
+    <div class="container">
+      <h2>Un service clients <span class="text-blue">premium</span></h2>
+      <div class="premiums">
+        <div class="premium">
+          <div class="image" style="background-image: url('./assets/premium1.jpg');"></div>
+          <div class="text">Livraison</div>
+        </div>
+      </div>
+      <div class="faqs">
+        <div class="faq">
+
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+
+
+  <script src="./main.js"></script>
+</body>
+</html>
