@@ -1034,7 +1034,7 @@ svg {
     .slick-prev {
       left: -40px !important;
     }
-    
+
     .slick-next {
       right: -20px !important;
     }
@@ -1044,7 +1044,7 @@ svg {
   .silver-slider .slick-prev {
     left: -40px !important;
   }
-  
+
   .slider .slick-next,
   .silver-slider .slick-next {
     right: -20px !important;
@@ -1112,7 +1112,7 @@ svg {
     .slick-prev {
       left: -30px !important;
     }
-    
+
     .slick-next {
       right: -15px !important;
     }
@@ -1778,31 +1778,31 @@ svg {
         font-size: 28px;
         margin: 35px auto 18px;
     }
-    
+
     .topsales-topSale-container {
         width: 305px !important;
         margin-top: 15px;
     }
-    
+
     .topsales-slider.slick-slider {
         width: 90%;
         margin: 0 auto;
     }
-    
+
     .topsales-slider .slick-slide {
         display: flex;
         justify-content: center;
     }
-    
+
     .topsales-slider .slick-prev {
         left: -2px !important;
         z-index: 2;
     }
-    
+
     .topsales-slider .slick-next {
         right: -2px !important;
     }
-    
+
     .topsales-arrow {
         font-size: 26px;
         width: 26px;
@@ -2616,11 +2616,11 @@ svg {
         background: white;
         border: none;
         cursor: pointer;
-        
+
         &::after {
             display: none !important;
         }
-        
+
         .chevron-icon {
             position: absolute;
             right: 15px;
@@ -2629,7 +2629,7 @@ svg {
             color: #0A2463;
             transition: transform 0.3s ease;
         }
-        
+
         &.open .chevron-icon {
             transform: rotate(180deg);
         }
@@ -2645,11 +2645,11 @@ svg {
         width: 838px;
         border-radius: 0px 0px 8px 8px;
         background: #FFF;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 
-                    0px 79px 22px 0px rgba(0, 8, 117, 0.00), 
-                    0px 50px 20px 0px rgba(0, 8, 117, 0.01), 
-                    0px 28px 17px 0px rgba(0, 8, 117, 0.05), 
-                    0px 13px 13px 0px rgba(0, 8, 117, 0.09), 
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+                    0px 79px 22px 0px rgba(0, 8, 117, 0.00),
+                    0px 50px 20px 0px rgba(0, 8, 117, 0.01),
+                    0px 28px 17px 0px rgba(0, 8, 117, 0.05),
+                    0px 13px 13px 0px rgba(0, 8, 117, 0.09),
                     0px 3px 7px 0px rgba(0, 8, 117, 0.10);
     }
 
@@ -2666,15 +2666,15 @@ svg {
         height: 297px;
         overflow-y: auto;
         padding-left: 5px;
-        
+
         &::-webkit-scrollbar {
             width: 4px;
         }
-        
+
         &::-webkit-scrollbar-track {
             background-color: #D9D9D9;
         }
-        
+
         &::-webkit-scrollbar-thumb {
             background-color: #0A2463;
         }
@@ -2684,12 +2684,12 @@ svg {
         display: flex;
         padding: 6px 12px 6px 0px;
         cursor: pointer;
-        
+
         &:hover {
             text-decoration: underline;
             text-underline-offset: 8px;
         }
-        
+
         a {
             color: #0A2463 !important;
             font-family: var(--font-outfit);
@@ -2709,7 +2709,7 @@ svg {
         height: 20px;
         position: relative;
         margin-right: 12px;
-        
+
         img {
             width: 100%;
             height: 100%;
@@ -2745,13 +2745,13 @@ svg {
         line-height: normal;
         letter-spacing: 0.8px;
         text-decoration: none !important;
-        
+
         .icon {
             width: 14px;
             height: 16px;
             margin-left: 10px;
         }
-        
+
         &:hover {
             text-decoration: none !important;
         }
@@ -2764,30 +2764,30 @@ svg {
         padding-left: 40px;
         padding-right: 10px;
         height: 327px;
-        
+
         ul {
             list-style: none;
             padding: 0;
             margin: 0;
             height: 287px;
             overflow-y: auto;
-            
+
             &::-webkit-scrollbar {
                 width: 4px;
             }
-            
+
             &::-webkit-scrollbar-track {
                 background-color: #D9D9D9;
             }
-            
+
             &::-webkit-scrollbar-thumb {
                 background-color: #0A2463;
             }
         }
-        
+
         li {
             padding-bottom: 20px;
-            
+
             a {
                 color: #0A2463 !important;
                 font-family: var(--font-outfit);
@@ -2799,7 +2799,7 @@ svg {
                 padding-bottom: 15px;
                 text-underline-offset: 8px;
                 text-decoration: none;
-                
+
                 &:hover {
                     text-decoration: underline;
                 }
@@ -2829,7 +2829,7 @@ svg {
         background: url('/images/icons/search-icon-blue.svg'), white;
         background-repeat: no-repeat;
         background-position: center right 16px;
-        
+
         &::placeholder {
             color: #0A2463;
         }
@@ -3068,7 +3068,7 @@ svg {
     &.disabled {
       opacity: 0.5;
       pointer-events: none;
-      
+
       select {
         background-color: #f5f5f5;
         color: #999;
@@ -3299,7 +3299,7 @@ svg {
     height: unset;
     background: none;
   }
-  
+
   .chain-search-container {
     width: 92% !important;
     border-radius: 8px;
@@ -3307,12 +3307,12 @@ svg {
     padding: 20px 12px;
     margin-top: 20px;
   }
-  
+
   .chain-selectpicker .form-select,
   .chain-brand-selectpicker .form-select {
     width: 100% !important;
   }
-  
+
   .chain-search-button {
     width: 100%;
   }
@@ -3394,7 +3394,7 @@ svg {
     .slick-prev {
       left: -40px !important;
     }
-    
+
     .slick-next {
       right: -20px !important;
     }
@@ -3412,7 +3412,7 @@ svg {
     .slick-prev {
       left: -30px !important;
     }
-    
+
     .slick-next {
       right: -15px !important;
     }
@@ -3471,6 +3471,158 @@ svg {
     .slick-slide .bgImage {
       width: 270px;
       height: 149px;
+    }
+  }
+}
+.promo-banner {
+  width: 100%;
+  background: #fb3640;
+  color: #fff;
+  font-family: "Outfit", sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  position: relative;
+  z-index: 100;
+
+  span {
+    margin-right: 18px;
+    white-space: nowrap;
+  }
+
+  .btn {
+    font-family: "Outfit", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #0a2463;
+    background: #fff;
+    border-radius: 6px;
+    padding: 4px 18px;
+    border: none;
+    box-shadow: none;
+    transition: background 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      background: #f2f2f4;
+    }
+  }
+}
+
+/* Liens rouges (inscription/connexion) */
+.header-top .redlink a {
+  color: #fb3640 !important;
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+
+  svg {
+    margin-right: 6px;
+    color: #fb3640;
+  }
+
+  &:hover {
+    text-decoration: underline;
+    color: #d82c36 !important;
+  }
+}
+
+/* Dropdown langues */
+.language-selector {
+  position: relative;
+  margin-left: 12px;
+
+  .language-toggle {
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background: transparent;
+    transition: background 0.2s;
+    min-width: 40px;
+
+    &:hover, &:focus {
+      background: #f2f2f4;
+    }
+
+    img {
+      vertical-align: middle;
+    }
+
+    svg {
+      margin-left: 4px;
+      vertical-align: middle;
+      transition: transform 0.2s;
+    }
+  }
+
+  .language-menu {
+    display: none;
+    position: absolute;
+    top: 110%;
+    right: 0;
+    background: #fff;
+    border: 1px solid #e4e5e8;
+    border-radius: 6px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    min-width: 140px;
+    z-index: 100;
+    padding: 8px 0;
+
+    li {
+        list-style: none;
+      a {
+        display: flex;
+        align-items: center;
+        padding: 7px 18px;
+        font-family: "Outfit", sans-serif;
+        font-size: 15px;
+        color: #0a2463;
+        text-decoration: none;
+        transition: background 0.2s;
+
+        img {
+          margin-right: 8px;
+        }
+
+        &.active {
+          font-weight: 700;
+          color: #164fda;
+        }
+
+        &:hover {
+          background: #f2f2f4;
+        }
+      }
+    }
+  }
+
+  &:focus-within .language-menu,
+  .language-toggle:focus + .language-menu,
+  .language-toggle.active + .language-menu {
+    display: block;
+  }
+}
+
+/* Responsive pour le ruban promo */
+@media only screen and (max-width: 600px) {
+  .promo-banner {
+    font-size: 15px;
+    padding: 8px 0;
+
+    span {
+      margin-right: 10px;
+    }
+
+    .btn {
+      font-size: 13px;
+      padding: 3px 12px;
     }
   }
 }

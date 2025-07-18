@@ -310,7 +310,7 @@ $(document).ready(function () {
     $('#vehicleSidebar').removeClass('open');
     $('#overlay').hide();
     $('body').css('overflow', '');
-    
+
     setTimeout(function() {
       $('#vehicleSidebar').hide();
     }, 300);
@@ -331,7 +331,7 @@ $(document).ready(function () {
       const $motorisationSelect = $('#motorisationSelect');
       const $modeleWrapper = $modeleSelect.closest('.select-wrapper');
       const $motorisationWrapper = $motorisationSelect.closest('.select-wrapper');
-      
+
       if ($(this).val()) {
         $modeleSelect.prop('disabled', false);
         $modeleWrapper.removeClass('disabled');
@@ -351,7 +351,7 @@ $(document).ready(function () {
     $('#modeleSelect').on('change', function() {
       const $motorisationSelect = $('#motorisationSelect');
       const $motorisationWrapper = $motorisationSelect.closest('.select-wrapper');
-      
+
       if ($(this).val()) {
         $motorisationSelect.prop('disabled', false);
         $motorisationWrapper.removeClass('disabled');
@@ -374,7 +374,7 @@ $(document).ready(function () {
       const modele = $('#modeleSelect').val();
       const motorisation = $('#motorisationSelect').val();
       const $button = $('#searchVehicleBtn');
-      
+
       if (marque && modele && motorisation) {
         $button.prop('disabled', false).removeClass('disabled');
       } else {
@@ -389,7 +389,7 @@ $(document).ready(function () {
         const marque = $('#marqueSelect').val();
         const modele = $('#modeleSelect').val();
         const motorisation = $('#motorisationSelect').val();
-        
+
         console.log('Recherche avec:', { marque, modele, motorisation });
         closeSidebar();
       }
@@ -508,7 +508,7 @@ $(document).ready(function () {
     $('#categoriesBtn').on('click', function(e) {
       e.preventDefault();
       e.stopPropagation();
-      
+
       if (isModalOpen) {
         closeModal();
       } else {
@@ -549,7 +549,7 @@ $(document).ready(function () {
     $('.nav-item').on('mouseenter', function() {
       const categoryType = $(this).data('category');
       currentHoveredCategory = categoryType;
-      
+
       if (subcategoriesData[categoryType]) {
         showSubcategories(subcategoriesData[categoryType]);
       }
@@ -583,14 +583,14 @@ $(document).ready(function () {
     if ($('#subcategoriesList').length) {
       const $subcategoriesList = $('#subcategoriesList');
       $subcategoriesList.empty();
-      
+
       subcategories.forEach(function(subcat) {
         const $li = $('<li>');
         const $a = $('<a>').attr('href', subcat.url).text(subcat.name);
         $li.append($a);
         $subcategoriesList.append($li);
       });
-      
+
       $('#subcategoriesPanel').show();
     }
   }
@@ -604,7 +604,7 @@ $(document).ready(function () {
 
   // ===== RECHERCHE BATTERIES =====
   const $searchBatteries = $('#search_batteries');
-  
+
   if ($searchBatteries.length) {
     // Fonction pour vérifier la validité des formulaires
     function checkFormValidity(type) {
@@ -613,7 +613,7 @@ $(document).ready(function () {
         const power = $('#powerSelect').val();
         const brand = $('#brandSelect').val();
         const $button = $('#searchAmperageBtn');
-        
+
         if ($button.length) {
           if (amperage || power || brand) {
             $button.removeClass('disabled');
@@ -626,7 +626,7 @@ $(document).ready(function () {
         const model = $('#vehicleModelSelect').val();
         const motor = $('#vehicleMotorSelect').val();
         const $button = $('#searchVehicleBtn');
-        
+
         if ($button.length) {
           if (brand && model && motor) {
             $button.removeClass('disabled');
@@ -642,10 +642,10 @@ $(document).ready(function () {
       const tab = $(this).attr('data-tab');
       const $sidebar = $searchBatteries.find(`#sidebar-${tab}`);
       const $overlay = $searchBatteries.find('.overlay');
-      
+
       // Fermer toutes les sidebars
       $searchBatteries.find('.sidebar').removeClass('open');
-      
+
       // Ouvrir la sidebar correspondante
       if ($sidebar.length) {
         $sidebar.addClass('open');
@@ -682,16 +682,16 @@ $(document).ready(function () {
         const selectedBrand = $(this).val();
         const $modelWrapper = $vehicleModelSelect.parent();
         const $motorWrapper = $vehicleMotorSelect.parent();
-        
+
         // Reset des modèles et motorisations
         $vehicleModelSelect.html('<option value="">Modèle</option>');
         $vehicleMotorSelect.html('<option value="">Motorisation</option>');
-        
+
         if (selectedBrand && vehicleData[selectedBrand]) {
           // Activer le select des modèles
           $modelWrapper.removeClass('disabled');
           $vehicleModelSelect.prop('disabled', false);
-          
+
           // Remplir les modèles
           vehicleData[selectedBrand].models.forEach(model => {
             const $option = $('<option>').val(model.toLowerCase().replace(/\s+/g, '-')).text(model);
@@ -704,7 +704,7 @@ $(document).ready(function () {
           $vehicleModelSelect.prop('disabled', true);
           $vehicleMotorSelect.prop('disabled', true);
         }
-        
+
         checkFormValidity('vehicle');
       });
     }
@@ -714,19 +714,19 @@ $(document).ready(function () {
         const selectedBrand = $vehicleBrandSelect.val();
         const selectedModel = $(this).val();
         const $motorWrapper = $vehicleMotorSelect.parent();
-        
+
         // Reset des motorisations
         $vehicleMotorSelect.html('<option value="">Motorisation</option>');
-        
+
         if (selectedBrand && selectedModel && vehicleData[selectedBrand]) {
           const modelName = $(this).find('option:selected').text();
           const motorisations = vehicleData[selectedBrand].motorisations[modelName];
-          
+
           if (motorisations) {
             // Activer le select des motorisations
             $motorWrapper.removeClass('disabled');
             $vehicleMotorSelect.prop('disabled', false);
-            
+
             // Remplir les motorisations
             motorisations.forEach(motor => {
               const $option = $('<option>').val(motor.toLowerCase().replace(/\s+/g, '-')).text(motor);
@@ -738,7 +738,7 @@ $(document).ready(function () {
           $motorWrapper.addClass('disabled');
           $vehicleMotorSelect.prop('disabled', true);
         }
-        
+
         checkFormValidity('vehicle');
       });
     }
@@ -757,7 +757,7 @@ $(document).ready(function () {
       $immatButton.on('click', function(e) {
         e.preventDefault();
         const immat = $immatInput.val().trim();
-        
+
         if (immat) {
           console.log('Recherche par IMMAT:', immat);
           window.location.href = `/battery/search?immat=${encodeURIComponent(immat)}`;
@@ -770,18 +770,18 @@ $(document).ready(function () {
     if ($searchAmperageBtn.length) {
       $searchAmperageBtn.on('click', function(e) {
         e.preventDefault();
-        
+
         if ($(this).hasClass('disabled')) return;
-        
+
         const amperage = $('#amperageSelect').val();
         const power = $('#powerSelect').val();
         const brand = $('#brandSelect').val();
-        
+
         const params = new URLSearchParams();
         if (amperage) params.set('amperage', amperage);
         if (power) params.set('power', power);
         if (brand) params.set('brands', brand);
-        
+
         console.log('Recherche par ampérage:', { amperage, power, brand });
         window.location.href = `/battery/search?${params.toString()}`;
       });
@@ -792,18 +792,18 @@ $(document).ready(function () {
     if ($searchVehicleBtn.length) {
       $searchVehicleBtn.on('click', function(e) {
         e.preventDefault();
-        
+
         if ($(this).hasClass('disabled')) return;
-        
+
         const brand = $('#vehicleBrandSelect').val();
         const model = $('#vehicleModelSelect').val();
         const motor = $('#vehicleMotorSelect').val();
-        
+
         const params = new URLSearchParams();
         if (brand) params.set('brand', brand);
         if (model) params.set('model', model);
         if (motor) params.set('car_id', motor);
-        
+
         console.log('Recherche par véhicule:', { brand, model, motor });
         window.location.href = `/battery/search?${params.toString()}`;
       });
@@ -815,12 +815,12 @@ $(document).ready(function () {
       const $wrapper = $(this);
       const $select = $wrapper.find('select');
       const $arrow = $wrapper.find('.select-arrow');
-      
+
       if ($select.length && $arrow.length) {
         $select.on('focus', function() {
           $arrow.css('transform', 'translateY(-50%) rotate(180deg)');
         });
-        
+
         $select.on('blur', function() {
           $arrow.css('transform', 'translateY(-50%) rotate(0deg)');
         });
@@ -834,7 +834,7 @@ $(document).ready(function () {
 
   // ===== GESTION DES CHAINES =====
   const $chainSelects = $('.chain-selectpicker select, .chain-brand-selectpicker select');
-  
+
   if ($chainSelects.length) {
     $chainSelects.on('change', function() {
       console.log('Valeur sélectionnée:', $(this).val());
@@ -850,7 +850,7 @@ $(document).ready(function () {
   }
 
   // ===== FONCTIONS UTILITAIRES =====
-  
+
   // Fonction pour charger les données des selects pneus
   function loadSelectData() {
     if ($("#width-select").length) {
@@ -896,7 +896,7 @@ $(document).ready(function () {
   function loadOptionsForSelect(selectId, endpoint, fallbackData) {
     const $select = $(selectId);
     if (!$select.length) return;
-    
+
     const currentValue = $select.val();
 
     $select.empty();
@@ -915,13 +915,13 @@ $(document).ready(function () {
   // Fonction pour charger les marques
   function loadBrands() {
     const brands = [
-      "BRIDGESTONE", "CONTINENTAL", "DUNLOP", "GOOD YEAR", "GOODYEAR", 
+      "BRIDGESTONE", "CONTINENTAL", "DUNLOP", "GOOD YEAR", "GOODYEAR",
       "MICHELIN", "PIRELLI", "YOKOHAMA", "HANKOOK", "KUMHO",
     ];
 
     const $select = $("#brand-select");
     if (!$select.length) return;
-    
+
     $select.empty();
     $select.append("<option></option>");
 
@@ -943,7 +943,7 @@ $(document).ready(function () {
 
     const $select = $("#brand-type-select");
     if (!$select.length) return;
-    
+
     $select.empty();
     $select.append("<option></option>");
 
@@ -965,7 +965,7 @@ $(document).ready(function () {
     if ($("#load-select, #speed-select").length) {
       $("#load-select, #speed-select").prop("disabled", !hasBasicDimensions);
     }
-    
+
     if ($("#brand-select, #brand-type-select").length) {
       $("#brand-select, #brand-type-select").prop("disabled", !hasBasicDimensions);
     }
@@ -973,7 +973,7 @@ $(document).ready(function () {
     if ($('input[name="season"]').length) {
       $('input[name="season"]').prop("disabled", !hasBasicDimensions);
     }
-    
+
     if ($(".checkbox-wrapper").length) {
       $(".checkbox-wrapper").toggleClass("disabled", !hasBasicDimensions);
     }
@@ -1041,3 +1041,33 @@ if ($('.silver-slider .slider').length && !$('.silver-slider .slider').hasClass(
     ]
   });
 }
+
+// ===== DROPDOWN LANGUE HEADER =====
+$(function () {
+  var $langSelector = $('.language-selector');
+  var $toggle = $langSelector.find('.language-toggle');
+  var $menu = $langSelector.find('.language-menu');
+
+  $toggle.on('click keydown', function (e) {
+    if (e.type === 'click' || e.key === 'Enter' || e.key === ' ') {
+      $langSelector.toggleClass('open');
+      if ($langSelector.hasClass('open')) {
+        $toggle.attr('aria-expanded', 'true');
+      } else {
+        $toggle.attr('aria-expanded', 'false');
+      }
+    }
+  });
+
+  // Ferme le menu si clic ailleurs (mais PAS sur un lien du menu)
+  $(document).on('click', function (e) {
+    if (
+      !$langSelector.is(e.target) &&
+      $langSelector.has(e.target).length === 0
+    ) {
+      $langSelector.removeClass('open');
+      $toggle.attr('aria-expanded', 'false');
+    }
+  });
+
+});
