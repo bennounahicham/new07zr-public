@@ -268,9 +268,9 @@ $(document).ready(function () {
   }
 
   // Chargement des données pour les pneus
-  if ($(".tyre-select").length || $(".brand-select").length) {
-    loadSelectData();
-  }
+//   if ($(".tyre-select").length || $(".brand-select").length) {
+//     loadSelectData();
+//   }
 
   // Gestion des dépendances entre selects pneus
   if ($("#width-select, #height-select, #diameter-select").length) {
