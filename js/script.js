@@ -114,16 +114,6 @@ $(document).ready(function () {
   });
 
   // ===== NAVIGATION EFFECTS =====
-  if ($(".navbar-link").length) {
-    $(".navbar-link").hover(
-      function () {
-        $(this).addClass("active");
-      },
-      function () {
-        $(this).removeClass("active");
-      }
-    );
-  }
 
   if ($('.header-top .d-flex[style*="cursor"]').length) {
     $('.header-top .d-flex[style*="cursor"]').on("click", function () {
