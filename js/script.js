@@ -1061,3 +1061,112 @@ $(function () {
   });
 
 });
+
+$(document).ready(function() {
+    // Toggle des sous-catégories (sauf pour les produits populaires)
+    $('#spareparts-categories').on('click', '.subcategory .title', function(e) {
+        e.preventDefault();
+
+        const $subcategory = $(this).closest('.subcategory');
+        const $secsubcategorys = $subcategory.find('.secsubcategorys');
+        const $arrow = $(this).find('svg');
+
+        // Vérifier si c'est les produits populaires (pas de flèche)
+        if ($arrow.length === 0) {
+            // Logique pour les produits populaires
+            const productName = $(this).text().trim();
+            console.log('Recherche produit populaire:', productName);
+            return;
+        }
+
+        // Toggle pour les autres catégories
+        if ($secsubcategorys.is(':visible')) {
+            $secsubcategorys.slideUp(300);
+            $arrow.css('transform', 'rotate(0deg)');
+        } else {
+            $secsubcategorys.slideDown(300);
+            $arrow.css('transform', 'rotate(180deg)');
+        }
+    });
+
+    // Recherche dans les catégories
+    $('#spareparts-categories .searchInput').on('input', function() {
+        const searchValue = $(this).val().toLowerCase().trim();
+        const $cards = $('#spareparts-categories .cat-cards .card');
+
+        if (searchValue === '') {
+            $cards.show();
+            return;
+        }
+
+        $cards.each(function() {
+            const $card = $(this);
+            const categoryName = $card.find('.card-header span').text().toLowerCase();
+            const subcategoriesText = $card.find('.subcategory .title').map(function() {
+                return $(this).text().toLowerCase();
+            }).get().join(' ');
+
+            const hasMatch = categoryName.includes(searchValue) ||
+                           subcategoriesText.includes(searchValue);
+
+            if (hasMatch) {
+                $card.show();
+            } else {
+                $card.hide();
+            }
+        });
+    });
+
+    // Gestion des boutons de l'iframe
+    $('#spareparts-categories .expanded button:last-child').on('click', function() {
+        console.log('Agrandir iframe');
+    });
+
+    $('#spareparts-categories .expanded button:first-child').on('click', function() {
+        if (!$(this).prop('disabled')) {
+            console.log('Retour iframe');
+        }
+    });
+
+    // Gestion du clic sur les sous-sous-catégories
+    $('#spareparts-categories').on('click', '.secsubcategorys div', function(e) {
+        e.stopPropagation();
+        const categoryName = $(this).text().trim();
+        console.log('Clic sur sous-sous-catégorie:', categoryName);
+    });
+});
+
+$(document).ready(function() {
+    // Égaliser la hauteur des cartes
+    function equalizeCardHeights() {
+        let maxHeight = 0;
+        const cards = $('#equipment-categories .equipment-card');
+
+        // Reset heights
+        cards.css('height', 'auto');
+
+        // Find max height
+        cards.each(function() {
+            const height = $(this).outerHeight();
+            if (height > maxHeight) {
+                maxHeight = height;
+            }
+        });
+
+        // Set all cards to max height
+        cards.css('height', maxHeight + 'px');
+    }
+
+    // Equal heights on load and resize
+    equalizeCardHeights();
+    $(window).resize(equalizeCardHeights);
+
+    // Smooth scrolling for subcategories
+    $('#equipment-categories .equipment-subcategories').on('scroll', function() {
+        $(this).addClass('scrolling');
+        clearTimeout($(this).data('scrollTimer'));
+        $(this).data('scrollTimer', setTimeout(() => {
+            $(this).removeClass('scrolling');
+        }, 150));
+    });
+});
