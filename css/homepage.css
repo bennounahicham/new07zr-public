@@ -303,6 +303,14 @@ html {
     max-height: 220px;
 }
 
+.services-section .service-detail-content p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+}
+
 .services-section .service-detail-content h3 {
     font-family: Inter;
     font-weight: 800;
@@ -477,9 +485,11 @@ html {
 
 .catalogue-section .stats {
     display: flex;
-    justify-content: center;
-    gap: 220px;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1480px;
+    margin: 0 auto;
+    z-index: 2;
+    position: relative;
 }
 
 .catalogue-section .stat h3 {
@@ -614,9 +624,10 @@ html {
 
 .customer-service-section .customer-service-cards-videos {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 35px
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 1480px;
+    margin: 0 auto;
 }
 
 .customer-service-section .video-card {
@@ -1034,6 +1045,340 @@ html {
 
 .faq-header .faq-toggle:hover {
     background-color: #e0e7ff;
+}
+
+@media (min-width: 1280px) and (max-width: 1599px) {
+    .hero-section .hero-text {
+        width: 1200px;
+    }
+    .hero-section .hero-text h1 {
+        font-size: 60px;
+    }
+    .hero-section .hero-text h1 span {
+        font-size: 28px;
+    }
+    .services-section .services-header h2 {
+        font-size: 38px;
+    }
+    .services-section .services-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .services-section .services-grid {
+        gap: unset;
+        justify-content: space-between;
+    }
+    .services-section .service-card {
+        width: 275px;
+    }
+    .services-section .video-container {
+        width: 275px;
+        height: 180px;
+    }
+    .services-section .service-detail-content h3 {
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .services-section .service-detail-content {
+        max-height: 180px;
+    }
+    .services-section .service-detail-content p {
+        -webkit-line-clamp: 5;
+        font-size: 20px;
+    }
+    .catalogue-section .catalogue-header h2 {
+        font-size: 38px;
+    }
+    .catalogue-section .catalogue-header p {
+        font-size: 18px;
+    }
+    .catalogue-section .catalogue-card {
+        width: 380px;
+    }
+    .catalogue-section .catalogue-brands img {
+        height: 68px;
+    }
+    .catalogue-section .stats {
+        max-width: 1200px;
+    }
+    .catalogue-section .catalogue-stats h2 {
+        font-size: 38px;
+    }
+    .customer-service-section .service-swiper-wrapper,
+    .testimonial-section .service-swiper-wrapper {
+        width: 1200px;
+    }
+    .customer-service-section .service-swiper,
+    .testimonial-section .testimonial-swiper {
+        max-width: 1200px;
+    }
+    .customer-service-section .swiper-slide img {
+        max-width: 375px;
+    }
+    .customer-service-section .customer-service-cards-videos {
+        max-width: 1200px;
+    }
+    .customer-service-section .video-card {
+        width: 375px;
+    }
+    .customer-service-section h2 {
+        font-size: 40px;
+    }
+    .customer-service-section .slide-text {
+        padding: 25px;
+        font-size: 20px;
+        max-width: unset;
+    }
+    .customer-service-section .video-card p {
+        font-size: 20px;
+    }
+    .pricing-section .pricing-content {
+        width: 1200px;
+    }
+    .pricing-section .pricing-left {
+        max-width: 300px;
+    }
+    .pricing-section .pricing-left h2 {
+        font-size: 48px;
+    }
+    .pricing-section .pricing-left p {
+        width: 100%;
+        font-size: 21px;
+    }
+    .pricing-section .pricing-cards {
+        gap: 15px;
+    }
+    .pricing-section .cta-button {
+        width: 300px;
+    }
+    .pricing-section .pricing-card {
+        width: 250px;
+        padding: 20px 15px;
+    }
+    .pricing-section .pricing-card h4,
+    .pricing-section .pricing-card p {
+        padding-left: unset;
+        padding-right: unset;
+    }
+    .pricing-section .pricing-card p {
+        margin-bottom: 20px;
+    }
+    .pricing-section .pricing-card h4 {
+        font-size: 25px;
+    }
+    .pricing-section .pricing-card.popular h4 {
+        font-size: 35px;
+        margin-top: 15px;
+    }
+    .pricing-section .price {
+        margin-bottom: 30px;
+    }
+    .pricing-section .pricing-card.popular {
+        width: 300px;
+    }
+    .pricing-section .card-btn {
+        width: 100%;
+        margin-left: unset;
+    }
+    .pricing-section .popular .card-btn {
+        width: 100%;
+    }
+    .pricing-section .club-banner {
+        max-width: 1200px;
+    }
+    .testimonial-section .testimonial-text {
+        font-size: 18px;
+    }
+    .testimonial-section .user-info strong {
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .testimonial-section .location {
+        font-size: 16px;
+    }
+    .faq-header {
+        padding: 35px 20px;
+    }
+    .faq-header h2 {
+        font-size: 40px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1279px) {
+    .hero-section .hero-text {
+        width: 1000px;
+    }
+    .hero-section .hero-text h1 {
+        font-size: 55px;
+    }
+    .hero-section .hero-text h1 span {
+        font-size: 24px;
+    }
+    .approved-section h2 {
+        font-size: 28px;
+    }
+    .services-section .services-header h2 {
+        font-size: 35px;
+    }
+    .services-section .services-wrapper {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    .services-section .services-grid {
+        gap: unset;
+        justify-content: space-between;
+    }
+    .services-section .service-card {
+        width: 235px;
+    }
+    .services-section .video-container {
+        width: 235px;
+        height: 140px;
+    }
+    .services-section .service-detail-content h3 {
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .services-section .service-detail-content {
+        max-height: 180px;
+    }
+    .services-section .service-detail-content p {
+        -webkit-line-clamp: 5;
+        font-size: 20px;
+    }
+    .services-section .service-card p {
+        font-size: 20px;
+    }
+    .catalogue-section .catalogue-header h2 {
+        font-size: 35px;
+    }
+    .catalogue-section .catalogue-header p {
+        font-size: 15px;
+    }
+    .catalogue-section .catalogue-cards {
+        gap: 15px;
+    }
+    .catalogue-section .catalogue-card {
+        width: 325px;
+    }
+    .catalogue-section .catalogue-brands img {
+        height: 50px;
+    }
+    .catalogue-section .stats {
+        max-width: 1000px;
+    }
+    .catalogue-section .catalogue-stats h2 {
+        font-size: 35px;
+    }
+    .catalogue-section .stat h3 {
+        font-size: 45px;
+        margin-bottom: 0;
+    }
+    .catalogue-section .stat p {
+        font-size: 20px;
+    }
+    .customer-service-section .service-swiper-wrapper,
+    .testimonial-section .service-swiper-wrapper {
+        width: 1000px;
+    }
+    .customer-service-section .service-swiper,
+    .testimonial-section .testimonial-swiper {
+        max-width: 1000px;
+    }
+    .customer-service-section .swiper-slide img {
+        max-width: 310px;
+    }
+    .customer-service-section .customer-service-cards-videos {
+        max-width: 1000px;
+    }
+    .customer-service-section .video-card {
+        width: 310px;
+    }
+    .customer-service-section h2 {
+        font-size: 38px;
+    }
+    .customer-service-section .slide-text {
+        padding: 15px;
+        font-size: 18px;
+        max-width: unset;
+    }
+    .customer-service-section .video-card p {
+        font-size: 18px;
+    }
+    .pricing-section .pricing-content {
+        width: 1000px;
+    }
+    .pricing-section .pricing-left {
+        max-width: 275px;
+    }
+    .pricing-section .pricing-left h2 {
+        font-size: 42px;
+    }
+    .pricing-section .pricing-left p {
+        width: 85%;
+        font-size: 18px;
+    }
+    .pricing-section .pricing-cards {
+        gap: 15px;
+    }
+    .pricing-section .cta-button {
+        width: 220px;
+    }
+    .pricing-section .pricing-card {
+        width: 220px;
+        padding: 15px;
+    }
+    .pricing-section .pricing-card h4,
+    .pricing-section .pricing-card p {
+        padding-left: unset;
+        padding-right: unset;
+    }
+    .pricing-section .pricing-card p {
+        margin-bottom: 20px;
+    }
+    .pricing-section .pricing-card h4 {
+        font-size: 25px;
+    }
+    .pricing-section .pricing-card.popular h4 {
+        font-size: 35px;
+        margin-top: 15px;
+    }
+    .pricing-section .price {
+        margin-bottom: 30px;
+    }
+    .pricing-section .pricing-card.popular {
+        width: 280px;
+    }
+    .pricing-section .card-btn {
+        width: 100%;
+        margin-left: unset;
+    }
+    .pricing-section .popular .card-btn {
+        width: 100%;
+    }
+    .pricing-section .club-banner {
+        max-width: 1000px;
+    }
+    .testimonial-section .testimonial-text {
+        font-size: 18px;
+    }
+    .testimonial-section .user-info strong {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .testimonial-section .location {
+        font-size: 16px;
+    }
+    .testimonial-section .user-logo {
+        width: 80px;
+        height: 80px;
+    }
+    .faq-header {
+        padding: 35px 20px;
+    }
+    .faq-header h2 {
+        font-size: 40px;
+    }
 }
 
 
