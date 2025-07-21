@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Homepage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../css/homepage.css" />
+</head>
+
+<body>
+    <section class="hero-section">
+        <video autoplay muted loop playsinline class="hero-video">
+        <source src="../images/video.mp4" type="video/mp4" />
+        Votre navigateur ne prend pas en charge la vidéo HTML5.
+      </video>
+
+        <div class="hero-overlay">
+            <div class="hero-text">
+                <h1>
+                    La plateforme B2B leader<br /><span>dédiée aux professionnels de l'automobile</span
+            >
+          </h1>
+          <p>
+            Ateliers de réparation et centres automobiles, garages,<br
+              class="d-none d-mb-block"
+            />
+            commerces de pneus et carrossiers.
+          </p>
+
+          <form class="signup-form">
+            <h2>Créer votre compte</h2>
+            <input type="text" placeholder="TVA *" required />
+            <input type="email" placeholder="Email *" required />
+            <input type="tel" placeholder="Téléphone *" required />
+            <button type="submit">
+              Je teste 07ZR <strong>sans engagement</strong> !
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="approved-section">
+      <div class="approved-container">
+        <h2>Approuvé par les plus grands ateliers de réparation automobile</h2>
+        <div class="logo-container">
+          <div class="logo-slider">
+            <div class="logo-slide">
+              <img src="../images/norauto.svg" alt="Norauto" />
+            </div>
+            <div class="logo-slide">
+              <img src="../images/feu-vert.svg" alt="Feu Vert" />
+            </div>
+            <div class="logo-slide">
+              <img src="../images/firststop.svg" alt="First Stop" />
+            </div>
+            <div class="logo-slide">
+              <img src="../images/euromaster.svg" alt="Euromaster" />
+            </div>
+            <div class="logo-slide">
+              <img src="../images/point-s.svg" alt="Point S" />
+            </div>
+            <div class="logo-slide">
+              <img src="../images/vulco.svg" alt="Vulco" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-section">
+      <div class="services-header">
+        <h2>
+          Un partenaire de confiance, une expérience unique,<br />
+          un service à la hauteur.
+        </h2>
+      </div>
+
+      <div class="services-wrapper">
+        <div class="services-grid">
+          <div class="service-card" data-service="multiproduits">
+            <div class="video-container">
+              <video autoplay muted loop playsinline>
+                <source src="../images/service1.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <p>Multiproduits</p>
+          </div>
+          <div class="service-card" data-service="meilleurs-prix">
+            <div class="video-container">
+              <video autoplay muted loop playsinline>
+                <source src="../images/service2.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <p>Meilleurs prix</p>
+          </div>
+          <div class="service-card" data-service="flexibilite">
+            <div class="video-container">
+              <video autoplay muted loop playsinline>
+                <source src="../images/service3.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <p>Flexibilité de paiement</p>
+          </div>
+          <div class="service-card" data-service="premium">
+            <div class="video-container">
+              <video autoplay muted loop playsinline>
+                <source src="../images/service4.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <p>Services premium</p>
+          </div>
+        </div>
+
+        <div class="service-detail hidden" id="service-detail">
+          <div class="video-container">
+            <video autoplay muted loop playsinline>
+              <source src="../images/service1.mp4" type="video/mp4" />
+            </video>
+            <p id="detail-label"></p>
+          </div>
+          <div class="service-detail-content">
+            <h3></h3>
+            <p></p>
+            <button class="service-close">
+              <img src="../images/chevron-left.svg" width="16" height="16" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalogue-section">
+      <div class="catalogue-header">
+        <h2>Le catalogue multi-produits le plus complet en Europe</h2>
+        <p>
+          Accédez à une gamme étendue de produits de qualité, proposés à des
+          prix attractifs, pour garantir des interventions efficaces et rapides.
+        </p>
+      </div>
+
+      <div class="catalogue-cards">
+        <div class="catalogue-card">
+          <div class="card-header">
+            <img src="../images/icon-roues.svg" alt="Roues" />
+            <h3>ROUES</h3>
+          </div>
+          <ul>
+            <li>
+              <div class="img-container">
+                <img src="../images/pneus.svg" alt="" />
+              </div>
+              Pneus
+            </li>
+            <li>
+              <div class="img-container">
+                <img src="../images/chambres-a-air.svg" alt="" />
+              </div>
+              Chambres à air
+            </li>
+            <li>
+              <div class="img-container">
+                <img src="../images/jantes.svg" alt="" />
+              </div>
+              Jantes
+            </li>
+            <li>
+              <div class="img-container">
+                <img src="../images/chaines.svg" alt="" />
+              </div>
+              Chaînes
+            </li>
+          </ul>
+        </div>
+
+        <div class="catalogue-card">
+          <div class="card-header">
+            <img src="../images/icon-pieces.svg" alt="Pièces" />
+            <h3>PIÈCES</h3>
+          </div>
+          <ul>
+            <li>
+              <div class="img-container">
+                <img src="../images/pieces-detachees.svg" alt="" />
+              </div>
+              Pièces détachées
+            </li>
+            <li>
+              <div class="img-container">
+                <img src="../images/pieces-reemploi.svg" alt="" />
+              </div>
+              Pièces de réemploi
+            </li>
+            <li>
+              <div class="img-container">
+                <img src="../images/batteries.svg" alt="" />
+              </div>
+              Batteries
+            </li>
+            <li>
+              <div class="img-container">
+                <img src="../images/fluides.svg" alt="" />
+              </div>
+              Fluides
+            </li>
+          </ul>
+        </div>
+
+        <div class="catalogue-card">
+          <div class="card-header">
+            <img src="../images/icon-equipements.svg" alt="Équipements" />
+            <h3>EQUIPEMENTS</h3>
+          </div>
+          <ul>
+            <li>
+              <div class="img-container">
+                <img src="../images/machines.svg" alt="" />
+              </div>
+              Machines
+            </li>
+            <li>
+              <div class="img-container">
+                <img src="../images/materiels.svg" alt="" />
+              </div>
+              Matériels
+            </li>
+            <li>
+              <div class="img-container">
+                <img src="../images/consommables.svg" alt="" />
+              </div>
+              Consommables
+            </li>
+            <li>
+              <div class="img-container">
+                <img src="../images/outillages.svg" alt="" />
+              </div>
+              Outillages
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="catalogue-brands">
+        <img src="../images/goodyear.svg" alt="Goodyear" />
+        <img src="../images/michelin.svg" alt="Michelin" />
+        <img src="../images/shell.svg" alt="Shell" />
+        <img src="../images/bosch.svg" alt="Bosch" />
+        <img src="../images/mecafilter.svg" alt="Mecafilter" />
+      </div>
+
+      <div class="catalogue-stats">
+        <h2>Propulsez votre garage avec 07ZR</h2>
+        <div class="stats">
+          <div class="stat">
+            <h3>+32K</h3>
+            <p>utilisateurs nous<br />font confiance</p>
+          </div>
+          <div class="stat">
+            <h3>1100</h3>
+            <p>marques équipementiers<br />et constructeurs</p>
+          </div>
+          <div class="stat">
+            <h3>+80%</h3>
+            <p>de remise<br />à l’unité !</p>
+          </div>
+          <div class="stat">
+            <h3>24H</h3>
+            <p>Livraison express<br />à partir de 24h</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-section no-js">
+      <div class="services-header">
+        <h2>Des services pensés pour les professionnels de l'automobile</h2>
+      </div>
+
+      <div class="services-wrapper">
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="video-container">
+              <video autoplay muted loop playsinline>
+                <source src="../images/service5.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <p>Service client premium</p>
+          </div>
+          <div class="service-card">
+            <div class="video-container">
+              <video autoplay muted loop playsinline>
+                <source src="../images/service6.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <p>Chat support pièces</p>
+          </div>
+          <div class="service-card">
+            <div class="video-container">
+              <video autoplay muted loop playsinline>
+                <source src="../images/service7.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <p>Carnets d’entretien à jour</p>
+          </div>
+          <div class="service-card">
+            <div class="video-container">
+              <video autoplay muted loop playsinline>
+                <source src="../images/service8.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <p>Devis en ligne personnalisé</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="customer-service-section">
+      <h2><span>Un service clients</span> <strong>premium</strong></h2>
+                    <div class="service-swiper-wrapper">
+                        <div class="swiper service-swiper">
+                            <div class="swiper-wrapper">
+                                <!-- Slide 1 -->
+                                <div class="swiper-slide">
+                                    <img src="../images/slide1.svg" alt="Chat rapide" />
+                                    <div class="slide-text">
+                                        Nous répondons à vos sollicitations par
+                                        <strong>chat en <span>moins d'1 minute</span></strong
+                >. Notre équipe mobilisée vous garantit une réponse par chat
+                rapide.
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <img
+                src="../images/slide2.svg"
+                alt="N°1 relations Client"
+                class="center-logo"
+              />
+              <div class="slide-text">
+                <strong>91% des appels</strong> sont pris en charge en
+                                        <strong><span>moins de 30 secondes</span></strong> par nos conseillers. Notre engagement qualité se traduit par des résultats concrets.
+                                    </div>
+                                </div>
+
+                                <!-- Slide 3 -->
+                                <div class="swiper-slide">
+                                    <img src="../images/slide3.svg" alt="Réseaux sociaux" />
+                                    <div class="slide-text">
+                                        Nos conseillers répondent sur
+                                        <strong>les réseaux sociaux 7jours/7
+                  <span>en moins de 30 minutes</span></strong
+                >
+                pour une prise en charge rapide de vos demandes.
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <img
+                src="../images/slide2.svg"
+                alt="N°1 relations Client"
+                class="center-logo"
+              />
+              <div class="slide-text">
+                <strong>91% des appels</strong> sont pris en charge en
+                                        <strong><span>moins de 30 secondes</span></strong> par nos conseillers. Notre engagement qualité se traduit par des résultats concrets.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev custom-prev">
+                            <img src="../images/swiper-arrow-left.svg" alt="Prev" />
+                        </div>
+                        <div class="swiper-button-next custom-next">
+                            <img src="../images/swiper-arrow-right.svg" alt="Next" />
+                        </div>
+                    </div>
+
+                    <div class="customer-service-cards-videos">
+                        <div class="video-card">
+                            <div class="video-wrapper">
+                                <img src="../images/07zr-white.svg" class="poster" alt="poster" />
+
+                                <video class="service-video">
+              <source src="../images/video.mp4" type="video/mp4" />
+              Votre navigateur ne supporte pas la lecture vidéo.
+            </video>
+                                <button class="play-button">
+              <img src="../images/play.svg" />
+            </button>
+                            </div>
+                            <p>Vous n’avez pas reçu votre colis dans les délais ?</p>
+                        </div>
+
+                        <div class="video-card">
+                            <div class="video-wrapper">
+                                <img src="../images/07zr-white.svg" class="poster" alt="poster" />
+
+                                <video class="service-video">
+              <source src="../images/video.mp4" type="video/mp4" />
+              Votre navigateur ne supporte pas la lecture vidéo.
+            </video>
+                                <button class="play-button">
+              <img src="../images/play.svg" />
+            </button>
+                            </div>
+                            <p>Vous souhaitez obtenir un remboursement ?</p>
+                        </div>
+
+                        <div class="video-card">
+                            <div class="video-wrapper">
+                                <img src="../images/07zr-white.svg" class="poster" alt="poster" />
+
+                                <video class="service-video">
+              <source src="../images/video.mp4" type="video/mp4" />
+              Votre navigateur ne supporte pas la lecture vidéo.
+            </video>
+                                <button class="play-button">
+              <img src="../images/play.svg" />
+            </button>
+                            </div>
+                            <p>Vous souhaitez convertir vos points fidélités en cadeaux ?</p>
+                        </div>
+                    </div>
+    </section>
+
+    <section class="pricing-section">
+        <div class="pricing-content">
+            <div class="pricing-left">
+                <h2>Nos formules</h2>
+                <p>
+                    Accédez en quelques clics au réseau de +900 fournisseurs pour trouver pneus, pièces et accessoires au meilleur prix et avec la livraison la plus rapide
+                </p>
+                <a href="#" class="cta-button">Je teste 07ZR !</a>
+            </div>
+
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <h4>pneumaticien</h4>
+                    <p>
+                        Accédez à un choix inégalé de pneus, jantes et chaînes avec plus de 120 000 références et 450 marques. Le tout, aux meilleurs prix et à portée de main.
+                    </p>
+                    <div class="price">
+                        <span>À partir de</span>
+                        <strong>18.67 €/mois</strong>
+                        <small>Économisez jusqu’à 224€ pour 2 ans</small>
+                    </div>
+                    <a href="#" class="card-btn">Voir plus <img src="../images/arrow-right-blue.svg"
+            /></a>
+                </div>
+
+                <div class="pricing-card popular">
+                    <div class="badge">Populaire</div>
+                    <h4>garagiste</h4>
+                    <p>
+                        Accédez à un catalogue ultra-complet regroupant pneus, pièces détachées, pièces de réemploi, jantes, chaînes, fluides, batteries, matériels ... Tout ce dont vous avez besoin, réuni dans un espace unique et aux meilleurs prix.
+                    </p>
+                    <div class="price">
+                        <span>À partir de</span>
+                        <strong>18.67 €/mois</strong>
+                        <small>Économisez jusqu’à 224€ pour 2 ans</small>
+                    </div>
+                    <a href="#" class="card-btn">Voir plus <img src="../images/arrow-right-blue.svg"
+            /></a>
+                </div>
+
+                <div class="pricing-card">
+                    <h4>mécanicien</h4>
+                    <p>
+                        Accédez à l’offre la plus complète en pièces détachées et pièces de réemploi. Des millions de références disponibles en quelques clics, toujours aux meilleurs prix.
+                    </p>
+                    <div class="price">
+                        <span>À partir de</span>
+                        <strong>18.67 €/mois</strong>
+                        <small>Économisez jusqu’à 224€ pour 2 ans</small>
+                    </div>
+                    <a href="#" class="card-btn">Voir plus <img src="../images/arrow-right-blue.svg"
+            /></a>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <img src="../images/club-banner.svg " alt="Club Avantages " />
+        </div>
+    </section>
+
+    <!-- Swiper Container -->
+    <section class="testimonial-section">
+        <img src="../images/stars.svg" width="309" height="59" class="stars" />
+
+        <div class="service-swiper-wrapper">
+            <div class="swiper testimonial-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide testimonial-card">
+                        <p class="testimonial-text">
+                            J’ai toujours fait du pneu (5000 par an) que je source chez 07ZR. Depuis 2020, je m’y fournis aussi en pièces. J’y bénéficie de remises très confortables et de prix bas sur les pièces premium. J’ai toujours été soucieux d’investir dans les meilleurs matériels.
+                            Tout est ok et nous sommes ravis de cette collaboration.
+                        </p>
+                        <div class="testimonial-user">
+                            <img src="../images/mechanic-logo.png" alt="Garage Logo" class="user-logo" />
+                            <div class="user-info">
+                                <strong>GARAGE DUFOUR</strong><br />
+                                <span class="location">Château-Gaillard – 01500</span><br />
+                                <img src="../images/stars.svg" width="131" height="25" class="mt-1" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide testimonial-card">
+                        <p class="testimonial-text">
+                            J’ai toujours fait du pneu (5000 par an) que je source chez 07ZR. Depuis 2020, je m’y fournis aussi en pièces. J’y bénéficie de remises très confortables et de prix bas sur les pièces premium. J’ai toujours été soucieux d’investir dans les meilleurs matériels.
+                            Tout est ok et nous sommes ravis de cette collaboration.
+                        </p>
+                        <div class="testimonial-user">
+                            <img src="../images/mechanic-logo.png" alt="Garage Logo" class="user-logo" />
+                            <div class="user-info">
+                                <strong>GARAGE DUFOUR DE PARIS</strong><br />
+                                <span class="location">Château-Gaillard – 01500</span><br />
+                                <img src="../images/stars.svg" width="131" height="25" class="mt-1" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide testimonial-card">
+                        <p class="testimonial-text">
+                            J’ai toujours fait du pneu (5000 par an) que je source chez 07ZR. Depuis 2020, je m’y fournis aussi en pièces. J’y bénéficie de remises très confortables et de prix bas sur les pièces premium. J’ai toujours été soucieux d’investir dans les meilleurs matériels.
+                            Tout est ok et nous sommes ravis de cette collaboration.
+                        </p>
+                        <div class="testimonial-user">
+                            <img src="../images/mechanic-logo.png" alt="Garage Logo" class="user-logo" />
+                            <div class="user-info">
+                                <strong>GARAGE DUFOUR DE PARIS</strong><br />
+                                <span class="location">Château-Gaillard – 01500</span><br />
+                                <img src="../images/stars.svg" width="131" height="25" class="mt-1" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide testimonial-card">
+                        <p class="testimonial-text">
+                            J’ai toujours fait du pneu (5000 par an) que je source chez 07ZR. Depuis 2020, je m’y fournis aussi en pièces. J’y bénéficie de remises très confortables et de prix bas sur les pièces premium. J’ai toujours été soucieux d’investir dans les meilleurs matériels.
+                            Tout est ok et nous sommes ravis de cette collaboration.
+                        </p>
+                        <div class="testimonial-user">
+                            <img src="../images/mechanic-logo.png" alt="Garage Logo" class="user-logo" />
+                            <div class="user-info">
+                                <strong>GARAGE DUFOUR DE PARIS</strong><br />
+                                <span class="location">Château-Gaillard – 01500</span><br />
+                                <img src="../images/stars.svg" width="131" height="25" class="mt-1" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-prev custom-prev testimonials">
+                <img src="../images/swiper-arrow-left.svg" alt="Prev" />
+            </div>
+            <div class="swiper-button-next custom-next testimonials">
+                <img src="../images/swiper-arrow-right.svg" alt="Prev" />
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-header">
+        <h2>Vos <span class="highlight">questions</span> les plus fréquentes</h2>
+        <button class="faq-toggle">
+        <img src="../images/plus.svg" width="18" height="18" />
+      </button>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.marquee@1.6.0/jquery.marquee.min.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js "></script>
+    <script src="../js/homepage.js "></script>
+</body>
+
+</html>
