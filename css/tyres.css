@@ -1,0 +1,456 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    height: 100%;
+    background-color: #E4E5E8;
+}
+
+:focus {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.select2-container .select2-selection--single {
+    height: 48px;
+    width: 100%;
+    border-radius: 4px;
+    border: none;
+    display: flex;
+    align-items: center;
+    background-image: url('../images/chevron-down.svg');
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 14px 14px;
+    padding-right: 30px;
+}
+
+.select2-container .select2-selection--single .select2-selection__arrow {
+    display: none;
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+    background-color: #e2edf8;
+    color: #164FDA;
+}
+
+.select2-container--default .select2-results>.select2-results__options {
+    font-family: 'Outfit';
+    font-size: 14px;
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field {
+    border: 1px solid #0A2463;
+    border-radius: 6px;
+    font-family: 'Outfit';
+    font-size: 14px;
+    color: #0A2463
+}
+
+.select2-dropdown {
+    border: 1px solid #0A2463;
+}
+
+.select2-search--dropdown {
+    padding: 10px;
+}
+
+.select2-results__option {
+    padding: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #0A2463;
+}
+
+.select2-search--dropdown .select2-search__field {
+    padding: 6px;
+}
+
+.select2-container--open .select2-dropdown {
+    left: -1px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
+    color: #0A2463;
+}
+
+.custom-dropdown.select2-dropdown {
+    width: 114px !important;
+}
+
+.custom-dropdown-brands.select2-dropdown {
+    width: 232px !important;
+}
+
+.custom-dropdown-brandTypes.select2-dropdown {
+    width: 242px !important;
+}
+
+.column {
+    width: 112px;
+}
+
+.column.brands {
+    width: 230px
+}
+
+.column.brandTypes {
+    width: 240px
+}
+
+.tyre-search-bar {
+    background-image: url('../images/bg-tyres-searchbar.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 25px 0 30px;
+    color: white;
+    font-family: 'Outfit', sans-serif;
+}
+
+.tyre-search-bar .container {
+    max-width: 870px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 12px;
+}
+
+.form-row select {
+    background: white;
+    color: #0A2463;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 10px 16px;
+    border: none;
+    font-size: 16px;
+    width: 112px;
+    height: 48px;
+}
+
+.season-row {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+    font-size: 16px;
+}
+
+.season-row .form-check-input {
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: 2px;
+    width: 16px;
+    height: 16px;
+    background: transparent;
+    border: 2px solid white;
+    position: relative;
+    cursor: pointer;
+}
+
+.season-row .form-check-input:checked {
+    background-color: white;
+    border-color: white;
+}
+
+.season-row .form-check-input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 3px;
+    width: 6px;
+    height: 11px;
+    border: solid #0A2463;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.season-row label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 4px;
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.season-row img {
+    height: 24px;
+}
+
+.bottom-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 0;
+}
+
+.search-btn {
+    position: relative;
+    background-color: #164FDA;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    min-width: 230px;
+    padding: 0 32px 0 60px;
+    height: 48px;
+    cursor: pointer;
+    display: flex;
+    gap: 34px;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+    font-family: Lato;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.9px;
+}
+
+.category-search {
+    padding: 35px 20px;
+    text-align: center;
+}
+
+.category-search .container {
+    max-width: 1240px;
+    padding: 0;
+}
+
+.section-title {
+    color: #0A2463;
+    margin-bottom: 25px;
+    font-family: Outfit;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.category-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.category-card {
+    background-color: white;
+    color: #0A2463;
+    font-weight: 700;
+    font-family: Outfit;
+    font-size: 16px;
+    width: 161px;
+    height: 109px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+.category-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.workshopdata-banner {
+    padding: 0 0 35px;
+}
+
+.workshopdata-banner .container {
+    max-width: 1240px;
+    background: linear-gradient(99.76deg, #1F317A 57.6%, #152151 102.97%);
+    padding: 15px;
+}
+
+.banner-content {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    flex-wrap: wrap;
+}
+
+.banner-image img {
+    max-width: 253px;
+    height: auto;
+    display: block;
+}
+
+.banner-text {
+    color: white;
+    flex: 1;
+}
+
+.banner-text h2 {
+    font-family: Outfit;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 130%;
+    margin-bottom: 15px;
+}
+
+.banner-text p {
+    font-family: Outfit;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 135%;
+    margin-bottom: 15px;
+    width: 916px;
+}
+
+.green-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #56BA48;
+    color: white;
+    width: 291px;
+    height: 40px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-family: Lato;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0.7px;
+    transition: background-color 0.3s ease;
+}
+
+.green-button:hover {
+    background-color: #4cb132;
+}
+
+.green-button .arrow {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.brand-section {
+    text-align: center;
+}
+
+.brand-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 20px;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.brand-card {
+    background-color: #F2F2F4;
+    width: 190px;
+    height: 190px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 20px;
+}
+
+.brand-card img {
+    height: 50px;
+    width: auto;
+    max-width: 95%;
+    mix-blend-mode: multiply;
+    display: flex;
+    align-items: center;
+}
+
+.brand-card p {
+    color: #0A2463;
+    font-family: Outfit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+}
+
+.brand-btn-wrapper {
+    margin-top: 30px;
+}
+
+.brand-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: #164FDA;
+    color: white;
+    width: 312px;
+    height: 48px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-family: Lato;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0.7px;
+    transition: background-color 0.3s ease;
+}
+
+.faq-section {
+    padding: 35px 0;
+}
+
+.faq-section .accordion {
+    max-width: 1240px;
+    background-color: #F2F2F4;
+    padding: 30px 50px 30px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    color: #1f2f45;
+    background-color: transparent;
+}
+
+.accordion-body {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    padding-top: 5px;
+    color: #395561;
+}
+
+.accordion-button {
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+    color: #395561;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: transparent;
+    color: #395561;
+    box-shadow: none;
+}
+
+.accordion-button::after {
+    content: url('../images/plus-sign.svg');
+    background-image: none;
+}
+
+.accordion-button:not(.collapsed)::after {
+    content: url('../images/minus-sign.svg');
+    background-image: none;
+    margin-right: -7px;
+}
