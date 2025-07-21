@@ -895,7 +895,6 @@ html {
     gap: 18px;
     font-family: Inter;
     font-weight: 500;
-    font-style: Medium;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.5px;
@@ -1032,8 +1031,8 @@ html {
     background-color: #F7F7FF;
     border: none;
     border-radius: 8px;
-    width: 42px;
-    height: 42px;
+    min-width: 42px;
+    min-height: 42px;
     font-size: 30px;
     font-weight: bold;
     cursor: pointer;
@@ -1434,5 +1433,117 @@ html {
         font-weight: 700;
         font-size: 30px;
         letter-spacing: 0;
+    }
+    .catalogue-section {
+        padding: 30px 0px;
+    }
+    .catalogue-section .catalogue-cards,
+    .catalogue-section .catalogue-header {
+        padding: 0 20px;
+    }
+    .catalogue-section .catalogue-header h2 {
+        font-size: 35px;
+        margin-bottom: 15px;
+    }
+    .catalogue-section .catalogue-header p {
+        line-height: 110%;
+    }
+    .catalogue-section .catalogue-brands {
+        height: auto;
+        gap: 15px;
+        padding: 20px 0;
+    }
+    .catalogue-section .catalogue-brands img {
+        height: 50px;
+    }
+    .catalogue-section .catalogue-stats h2 {
+        font-size: 35px;
+        line-height: 120%;
+        margin-bottom: 30px;
+    }
+    .catalogue-section .stats {
+        max-width: 95%;
+        flex-direction: column;
+    }
+    .customer-service-section .service-swiper-wrapper,
+    .testimonial-section .service-swiper-wrapper {
+        width: 95%;
+    }
+    .customer-service-section .service-swiper,
+    .testimonial-section .testimonial-swiper {
+        max-width: 95%;
+    }
+    .customer-service-section .swiper-slide {
+        width: 95%;
+    }
+    .customer-service-section .swiper-slide img {
+        max-width: 100%;
+    }
+    .customer-service-section h2 {
+        font-size: 35px;
+        line-height: 110%;
+    }
+    .customer-service-section .slide-text {
+        padding: 15px;
+        max-width: unset;
+    }
+    .customer-service-section .customer-service-cards-videos {
+        max-width: 95%;
+        flex-wrap: wrap;
+        gap: 20px
+    }
+    .customer-service-section .video-card {
+        width: 100%;
+    }
+    .customer-service-section .video-card p {
+        padding: 15px;
+        font-size: 20px;
+    }
+    .pricing-section {
+        padding: 45px 20px;
+    }
+    .pricing-section .pricing-content {
+        width: 95%;
+        gap: 30px;
+        margin: 0 auto 30px;
+    }
+    .pricing-section .pricing-left {
+        max-width: 100%;
+    }
+    .pricing-section .pricing-left h2 {
+        font-size: 45px;
+    }
+    .pricing-section .pricing-left p {
+        width: 100%;
+    }
+    .pricing-section .cta-button {
+        width: 100%;
+    }
+    .pricing-section .pricing-card {
+        padding: 20px;
+        width: 100%;
+    }
+    .pricing-section .pricing-card h4,
+    .pricing-section .pricing-card p {
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center
+    }
+    .pricing-section .card-btn {
+        width: 100%;
+        margin-left: 0;
+    }
+    .pricing-section .club-banner {
+        max-width: 100%;
+    }
+    .testimonial-section {
+        padding: 50px 20px;
+    }
+    .faq-header {
+        padding: 30px 20px;
+    }
+    .faq-header h2 {
+        font-size: 33px;
+        text-align: left;
     }
 }
