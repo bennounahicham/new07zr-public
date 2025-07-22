@@ -101,6 +101,14 @@ html {
     width: 230px
 }
 
+.column label {
+    font-family: Outfit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    margin-bottom: 2px;
+}
+
 .column.brandTypes {
     width: 240px
 }
@@ -126,6 +134,10 @@ html {
     flex-wrap: wrap;
     gap: 15px;
     margin-bottom: 12px;
+}
+
+.form-row:not(.bottom-row) {
+    align-items: end;
 }
 
 .form-row select {
@@ -256,6 +268,7 @@ html {
     align-items: center;
     justify-content: center;
     transition: transform 0.2s ease;
+    text-decoration: none;
 }
 
 .category-card:hover {
@@ -322,6 +335,7 @@ html {
     font-size: 16px;
     line-height: 100%;
     letter-spacing: 0.7px;
+    gap: 8px;
     transition: background-color 0.3s ease;
 }
 
@@ -355,6 +369,12 @@ html {
     align-items: center;
     justify-content: space-evenly;
     padding: 0 20px;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.brand-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .brand-card img {
@@ -453,4 +473,159 @@ html {
     content: url('../images/minus-sign.svg');
     background-image: none;
     margin-right: -7px;
+}
+
+.breadcrumb {
+    font-family: var(--font-outfit);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0.5px;
+    color: #677198;
+    max-width: 1240px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-top: 30px
+}
+
+.breadcrumb a {
+    color: #0A2463;
+    text-decoration: none;
+}
+
+@media (min-width: 1025px) and (max-width: 1279px) {
+    .tyre-search-bar {
+        background-image: none;
+        background: #0A2463;
+    }
+    .breadcrumb {
+        max-width: 980px;
+    }
+    .category-search {
+        padding: 35px 0px;
+    }
+    .category-search .container {
+        max-width: 1000px;
+    }
+    .category-card {
+        width: 130px;
+    }
+    .workshopdata-banner .container {
+        max-width: 1000px;
+    }
+    .banner-image img {
+        max-width: 200px;
+    }
+    .banner-text p {
+        width: unset;
+    }
+    .brand-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        max-width: 1000px;
+    }
+    .brand-card {
+        width: 150px;
+        height: 150px;
+    }
+    .faq-section .accordion {
+        max-width: 1000px;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .tyre-search-bar {
+        background-image: none;
+        padding: 20px 0px;
+        background: #0A2463;
+    }
+    .form-row {
+        max-width: 330px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .tyre-search-bar .container {
+        max-width: 100%;
+    }
+    .column {
+        width: 100px;
+    }
+    .column.load,
+    .column.speed {
+        width: 157px;
+    }
+    .column.brands,
+    .column.brandTypes {
+        width: 100%;
+    }
+    .column.brandTypes {
+        order: 0;
+    }
+    .season-row {
+        order: 1;
+    }
+    .search-btn {
+        order: 2;
+        width: 100%
+    }
+    .custom-dropdown.select2-dropdown {
+        width: 102px !important;
+    }
+    .custom-dropdown-mobile.select2-dropdown {
+        width: 159px !important;
+    }
+    .custom-dropdown-brands.select2-dropdown,
+    .custom-dropdown-brandTypes.select2-dropdown {
+        width: 332px !important;
+    }
+    .season-row {
+        gap: unset;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .breadcrumb {
+        max-width: 90%;
+    }
+    .section-title {
+        font-size: 28px;
+        line-height: 110%;
+    }
+    .category-search {
+        padding: 35px 0px;
+    }
+    .category-search .container {
+        max-width: 100%;
+    }
+    .category-grid {
+        gap: 12px;
+    }
+    .category-card {
+        width: 48%;
+    }
+    .workshopdata-banner .container {
+        max-width: 100%;
+    }
+    .banner-content {
+        justify-content: center;
+        padding: 0 5px;
+    }
+    .banner-text p {
+        width: 100%;
+    }
+    .green-button {
+        margin-bottom: 20px;
+    }
+    .brand-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        max-width: 100%;
+    }
+    .faq-section .accordion {
+        max-width: 94%;
+        padding: 10px;
+    }
+    .accordion-button:not(.collapsed)::after {
+        margin-right: -17px;
+    }
 }

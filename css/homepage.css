@@ -1380,9 +1380,6 @@ html {
     }
 }
 
-
-/* Styles for mobile screens */
-
 @media (max-width: 767px) {
     .hero-section {
         height: unset;

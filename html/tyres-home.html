@@ -1,93 +1,148 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Pneus - Home</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../css/tyres.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <section class="tyre-search-bar">
-        <div class="container">
-            <div class="form-row">
-                <div class="column">
-                    <select class="form-select select2" name="width" data-dropdown-class="custom-dropdown">
+      <div class="container">
+        <div class="form-row">
+          <div class="column">
+            <label>Largeur</label>
+            <select
+              class="form-select select2"
+              name="width"
+              data-dropdown-class="custom-dropdown"
+            >
               <option>205</option>
               <option>215</option>
               <option>225</option>
             </select>
-                </div>
+          </div>
 
-                <div class="column">
-                    <select class="form-select select2" name="height" data-dropdown-class="custom-dropdown">
+          <div class="column">
+            <label>Hauteur</label>
+            <select
+              class="form-select select2"
+              name="height"
+              data-dropdown-class="custom-dropdown"
+            >
               <option>55</option>
               <option>60</option>
               <option>65</option>
             </select>
-                </div>
+          </div>
 
-                <div class="column">
-                    <select class="form-select select2" name="diameter" data-dropdown-class="custom-dropdown">
+          <div class="column">
+            <label>Diamètre</label>
+            <select
+              class="form-select select2"
+              name="diameter"
+              data-dropdown-class="custom-dropdown"
+            >
               <option>16</option>
               <option>17</option>
               <option>18</option>
             </select>
-                </div>
+          </div>
 
-                <div class="column">
-                    <select class="form-select select2" name="charge" data-dropdown-class="custom-dropdown">
+          <div class="column load">
+            <label>Charge</label>
+            <select
+              class="form-select select2"
+              name="charge"
+              data-dropdown-class="custom-dropdown"
+            >
               <option>84</option>
               <option>87</option>
               <option>88</option>
             </select>
-                </div>
-                <div class="column">
-                    <select class="form-select select2" name="vitesse" data-dropdown-class="custom-dropdown">
+          </div>
+          <div class="column speed">
+            <label>Vitesse</label>
+            <select
+              class="form-select select2"
+              name="vitesse"
+              data-dropdown-class="custom-dropdown"
+            >
               <option>H</option>
               <option>P</option>
               <option>Q</option>
             </select>
-                </div>
-                <div class="column brands">
-                    <select class="form-select select2 brands" name="brands" data-dropdown-class="custom-dropdown-brands" data-placeholder="Toutes les marques">
+          </div>
+          <div class="column brands">
+            <select
+              class="form-select select2 brands"
+              name="brands"
+              data-dropdown-class="custom-dropdown-brands"
+              data-placeholder="Toutes les marques"
+            >
               <option></option>
               <option>Michelin</option>
               <option>Hankook</option>
               <option>Pirelli</option>
             </select>
-                </div>
-            </div>
+          </div>
+        </div>
 
-            <div class="form-row bottom-row">
-                <div class="season-row">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="Été" id="Été" />
-                        <label class="form-check-label" for="Été">
+        <div class="form-row bottom-row">
+          <div class="season-row">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value="Été"
+                id="Été"
+              />
+              <label class="form-check-label" for="Été">
                 <img src="../images/ete.svg" alt="Été" />
 
                 Été
               </label>
-                    </div>
+            </div>
 
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="Hiver" id="Hiver" />
-                        <label class="form-check-label" for="Hiver">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value="Hiver"
+                id="Hiver"
+              />
+              <label class="form-check-label" for="Hiver">
                 <img src="../images/hiver.svg" alt="Hiver" /> Hiver
               </label>
-                    </div>
+            </div>
 
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="4saisons " id="4saisons" />
-                        <label class="form-check-label" for="4saisons ">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value="4saisons "
+                id="4saisons"
+              />
+              <label class="form-check-label" for="4saisons ">
                 <img src="../images/quatre-saisons.svg" alt="4 saisons" /> 4
                 saisons</label
               >
@@ -114,19 +169,27 @@
       </div>
     </section>
 
+    <div class="breadcrumb">
+      <a href="">Accueil</a>
+      <img src="../images/chevron-right-small.svg" />
+      <span class="breadcrumb-current">Pneus</span>
+    </div>
+
     <section class="category-search">
       <div class="container">
         <h2 class="section-title">RECHERCHE PAR CATÉGORIES</h2>
         <div class="category-grid">
-          <div class="category-card">Pneus<br />auto</div>
-          <div class="category-card">Pneus<br />4x4 et SUV</div>
-          <div class="category-card">
+          <a class="category-card" href="">Pneus<br />auto</a>
+          <a class="category-card" href="">Pneus<br />4x4 et SUV</a>
+          <a class="category-card" href="">
             Pneus<br />camionnette<br />et fourgonnette
-          </div>
-          <div class="category-card">Pneus<br />camion<br />et poids lourd</div>
-          <div class="category-card">Pneus<br />agricole</div>
-          <div class="category-card">Pneus<br />moto scooter</div>
-          <div class="category-card">Pneus<br />quad</div>
+          </a>
+          <a class="category-card" href=""
+            >Pneus<br />camion<br />et poids lourd</a
+          >
+          <a class="category-card" href="">Pneus<br />agricole</a>
+          <a class="category-card" href="">Pneus<br />moto scooter</a>
+          <a class="category-card" href="">Pneus<br />quad</a>
         </div>
       </div>
     </section>
@@ -155,7 +218,8 @@
               encore.
             </p>
             <a href="#" class="green-button">
-              Découvrir WorkshopData <span class="arrow">→</span>
+              Découvrir WorkshopData
+              <img src="../images/right-arrow-white.svg" />
             </a>
           </div>
         </div>
@@ -165,54 +229,54 @@
     <section class="brand-section">
       <h2 class="section-title">GRANDES MARQUES DE PNEUS À PRIX PROS</h2>
       <div class="brand-grid">
-        <div class="brand-card">
+        <a class="brand-card" href="#">
           <img src="../images/michelin.svg" alt="Michelin" />
           <p>Michelin</p>
-        </div>
-        <div class="brand-card">
+        </a>
+        <a class="brand-card" href="#">
           <img src="../images/pirelli.svg" alt="Pirelli" />
           <p>Pirelli</p>
-        </div>
-        <div class="brand-card">
+        </a>
+        <a class="brand-card" href="#">
           <img src="../images/continental.svg" alt="Continental" />
           <p>Continental</p>
-        </div>
-        <div class="brand-card">
+        </a>
+        <a class="brand-card" href="#">
           <img src="../images/hankook.svg" alt="Hankook" />
           <p>Hankook</p>
-        </div>
-        <div class="brand-card">
+        </a>
+        <a class="brand-card" href="#">
           <img src="../images/bridgestone.svg" alt="Bridgestone" />
           <p>Bridgestone</p>
-        </div>
-        <div class="brand-card">
+        </a>
+        <a class="brand-card" href="#">
           <img src="../images/goodyear.svg" alt="Goodyear" />
           <p>Goodyear</p>
-        </div>
-        <div class="brand-card">
+        </a>
+        <a class="brand-card" href="#">
           <img src="../images/dunlop.svg" alt="Dunlop" />
           <p>Dunlop</p>
-        </div>
-        <div class="brand-card">
+        </a>
+        <a class="brand-card" href="#">
           <img src="../images/kleber.svg" alt="Kleber" />
           <p>Kleber</p>
-        </div>
-        <div class="brand-card">
+        </a>
+        <a class="brand-card" href="#">
           <img src="../images/firestone.svg" alt="Firestone" />
           <p>Firestone</p>
-        </div>
-        <div class="brand-card">
+        </a>
+        <a class="brand-card" href="#">
           <img src="../images/kumho.svg" alt="Kumho Tire" />
           <p>Kumho tire</p>
-        </div>
-        <div class="brand-card">
+        </a>
+        <a class="brand-card" href="#">
           <img src="../images/uniroyal.svg" alt="Uniroyal" />
           <p>Uniroyal</p>
-        </div>
-        <div class="brand-card">
+        </a>
+        <a class="brand-card" href="#">
           <img src="../images/maxxis.svg" alt="Maxxis" />
           <p>Maxxis</p>
-        </div>
+        </a>
       </div>
 
       <div class="brand-btn-wrapper">
@@ -222,7 +286,6 @@
 
     <section class="faq-section">
       <div class="accordion" id="pneuAccordion">
-        <!-- Section 1 -->
         <div class="accordion-item border-0">
           <h2 class="accordion-header" id="headingOne">
             <button
@@ -271,7 +334,6 @@
           </div>
         </div>
 
-        <!-- Section 2 -->
         <div class="accordion-item border-0">
           <h2 class="accordion-header" id="headingTwo">
             <button
