@@ -279,13 +279,69 @@ $(document).ready(function () {
     });
   }
 
-  // Gestion du formulaire de recherche pneus
-  if ($(".search-container form").length) {
-    $(".search-container form").on("submit", function (e) {
-      e.preventDefault();
-      performSearch();
+    // Gestion du formulaire de recherche pneus
+    $('#tyreSearchForm').on('submit', function(e) {
+        e.preventDefault();
+        // Collecter tous les filtres
+        let filters = [];
+
+        // Dimension (combinaison largeur/hauteur/diamètre)
+        const width = $('#width-select').val();
+        const height = $('#height-select').val();
+        const diameter = $('#diameter-select').val();
+
+        if (width && height && diameter) {
+            filters.push('dimension-' + width + height + diameter);
+        }
+
+        // Marque
+        const brand = $('#brand-select').val();
+        if (brand) {
+            filters.push('marque-' + brand);
+        }
+
+        // Saisons (checkboxes multiples)
+        const seasons = [];
+        $('input[name="season"]:checked').each(function() {
+            seasons.push($(this).val());
+        });
+        if (seasons.length > 0) {
+            filters.push('saison-' + seasons.join('&'));
+        }
+
+        // Charge
+        const load = $('#load-select').val();
+        if (load) {
+            filters.push('charge-' + load);
+        }
+
+        // Vitesse
+        const speed = $('#speed-select').val();
+        if (speed) {
+            filters.push('vitesse-' + speed);
+        }
+
+        // Type de marque
+        const brandType = $('#brand-type-select').val();
+        if (brandType) {
+            filters.push('type-' + brandType);
+        }
+
+        const baseSearchUrl = $(this).data('action');
+
+        // Construire l'URL finale
+        let finalUrl = baseSearchUrl.replace(/\/$/, ''); // Enlever le slash final
+
+        if (filters.length > 0) {
+            finalUrl += filters.join('/');
+        }
+
+        // Debug (vous pouvez l'enlever)
+        console.log('URL générée:', finalUrl);
+
+        // Rediriger vers l'URL
+        window.location.href = finalUrl;
     });
-  }
 
   // ===== SIDEBAR VEHICULE =====
   if ($('#openVehicleSearch').length) {
