@@ -1,8 +1,4 @@
 $(document).ready(function () {
-  function isMobile() {
-    return /Mobi|Android/i.test(navigator.userAgent)
-  }
-
   $('.select2').each(function () {
     const $select = $(this)
     let dropdownClass = $select.data('dropdown-class') || ''
@@ -223,8 +219,15 @@ $(document).ready(function () {
     }
   })
 
+  function isMobile() {
+    return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    )
+  }
+
   function renderPagination(current, totalPages) {
-    const maxPages = 8
+    const maxPages = isMobile() ? 5 : 8
+
     const $ul = $('#pagination .pagination')
     $ul.empty()
 
@@ -240,16 +243,13 @@ $(document).ready(function () {
       $ul.append($li)
     }
 
-    // Only show pages if > 1
     if (totalPages <= 1) return
 
-    // Add '<<' and '<' buttons if not at the beginning
     if (current > Math.floor(maxPages / 2)) {
       addPage(1, '<i class="icon fas fa-angle-double-left"></i>') // First
       addPage(current - 1, '<i class="icon fas fa-chevron-left"></i>') // Prev
     }
 
-    // Main range
     let start = Math.max(1, current - Math.floor(maxPages / 2))
     let end = Math.min(totalPages, start + maxPages - 1)
     if (end - start + 1 < maxPages && end === totalPages) {
@@ -260,7 +260,6 @@ $(document).ready(function () {
       addPage(i, null, i === current)
     }
 
-    // Add '>' and '>>' if not at the end
     if (current < totalPages - Math.floor(maxPages / 2)) {
       addPage(current + 1, '<i class="icon fas fa-chevron-right"></i>') // Next
       addPage(totalPages, '<i class="icon fas fa-angle-double-right"></i>') // Last
@@ -283,5 +282,9 @@ $(document).ready(function () {
         // Trigger actual page change logic here (e.g., load content)
       }
     })
+  })
+
+  $('.mobile-filter-button').on('click', function () {
+    $('.filter-bar').toggleClass('show')
   })
 })
