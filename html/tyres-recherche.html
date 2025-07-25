@@ -232,7 +232,7 @@
             </div>
             <div class="filter">
                 <div class="filter-type" data-bs-toggle="collapse" data-bs-target="#loadCollapse" aria-expanded="true" aria-controls="deliveryCollapse">
-                    <div class="filter-type-name">Indices de charge</div>
+                    <div class="filter-type-name">Indice de charge</div>
                     <i class="fas icon"></i>
                 </div>
                 <div class="collapse show" id="loadCollapse">
@@ -278,7 +278,7 @@
             </div>
             <div class="filter">
                 <div class="filter-type" data-bs-toggle="collapse" data-bs-target="#speedCollapse" aria-expanded="true" aria-controls="deliveryCollapse">
-                    <div class="filter-type-name">Indices de charge</div>
+                    <div class="filter-type-name">Indice de charge</div>
                     <i class="fas icon"></i>
                 </div>
                 <div class="collapse show" id="speedCollapse">
@@ -493,17 +493,296 @@
                            <i class="fas fa-filter icon"></i> 
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Prix: Le moins cher</a></li>
-                            <li><a class="dropdown-item" href="#">Délai: Le plus rapide</a></li>
+                            <li>
+                                <a class="dropdown-item" href="#" onclick="handleSelect(event, 'price', 'Prix: Le moins cher')">
+                                  Prix: Le moins cher
+                                  <i class="fas fa-check check-icon" style="display: none;"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#" onclick="handleSelect(event, 'speed', 'Délai: Le plus rapide')">
+                                  Délai: Le plus rapide
+                                  <i class="fas fa-check check-icon" style="display: none;"></i>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
-        </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-        <script src="../js/tyres.js"></script>
+            <div class="filter-list hidden">
+                <span class="title">Filtres de recherche :</span>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <a href="">
+                        <div class="brand-container text-center">
+                            <img src="../images/bridgestone.png" style="height: auto; width: auto; max-height: 100%; max-width: 100%; margin: 0 auto; display: block;" alt="Brand name" />
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="img-container">
+                            <div class="default-image-container" style="position: relative">
+                                <img src="../images/tyre.png" style="height: auto; width: auto; max-height: 100%; max-width: 100%; margin: 0 auto; display: block;" class="your-class-name" alt="Product Image" />
+                            </div>
+                        </div>
+                    </a>
+                    <div class="quality premium">premium</div>
+
+
+                </div>
+                <div class="product-card-desc">
+                    <a class="name" href="">
+                            265/40 R21 XL 105H
+                            <div class="product-description">
+                              TL EAGLE F1 ASYMMETRIC 5 MOE SCT (SOUND COMFORT TECHNOLOGY) RFT (run flat) Mercedes 
+                            </div>
+                        </a>
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="../images/quatre-saisons.svg" />
+                        <img src="../images/icons/tourisme.svg" />
+                        <div class="d-flex align-items-center gap-1">
+                            <img alt="fueleff" src="../images/icons/fueleff.svg">
+                            <div class="arrow-label">A</div>
+                        </div>
+                        <div class="d-flex align-items-center gap-1">
+                            <img alt="wetgrip" src="../images/icons/wetgrip.svg">
+                            <div class="arrow-label B">B</div>
+                        </div>
+                        <div class="d-flex align-items-center gap-1">
+                            <img alt="extnoise" src="../images/icons/extnoise.svg">
+                            <div class="arrow-label C">C</div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="specificityTag">XL</span>
+                        <span class="specificityTag">M+S</span>
+                        <span class="specificityTag">protection jantes</span>
+                        <span class="specificityTag">runflat</span>
+                        <span class="specificityTag">cloutable</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="livraison">
+                            Livraison 24H
+                            <img src='../images/icons/express-delivery.svg' width="25" height="20" class='ms-1' alt="Express delivery" />
+                        </div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input custom-switch" type="checkbox" role="switch" id="toggleDevis">
+                            <label class="form-check-label" for="toggleDevis">Ajouter au devis</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-194">
+                    <div class="connect-text">Connectez vous <br/>pour voir les prix</div>
+                    <button class="btn">Je m'inscris</button>
+                    <button class="btn">Se connecter</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <a href="">
+                        <div class="brand-container text-center">
+                            <img src="../images/bridgestone.png" style="height: auto; width: auto; max-height: 100%; max-width: 100%; margin: 0 auto; display: block;" alt="Brand name" />
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="img-container">
+                            <div class="default-image-container" style="position: relative">
+                                <img src="../images/tyre.png" style="height: auto; width: auto; max-height: 100%; max-width: 100%; margin: 0 auto; display: block;" class="your-class-name" alt="Product Image" />
+                            </div>
+                        </div>
+                    </a>
+                    <div class="quality premium">premium</div>
+
+
+                </div>
+                <div class="product-card-desc">
+                    <a class="name" href="">
+                            265/40 R21 XL 105H
+                            <div class="product-description">
+                              TL EAGLE F1 ASYMMETRIC 5 MOE SCT (SOUND COMFORT TECHNOLOGY) RFT (run flat) Mercedes 
+                            </div>
+                        </a>
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="../images/quatre-saisons.svg" />
+                        <img src="../images/icons/tourisme.svg" />
+                        <div class="d-flex align-items-center gap-1">
+                            <img alt="fueleff" src="../images/icons/fueleff.svg">
+                            <div class="arrow-label">A</div>
+                        </div>
+                        <div class="d-flex align-items-center gap-1">
+                            <img alt="wetgrip" src="../images/icons/wetgrip.svg">
+                            <div class="arrow-label B">B</div>
+                        </div>
+                        <div class="d-flex align-items-center gap-1">
+                            <img alt="extnoise" src="../images/icons/extnoise.svg">
+                            <div class="arrow-label C">C</div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="specificityTag">XL</span>
+                        <span class="specificityTag">M+S</span>
+                        <span class="specificityTag">protection jantes</span>
+                        <span class="specificityTag">runflat</span>
+                        <span class="specificityTag">cloutable</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="livraison">
+                            Livraison 24H
+                            <img src='../images/icons/express-delivery.svg' width="25" height="20" class='ms-1' alt="Express delivery" />
+                        </div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input custom-switch" type="checkbox" role="switch" id="toggleDevis">
+                            <label class="form-check-label" for="toggleDevis">Ajouter au devis</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-194">
+                    <div class="connect-text">Connectez vous <br/>pour voir les prix</div>
+                    <button class="btn">Je m'inscris</button>
+                    <button class="btn">Se connecter</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <a href="">
+                        <div class="brand-container text-center">
+                            <img src="../images/bridgestone.png" style="height: auto; width: auto; max-height: 100%; max-width: 100%; margin: 0 auto; display: block;" alt="Brand name" />
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="img-container">
+                            <div class="default-image-container" style="position: relative">
+                                <img src="../images/tyre.png" style="height: auto; width: auto; max-height: 100%; max-width: 100%; margin: 0 auto; display: block;" class="your-class-name" alt="Product Image" />
+                            </div>
+                        </div>
+                    </a>
+                    <div class="quality premium">premium</div>
+
+
+                </div>
+                <div class="product-card-desc">
+                    <a class="name" href="">
+                            265/40 R21 XL 105H
+                            <div class="product-description">
+                              TL EAGLE F1 ASYMMETRIC 5 MOE SCT (SOUND COMFORT TECHNOLOGY) RFT (run flat) Mercedes 
+                            </div>
+                        </a>
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="../images/quatre-saisons.svg" />
+                        <img src="../images/icons/tourisme.svg" />
+                        <div class="d-flex align-items-center gap-1">
+                            <img alt="fueleff" src="../images/icons/fueleff.svg">
+                            <div class="arrow-label">A</div>
+                        </div>
+                        <div class="d-flex align-items-center gap-1">
+                            <img alt="wetgrip" src="../images/icons/wetgrip.svg">
+                            <div class="arrow-label B">B</div>
+                        </div>
+                        <div class="d-flex align-items-center gap-1">
+                            <img alt="extnoise" src="../images/icons/extnoise.svg">
+                            <div class="arrow-label C">C</div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="specificityTag">XL</span>
+                        <span class="specificityTag">M+S</span>
+                        <span class="specificityTag">protection jantes</span>
+                        <span class="specificityTag">runflat</span>
+                        <span class="specificityTag">cloutable</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="livraison">
+                            Livraison 24H
+                            <img src='../images/icons/express-delivery.svg' width="25" height="20" class='ms-1' alt="Express delivery" />
+                        </div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input custom-switch" type="checkbox" role="switch" id="toggleDevis">
+                            <label class="form-check-label" for="toggleDevis">Ajouter au devis</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-194">
+                    <div class="connect-text">Connectez vous <br/>pour voir les prix</div>
+                    <button class="btn">Je m'inscris</button>
+                    <button class="btn">Se connecter</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <a href="">
+                        <div class="brand-container text-center">
+                            <img src="../images/bridgestone.png" style="height: auto; width: auto; max-height: 100%; max-width: 100%; margin: 0 auto; display: block;" alt="Brand name" />
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="img-container">
+                            <div class="default-image-container" style="position: relative">
+                                <img src="../images/tyre.png" style="height: auto; width: auto; max-height: 100%; max-width: 100%; margin: 0 auto; display: block;" class="your-class-name" alt="Product Image" />
+                            </div>
+                        </div>
+                    </a>
+                    <div class="quality premium">premium</div>
+
+
+                </div>
+                <div class="product-card-desc">
+                    <a class="name" href="">
+                            265/40 R21 XL 105H
+                            <div class="product-description">
+                              TL EAGLE F1 ASYMMETRIC 5 MOE SCT (SOUND COMFORT TECHNOLOGY) RFT (run flat) Mercedes 
+                            </div>
+                        </a>
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="../images/quatre-saisons.svg" />
+                        <img src="../images/icons/tourisme.svg" />
+                        <div class="d-flex align-items-center gap-1">
+                            <img alt="fueleff" src="../images/icons/fueleff.svg">
+                            <div class="arrow-label">A</div>
+                        </div>
+                        <div class="d-flex align-items-center gap-1">
+                            <img alt="wetgrip" src="../images/icons/wetgrip.svg">
+                            <div class="arrow-label B">B</div>
+                        </div>
+                        <div class="d-flex align-items-center gap-1">
+                            <img alt="extnoise" src="../images/icons/extnoise.svg">
+                            <div class="arrow-label C">C</div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="specificityTag">XL</span>
+                        <span class="specificityTag">M+S</span>
+                        <span class="specificityTag">protection jantes</span>
+                        <span class="specificityTag">runflat</span>
+                        <span class="specificityTag">cloutable</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="livraison">
+                            Livraison 24H
+                            <img src='../images/icons/express-delivery.svg' width="25" height="20" class='ms-1' alt="Express delivery" />
+                        </div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input custom-switch" type="checkbox" role="switch" id="toggleDevis">
+                            <label class="form-check-label" for="toggleDevis">Ajouter au devis</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-194">
+                    <div class="connect-text">Connectez vous <br/>pour voir les prix</div>
+                    <button class="btn">Je m'inscris</button>
+                    <button class="btn">Se connecter</button>
+                </div>
+            </div>
+
+
+            <nav id="pagination" class="pagination-container">
+                <ul class="pagination justify-content-center"></ul>
+            </nav </div>
+
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+            <script src="../js/tyres.js"></script>
 </body>
 
 </html>
