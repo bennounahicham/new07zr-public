@@ -147,6 +147,9 @@ $(document).ready(function () {
   // Bind change event to all checkboxes in the filter bar
   $('.filter-bar').on('change', 'input[type="checkbox"]', function () {
     updateFilterList()
+    if (isMobile()) {
+      $('.mobile-filter-panel').removeClass('active')
+    }
   })
 
   // Handle individual filter pill removal
@@ -285,6 +288,9 @@ $(document).ready(function () {
   })
 
   $('.mobile-filter-button').on('click', function () {
-    $('.filter-bar').toggleClass('show')
+    $('.mobile-filter-panel').addClass('active')
+  })
+  $('.mobile-filter-close').on('click', function () {
+    $('.mobile-filter-panel').removeClass('active')
   })
 })

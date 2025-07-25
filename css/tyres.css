@@ -1491,7 +1491,7 @@ html {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 0 25px;
+        padding: 10px 0 15px;
         border-bottom: 1px solid rgba(10, 36, 99, 0.30);
         margin-bottom: 20px;
     }
@@ -1502,6 +1502,7 @@ html {
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        margin-bottom: 0;
     }
     .mobile-filter-close {
         background: none;
@@ -1509,10 +1510,13 @@ html {
         font-size: 20px;
         cursor: pointer;
     }
-    .filter-bar {
+    .mobile-filter-panel {
         display: none;
     }
-    .filter-bar.show {
+    .mobile-filter-panel.active {
         display: block;
+    }
+    .pagination {
+        padding-bottom: 30px;
     }
 }
