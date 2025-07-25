@@ -757,7 +757,7 @@ html {
     border-color: #0A2463;
     border-width: 1px 0 1px 0;
     color: #727690;
-    font-family: var(--font-outfit);
+    font-family: "Outfit", sans-serif;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
@@ -842,7 +842,7 @@ html {
 .product-card-desc .name {
     width: 100%;
     color: #0A2463;
-    font-family: var(--font-outfit);
+    font-family: "Outfit", sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
@@ -854,7 +854,7 @@ html {
 
 .product-card-desc .product-description {
     color: #0A2463;
-    font-family: var(--font-outfit);
+    font-family: "Outfit", sans-serif;
     font-size: 16px!important;
     font-style: normal;
     font-weight: 500!important;
@@ -863,7 +863,7 @@ html {
 }
 
 .product-card-desc .ref {
-    font-family: var(--font-outfit);
+    font-family: "Outfit", sans-serif;
     font-size: 16px;
     font-style: normal;
     color: #0A2463;
@@ -889,7 +889,7 @@ html {
     border-radius: 4px;
     border: 1px solid #164FDA;
     color: #164FDA;
-    font-family: var(--font-outfit);
+    font-family: "Outfit", sans-serif;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -917,7 +917,7 @@ html {
     border-bottom: 1px solid #A1A4B3;
     background: #F2F2F4;
     color: #677198;
-    font-family: var(--font-outfit);
+    font-family: "Outfit", sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -960,7 +960,7 @@ html {
 
 .product-card-price .text {
     color: #0A2463;
-    font-family: var(--font-outfit);
+    font-family: "Outfit", sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -971,7 +971,7 @@ html {
 
 .product-card-price .old-price {
     color: #677198;
-    font-family: var(--font-outfit);
+    font-family: "Outfit", sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -1051,7 +1051,7 @@ html {
     border-radius: 4px;
     background: #164FDA;
     color: #F2F2F4;
-    font-family: var(--font-outfit);
+    font-family: "Outfit", sans-serif;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -1069,7 +1069,7 @@ html {
     border-radius: 4px;
     background: #164FDA;
     color: #F2F2F4;
-    font-family: var(--font-outfit);
+    font-family: "Outfit", sans-serif;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -1110,7 +1110,7 @@ html {
 
 .product-filter :global(.rs-text) {
     color: #727690;
-    font-family: var(--font-outfit);
+    font-family: "Outfit", sans-serif;
     font-size: 12px;
     font-style: normal;
     font-weight: 300;
@@ -1141,7 +1141,7 @@ html {
 }
 
 .filter-list .title {
-    font-family: var(--font-outfit);
+    font-family: "Outfit", sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -1160,7 +1160,7 @@ html {
     border-radius: 4px;
     border: 1px solid #164FDA;
     color: #164FDA;
-    font-family: var(--font-outfit);
+    font-family: "Outfit", sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -1200,29 +1200,19 @@ html {
 
 .total-number {
     color: #0A2463;
-    font-family: var(--font-outfit);
+    font-family: "Outfit", sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-}
-
-.total-number-similar {
-    color: #ffffff;
-    background: linear-gradient(99.76deg, #1F317A 57.6%, #152151 102.97%);
-    font-family: var(--font-outfit);
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    padding: 20px;
-    border-radius: 4px;
-    margin-TOP: 25PX;
-    margin-bottom: 10PX;
 }
 
 .total-number strong {
     font-weight: 700;
+}
+
+.filter-dropdown .dropdown-toggle::after {
+    display: none;
 }
 
 .disclaimer {

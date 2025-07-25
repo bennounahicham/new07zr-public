@@ -487,7 +487,16 @@
             <div class="product-filter">
                 <div class="total-number"><strong>879</strong> article(s) trouvé(s)</div>
                 <div class="d-flex">
-                    <SortDropdown sortingOptions={sortingOptions} selectedOrder={selectedOrder} handleFilterSelect={setSelectedOrder} /> )}
+                    <div class="dropdown">
+                        <button class="btn filter-by dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Trier par
+                           <i class="fas fa-filter icon"></i> 
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Prix: Le moins cher</a></li>
+                            <li><a class="dropdown-item" href="#">Délai: Le plus rapide</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
