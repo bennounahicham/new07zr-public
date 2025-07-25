@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pneus - Recherche</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="../css/tyres.css" />
+</head>
+
+<body>
+    <section class="tyre-search-bar">
+        <div class="container">
+            <div class="form-row">
+                <div class="column">
+                    <label>Largeur</label>
+                    <select class="form-select select2" name="width" data-dropdown-class="custom-dropdown">
+              <option>205</option>
+              <option>215</option>
+              <option>225</option>
+            </select>
+                </div>
+
+                <div class="column">
+                    <label>Hauteur</label>
+                    <select class="form-select select2" name="height" data-dropdown-class="custom-dropdown">
+              <option>55</option>
+              <option>60</option>
+              <option>65</option>
+            </select>
+                </div>
+
+                <div class="column">
+                    <label>Diamètre</label>
+                    <select class="form-select select2" name="diameter" data-dropdown-class="custom-dropdown">
+              <option>16</option>
+              <option>17</option>
+              <option>18</option>
+            </select>
+                </div>
+
+                <div class="column load">
+                    <label>Charge</label>
+                    <select class="form-select select2" name="charge" data-dropdown-class="custom-dropdown">
+              <option>84</option>
+              <option>87</option>
+              <option>88</option>
+            </select>
+                </div>
+                <div class="column speed">
+                    <label>Vitesse</label>
+                    <select class="form-select select2" name="vitesse" data-dropdown-class="custom-dropdown">
+              <option>H</option>
+              <option>P</option>
+              <option>Q</option>
+            </select>
+                </div>
+                <div class="column brands">
+                    <select class="form-select select2 brands" name="brands" data-dropdown-class="custom-dropdown-brands" data-placeholder="Toutes les marques">
+              <option></option>
+              <option>Michelin</option>
+              <option>Hankook</option>
+              <option>Pirelli</option>
+            </select>
+                </div>
+            </div>
+
+            <div class="form-row bottom-row">
+                <div class="season-row">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Été" id="Été" />
+                        <label class="form-check-label" for="Été">
+                <img src="../images/ete.svg" alt="Été" />
+
+                Été
+              </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Hiver" id="Hiver" />
+                        <label class="form-check-label" for="Hiver">
+                <img src="../images/hiver.svg" alt="Hiver" /> Hiver
+              </label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="4saisons " id="4saisons" />
+                        <label class="form-check-label" for="4saisons ">
+                <img src="../images/quatre-saisons.svg" alt="4 saisons" /> 4
+                saisons</label
+              >
+            </div>
+          </div>
+          <div class="column brandTypes">
+            <select
+              class="form-select select2 brandTypes"
+              name="brandTypes"
+              data-dropdown-class="custom-dropdown-brandTypes"
+              data-placeholder="Types de marques"
+            >
+              <option></option>
+              <option>Michelin</option>
+              <option>Hankook</option>
+              <option>Pirelli</option>
+            </select>
+          </div>
+          <button class="search-btn">
+            Rechercher
+            <img src="../images/right-arrow-white.svg" class="right-arrow" />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div class="breadcrumb">
+      <a href="">Accueil</a>
+      <img src="../images/chevron-right-small.svg" />
+      <a href="">Pneus</a>
+      <img src="../images/chevron-right-small.svg" />
+      <span class="breadcrumb-current">Recherche</span>
+    </div>
+
+    <div class="results-container">
+      <div class="filter-bar">
+            <div class="filter">
+                <div class="filter-type" data-bs-toggle="collapse" data-bs-target="#deliveryCollapse" aria-expanded="true" aria-controls="deliveryCollapse">
+                  <div class="filter-type-name">Livraison</div>
+                    <i class="fas icon"></i>
+                  </div>
+                <div class="collapse show" id="deliveryCollapse">
+                        <ul class="filter-options">
+                            <li>
+                                <div class='checkbox-wrapper'>
+                                    <label class="control control--checkbox">
+                                    <div class='filter-option'>Express</div>
+                                    <input type="checkbox"/>
+                                    <div class='control__indicator'></div>
+                                  </label>
+                    </div>
+                    </li>
+                    <li>
+                        <div class='checkbox-wrapper'>
+                            <label class="control control--checkbox">
+                                    <div class='filter-option'>Lundi 28 juillet</div>
+                                    <input type="checkbox"/>
+                                    <div class='control__indicator'></div>
+                                  </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class='checkbox-wrapper'>
+                            <label class="control control--checkbox">
+                                    <div class='filter-option'>Mardi 29 juillet</div>
+                                    <input type="checkbox"/>
+                                    <div class='control__indicator'></div>
+                                  </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class='checkbox-wrapper'>
+                            <label class="control control--checkbox">
+                                    <div class='filter-option'>Mercredi 30 juillet</div>
+                                    <input type="checkbox"/>
+                                    <div class='control__indicator'></div>
+                                  </label>
+                        </div>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="filter">
+                <div class="filter-type" data-bs-toggle="collapse" data-bs-target="#seasonCollapse" aria-expanded="true" aria-controls="seasonCollapse">
+                    <div class="filter-type-name">Saison</div>
+                    <i class="fas icon"></i>
+                </div>
+                <div class="collapse show" id="seasonCollapse">
+                    <ul class="filter-options">
+                        <li>
+                            <div class='checkbox-wrapper'>
+                                <label class="control control--checkbox">
+                                    <div class='filter-option'>
+                                      <span class='d-flex align-items-center'>
+                                        <img src="../images/ete.svg" width="16" height="16"  class="me-1" />
+                                        Été                        
+                                      </span>
+                                      <span>2</span>
+                                    </div>
+                                    <input type="checkbox"/>
+                                    <div class='control__indicator'></div>
+                                  </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class='checkbox-wrapper'>
+                                <label class="control control--checkbox">
+                                    <div class='filter-option'>
+                                      <span class='d-flex align-items-center'>
+                                        <img src="../images/hiver.svg" width="16" height="16"  class="me-1" />
+                                        Hiver                        
+                                      </span>
+                                      <span>2</span>
+                                    </div>
+                                    <input type="checkbox"/>
+                                    <div class='control__indicator'></div>
+                                  </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class='checkbox-wrapper'>
+                                <label class="control control--checkbox">
+                                    <div class='filter-option'>
+                                      <span class='d-flex align-items-center'>
+                                        <img src="../images/quatre-saisons.svg" width="16" height="16"  class="me-1" />
+                                        4 saisons                        
+                                      </span>
+                                      <span>2</span>
+                                    </div>
+                                    <input type="checkbox"/>
+                                    <div class='control__indicator'></div>
+                                  </label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="filter">
+                <div class="filter-type" data-bs-toggle="collapse" data-bs-target="#loadCollapse" aria-expanded="true" aria-controls="deliveryCollapse">
+                    <div class="filter-type-name">Indices de charge</div>
+                    <i class="fas icon"></i>
+                </div>
+                <div class="collapse show" id="loadCollapse">
+                    <ul class="filter-options">
+                        <li>
+                            <div class='checkbox-wrapper'>
+                                <label class="control control--checkbox">
+                                    <div class='filter-option'>
+                                      <span>91</span>
+                                      <span>2120</span>
+                                    </div>
+                                    <input type="checkbox"/>
+                                    <div class='control__indicator'></div>
+                                  </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class='checkbox-wrapper'>
+                                <label class="control control--checkbox">
+                                    <div class='filter-option'>
+                                      <span>94</span>
+                                      <span>120</span>
+                                    </div>
+                                    <input type="checkbox"/>
+                                    <div class='control__indicator'></div>
+                                  </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class='checkbox-wrapper'>
+                                <label class="control control--checkbox">
+                                    <div class='filter-option'>
+                                      <span>89</span>
+                                      <span>20</span>
+                                    </div>
+                                    <input type="checkbox"/>
+                                    <div class='control__indicator'></div>
+                                  </label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="filter">
+                <div class="filter-type" data-bs-toggle="collapse" data-bs-target="#speedCollapse" aria-expanded="true" aria-controls="deliveryCollapse">
+                    <div class="filter-type-name">Indices de charge</div>
+                    <i class="fas icon"></i>
+                </div>
+                <div class="collapse show" id="speedCollapse">
+                    <ul class="filter-options">
+                        <li>
+                            <div class='checkbox-wrapper'>
+                                <label class="control control--checkbox">
+                                    <div class='filter-option'>
+                                      <span>H</span>
+                                      <span>220</span>
+                                    </div>
+                                    <input type="checkbox"/>
+                                    <div class='control__indicator'></div>
+                                  </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class='checkbox-wrapper'>
+                                <label class="control control--checkbox">
+                                    <div class='filter-option'>
+                                      <span>V</span>
+                                      <span>120</span>
+                                    </div>
+                                    <input type="checkbox"/>
+                                    <div class='control__indicator'></div>
+                                  </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class='checkbox-wrapper'>
+                                <label class="control control--checkbox">
+                                    <div class='filter-option'>
+                                      <span>W</span>
+                                      <span>20</span>
+                                    </div>
+                                    <input type="checkbox"/>
+                                    <div class='control__indicator'></div>
+                                  </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class='checkbox-wrapper'>
+                                <label class="control control--checkbox">
+                                    <div class='filter-option'>
+                                      <span>T</span>
+                                      <span>20</span>
+                                    </div>
+                                    <input type="checkbox"/>
+                                    <div class='control__indicator'></div>
+                                  </label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="filter">
+                <div class="filter-type" data-bs-toggle="collapse" data-bs-target="#quantityCollapse" aria-expanded="true" aria-controls="quantityCollapse">
+                    <div class="filter-type-name">Quantité</div>
+                    <i class="fas icon"></i>
+                </div>
+                <div class="collapse show" id="quantityCollapse">
+                    <div class="qty">
+                        <button class="qty-selector">
+                          <i class="fas fa-minus icon"></i>
+                        </button>
+                        <input class="qty-input" type="text" value="1" />
+                        <button class="qty-selector">
+                          <i class="fas fa-plus icon"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="filter">
+                <div class="filter-type" data-bs-toggle="collapse" data-bs-target="#brandCollapse" aria-expanded="true" aria-controls="brandCollapse">
+                    <div class="filter-type-name">Marque</div>
+                    <i class="fas icon"></i>
+                </div>
+                <div class="collapse show" id="brandCollapse">
+                    <div class="brand-filter">
+                        <input type="text" placeholder="Rechercher une marque" class="brand-search" id="brand-search" oninput="filterBrands()">
+                        <i class="fas fa-magnifying-glass icon"></i>
+                    </div>
+                    <ul class="filter-options has-scroll" id="brands-list">
+                        <li>
+                            <div class='checkbox-wrapper'>
+                                <label class="control control--checkbox">
+                                    <div class='filter-option'>
+                                      <span>Michelin</span>
+                                      <span>200</span>
+                                    </div>
+                                    <input type="checkbox"/>
+                                    <div class='control__indicator'></div>
+                                  </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class='checkbox-wrapper'>
+                                <label class="control control--checkbox">
+                                    <div class='filter-option'>
+                                      <span>Pirelli</span>
+                                      <span>20</span>
+                                    </div>
+                                    <input type="checkbox"/>
+                                    <div class='control__indicator'></div>
+                                  </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class='checkbox-wrapper'>
+                                <label class="control control--checkbox">
+                                    <div class='filter-option'>
+                                      <span>Goodyear</span>
+                                      <span>123</span>
+                                    </div>
+                                    <input type="checkbox"/>
+                                    <div class='control__indicator'></div>
+                                  </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class='checkbox-wrapper'>
+                                <label class="control control--checkbox">
+                                    <div class='filter-option'>
+                                      <span>Hankook</span>
+                                      <span>189</span>
+                                    </div>
+                                    <input type="checkbox"/>
+                                    <div class='control__indicator'></div>
+                                  </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class='checkbox-wrapper'>
+                                <label class="control control--checkbox">
+                                    <div class='filter-option'>
+                                      <span>Bridgestone</span>
+                                      <span>4420</span>
+                                    </div>
+                                    <input type="checkbox"/>
+                                    <div class='control__indicator'></div>
+                                  </label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="filter">
+                <div class="filter-type" data-bs-toggle="collapse" data-bs-target="#pricesCollapse" aria-expanded="true" aria-controls="pricesCollapse">
+                    <div class="filter-type-name">Prices</div>
+                    <i class="fas icon"></i>
+                </div>
+                <div class="collapse" id="pricesCollapse">
+                    <ul class="filter-options">
+                        <li>
+                            <div class='checkbox-wrapper'>
+                                <label class="control control--checkbox">
+                                    <div class='filter-option'>Masquer les prix</div>
+                                    <input type="checkbox"/>
+                                    <div class='control__indicator'></div>
+                                  </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class='checkbox-wrapper'>
+                                <label class="control control--checkbox">
+                                    <div class='filter-option'>€50 - €100</div>
+                                    <input type="checkbox"/>
+                                    <div class='control__indicator'></div>
+                                  </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class='checkbox-wrapper'>
+                                <label class="control control--checkbox">
+                                    <div class='filter-option'>€100 - €150</div>
+                                    <input type="checkbox"/>
+                                    <div class='control__indicator'></div>
+                                  </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class='checkbox-wrapper'>
+                                <label class="control control--checkbox">
+                                    <div class='filter-option'>€150 - €300</div>
+                                    <input type="checkbox"/>
+                                    <div class='control__indicator'></div>
+                                  </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class='checkbox-wrapper'>
+                                <label class="control control--checkbox">
+                                    <div class='filter-option'>€300 - €500</div>
+                                    <input type="checkbox"/>
+                                    <div class='control__indicator'></div>
+                                  </label>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-list">
+            <div class="product-filter">
+                <div class="total-number"><strong>879</strong> article(s) trouvé(s)</div>
+                <div class="d-flex">
+                    <SortDropdown sortingOptions={sortingOptions} selectedOrder={selectedOrder} handleFilterSelect={setSelectedOrder} /> )}
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+        <script src="../js/tyres.js"></script>
+</body>
+
+</html>
