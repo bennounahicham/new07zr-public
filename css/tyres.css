@@ -835,7 +835,7 @@ html {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    margin-top: -5px;
+    margin-top: -3px;
     text-decoration: none!important;
 }
 
@@ -847,37 +847,6 @@ html {
     font-weight: 500!important;
     line-height: normal;
     text-transform: uppercase;
-}
-
-.product-card-desc .ref {
-    font-family: "Outfit", sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    color: #0A2463;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-}
-
-.product-card-desc .specs {
-    padding: 0 10px 0 0;
-}
-
-.product-card-desc .specs .row {
-    width: 100%;
-    height: 32px;
-    border-bottom: 1px solid #A1A4B3;
-    background: #F2F2F4;
-    color: #677198;
-    font-family: "Outfit", sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
-.product-card-desc .specs .row strong {
-    font-weight: 700;
 }
 
 .filter-by,
@@ -1180,10 +1149,7 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px
-}
-
-.w-194 .connect-text {
+    gap: 10px;
     font-family: "Outfit", sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -1252,6 +1218,365 @@ html {
     width: 16px;
     height: 16px;
     color: #0A2463
+}
+
+.breadcrumbs-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.breadcrumbs-container .breadcrumb {
+    max-width: unset;
+    margin: unset;
+    padding: unset;
+}
+
+.backToSearch,
+.backToSearch:hover {
+    display: flex;
+    width: fit-content;
+    height: 36px;
+    padding: 0 16px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    border: 1px solid #164FDA;
+    color: #164FDA;
+    font-family: var(--font-outfit);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.6px;
+    white-space: nowrap;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.backToSearch .icon {
+    margin-right: 10px;
+}
+
+.product-info-container {
+    width: 1240px;
+    margin: 20px auto;
+}
+
+.product-card.info {
+    padding: 30px 40px;
+}
+
+.product-info-image-desc {
+    display: flex;
+    gap: 55px;
+}
+
+.product-info-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 207px;
+    gap: 25px
+}
+
+.product-info-image .brand-container {
+    width: 192px;
+    max-height: 25px;
+}
+
+.product-info-image .brand-container img,
+.product-info-image .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.product-info-image .img-container {
+    width: 197px;
+    max-height: 197px;
+}
+
+.product-card-desc.info {
+    width: 647px;
+}
+
+.product-card-desc .name.info {
+    font-size: 32px;
+    line-height: 110%;
+    margin-top: 0;
+}
+
+.product-card-desc .product-description.info {
+    font-size: 24px !important;
+    line-height: 110%;
+}
+
+.specs {
+    max-height: 156px;
+    overflow-y: auto;
+}
+
+.specs::-webkit-scrollbar {
+    width: 5px;
+}
+
+.specs::-webkit-scrollbar-track {
+    background-color: #D9D9D9;
+    border-radius: 8px;
+}
+
+.specs::-webkit-scrollbar-thumb {
+    background-color: #0A2463;
+    border-radius: 8px;
+}
+
+.product-card .specs .row {
+    width: 100%;
+    height: 32px;
+    border-bottom: 1px solid #A1A4B3;
+    color: #677198;
+    font-family: "Outfit", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+}
+
+.product-card .specs .row:last-child {
+    border: 0;
+}
+
+.product-card .specs .row * {
+    width: unset;
+    padding-right: unset;
+}
+
+.product-card .specs .row strong {
+    font-weight: 700;
+}
+
+.connect-text {
+    padding-top: 10px;
+    border-top: 1px solid rgba(10, 36, 99, 0.1);
+    width: 100%;
+    margin: 10px auto 0;
+    text-align: center;
+}
+
+.key-benefits {
+    padding: 20px 0 30px;
+}
+
+.key-benefits-card {
+    background-color: #fbfbfb;
+    border-radius: 12px;
+    padding: 25px 40px;
+    font-family: "Outfit", sans-serif;
+}
+
+.key-benefits-title {
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    color: #395561;
+    margin-bottom: 16px;
+}
+
+.key-benefits-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 32px;
+    border-top: 1px solid rgba(10, 36, 99, 0.1);
+    padding-top: 20px;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1 1 30%;
+    max-width: 30%;
+    color: #395561;
+}
+
+.benefit-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.benefit-item p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+    max-width: 267px;
+}
+
+.faq-section.info {
+    padding: 0;
+}
+
+.faq-section.info .accordion {
+    background-color: #FBFBFB;
+    padding: 25px 50px 25px 20px;
+}
+
+.faq-section.info .title {
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    color: #395561;
+    margin-bottom: 16px;
+    border-bottom: 1px solid rgba(10, 36, 99, 0.1);
+    padding-bottom: 20px;
+    margin-left: 20px;
+}
+
+.labeling-section {
+    padding: 30px 0;
+}
+
+.labeling-card {
+    background-color: #fbfbfb;
+    border-radius: 12px;
+    padding: 25px 40px;
+    font-family: "Outfit", sans-serif;
+}
+
+.labeling-title {
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    color: #395561;
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(10, 36, 99, 0.1);
+    padding-bottom: 20px;
+}
+
+.labeling-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.labeling-item {
+    flex: 1 1 30%;
+    min-width: 280px;
+    max-width: 100%;
+}
+
+.labeling-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    color: #0a2463;
+    font-weight: 600;
+}
+
+.labeling-icon {
+    width: 15px;
+    height: 17px;
+    flex-shrink: 0;
+}
+
+.labeling-label {
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #395561;
+}
+
+.labeling-description {
+    color: #2a3e52;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+}
+
+.selected-products-section .section-title {
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    text-transform: uppercase;
+    color: #0a2463;
+    margin-bottom: 20px;
+}
+
+.selected-products-section .product-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px 16px;
+    height: 100%;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+    max-width: 295px;
+    display: flex;
+    flex-direction: column;
+}
+
+.selected-products-section .product-info-image {
+    gap: 20px
+}
+
+.selected-products-section .product-info-image .img-container {
+    width: 172px;
+    max-height: 172px;
+}
+
+.selected-products-section .product-info-image .quality {
+    margin-top: -10px;
+}
+
+.selected-products-section .product-title {
+    font-family: Outfit, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #0A2463;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    max-width: 260px;
+    min-height: 60px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.selected-products-section .icons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.selected-products-section .product-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #164FDA;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0.6px;
+    width: 100%;
+    height: 48px;
 }
 
 @media (min-width: 1025px) and (max-width: 1279px) {
@@ -1543,5 +1868,9 @@ html {
     }
     .mobile-filter-panel.active {
         display: block;
+    }
+    .benefit-item {
+        max-width: 100%;
+        flex: 1 1 100%;
     }
 }
