@@ -9,6 +9,7 @@ $(document).ready(function () {
       },
       1024: {
         slidesPerView: 3,
+        spaceBetween: 35,
       },
       1280: {
         slidesPerView: 4,
