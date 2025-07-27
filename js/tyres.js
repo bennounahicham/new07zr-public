@@ -1,4 +1,25 @@
 $(document).ready(function () {
+  const swiper = new Swiper('.selected-products-swiper', {
+    loop: false,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    breakpoints: {
+      768: {
+        slidesPerView: 1,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+      1280: {
+        slidesPerView: 4,
+      },
+    },
+    navigation: {
+      nextEl: '.custom-next',
+      prevEl: '.custom-prev',
+    },
+  })
+
   $('.select2').each(function () {
     const $select = $(this)
     let dropdownClass = $select.data('dropdown-class') || ''
@@ -292,19 +313,5 @@ $(document).ready(function () {
   })
   $('.mobile-filter-close').on('click', function () {
     $('.mobile-filter-panel').removeClass('active')
-  })
-
-  new Swiper('.selected-products-swiper', {
-    slidesPerView: 1,
-    spaceBetween: 20,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    breakpoints: {
-      640: { slidesPerView: 2 },
-      1024: { slidesPerView: 3 },
-      1280: { slidesPerView: 4 },
-    },
   })
 })

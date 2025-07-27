@@ -1291,7 +1291,7 @@ html {
 .product-info-image .brand-container img,
 .product-info-image .img-container img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: fill;
 }
 
@@ -1507,6 +1507,20 @@ html {
     margin: 0;
 }
 
+.selected-products-section .selected-products-wrapper {
+    position: relative;
+    width: 1240px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 60px;
+}
+
+.selected-products-section .selected-products-swiper {
+    max-width: 1240px;
+    position: relative;
+    margin: 0 auto;
+}
+
 .selected-products-section .section-title {
     font-family: "Outfit", sans-serif;
     font-weight: 700;
@@ -1577,6 +1591,38 @@ html {
     letter-spacing: 0.6px;
     width: 100%;
     height: 48px;
+}
+
+.swiper-button-prev.custom-prev,
+.swiper-button-next.custom-next {
+    width: 36px;
+    height: 36px;
+    background: transparent;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.swiper-button-prev.custom-prev {
+    left: -60px;
+}
+
+.swiper-button-next.custom-next {
+    right: -60px;
+    transform: rotate(180deg) translateY(-50%);
+}
+
+.swiper-button-prev.custom-prev img,
+.swiper-button-next.custom-next img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    content: '';
 }
 
 @media (min-width: 1025px) and (max-width: 1279px) {
@@ -1872,5 +1918,75 @@ html {
     .benefit-item {
         max-width: 100%;
         flex: 1 1 100%;
+    }
+    .breadcrumbs-container {
+        max-width: 90%;
+    }
+    .backToSearch {
+        display: none;
+    }
+    .product-info-container {
+        width: 95%;
+    }
+    .product-card.info {
+        padding: 16px 15px 16px 0;
+        gap: 15px;
+    }
+    .product-info-image-desc {
+        gap: 5px;
+    }
+    .product-info-image {
+        width: 135px;
+    }
+    .product-info-image .brand-container {
+        width: 103px;
+        max-height: 16px;
+    }
+    .product-info-image .img-container {
+        width: 134px;
+        max-height: 134px;
+    }
+    .product-card-desc.info {
+        width: unset;
+    }
+    .product-card-desc .name.info {
+        font-size: 28px;
+    }
+    .w-194.info {
+        padding: 0 0 0 15px;
+    }
+    .key-benefits-card {
+        padding: 20px 30px;
+    }
+    .faq-section.info .accordion {
+        padding: 20px 20px 20px 10px;
+        max-width: 100%;
+    }
+    .faq-section.info .accordion-button::after {
+        margin-right: -25px !important;
+        margin-left: 10% !important;
+    }
+    .labeling-card {
+        padding: 20px 30px;
+    }
+    .selected-products-section {
+        padding-bottom: 30px;
+    }
+    .selected-products-section .selected-products-wrapper {
+        width: 325px;
+        margin: 0 auto;
+    }
+    .selected-products-section .selected-products-swiper {
+        max-width: 325px;
+    }
+    .selected-products-section .product-card {
+        max-width: 325px;
+    }
+    .swiper-button-prev.custom-prev {
+        left: -20px;
+    }
+    .swiper-button-next.custom-next {
+        right: -20px;
+        transform: translateY(-50%) rotate(180deg);
     }
 }
