@@ -1945,6 +1945,94 @@ html {
     cursor: pointer;
 }
 
+.tyre-list-section {
+    padding: 0 0 30px;
+    width: 1240px;
+    margin: 0 auto;
+}
+
+.tyre-list-container {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px 40px;
+}
+
+.tyre-list-container .tyre-profile-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #F2F4F5;
+    margin-bottom: 20px;
+    color: #395561;
+}
+
+.tyre-list-container .tyre-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #F2F4F5;
+    margin-bottom: 20px;
+}
+
+.tyre-list-container .tyre-brand img,
+.tyre-list-container .tyre-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.tyre-list-container .tyre-brand {
+    width: 142px;
+    height: auto;
+}
+
+.tyre-list-container .tyre-image {
+    width: 120px;
+    height: auto;
+}
+
+.tyre-list-container .tyre-details {
+    width: 538px;
+}
+
+.tyre-list-container .tyre-dimension {
+    font-family: Outfit;
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: -7px;
+    color: #0A2463;
+}
+
+.tyre-list-container .tyre-name {
+    font-family: Outfit;
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #0A2463
+}
+
+.tyre-list-container .tyre-cta {
+    min-width: 198px;
+    height: 48px;
+    background: #164FDA;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 32px 0 50px;
+    gap: 25px;
+}
+
 @media (min-width: 1280px) and (max-width: 1399px) {
     .swiper-button-prev.custom-prev {
         left: -20px;
@@ -2079,6 +2167,21 @@ html {
     }
     .video-wrapper {
         width: 980px;
+    }
+    .dimension-search {
+        max-width: 980px;
+    }
+    .dimension-search .form-group {
+        width: 120px;
+    }
+    .dimension-search .select2-container {
+        max-width: 120px;
+    }
+    .tyre-list-section {
+        width: 980px;
+    }
+    .tyre-list-container .tyre-details {
+        width: 400px;
     }
 }
 

@@ -24,7 +24,6 @@ $(document).ready(function () {
   $('.select2').each(function () {
     const $el = $(this)
 
-    // Always destroy before re-initializing
     if ($el.hasClass('select2-hidden-accessible')) {
       $el.select2('destroy')
     }
