@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pneus - Marques</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/tyres.css" />
+  </head>
+
+  <body>
+    <section class="tyre-search-bar">
+      <div class="container">
+        <div class="form-row">
+          <div class="column">
+            <label>Largeur</label>
+            <select
+              class="form-select select2"
+              name="width"
+              data-dropdown-class="custom-dropdown"
+            >
+              <option>205</option>
+              <option>215</option>
+              <option>225</option>
+            </select>
+          </div>
+
+          <div class="column">
+            <label>Hauteur</label>
+            <select
+              class="form-select select2"
+              name="height"
+              data-dropdown-class="custom-dropdown"
+            >
+              <option>55</option>
+              <option>60</option>
+              <option>65</option>
+            </select>
+          </div>
+
+          <div class="column">
+            <label>Diamètre</label>
+            <select
+              class="form-select select2"
+              name="diameter"
+              data-dropdown-class="custom-dropdown"
+            >
+              <option>16</option>
+              <option>17</option>
+              <option>18</option>
+            </select>
+          </div>
+
+          <div class="column load">
+            <label>Charge</label>
+            <select
+              class="form-select select2"
+              name="charge"
+              data-dropdown-class="custom-dropdown"
+            >
+              <option>84</option>
+              <option>87</option>
+              <option>88</option>
+            </select>
+          </div>
+          <div class="column speed">
+            <label>Vitesse</label>
+            <select
+              class="form-select select2"
+              name="vitesse"
+              data-dropdown-class="custom-dropdown"
+            >
+              <option>H</option>
+              <option>P</option>
+              <option>Q</option>
+            </select>
+          </div>
+          <div class="column brands">
+            <select
+              class="form-select select2 brands"
+              name="brands"
+              data-dropdown-class="custom-dropdown-brands"
+              data-placeholder="Toutes les marques"
+            >
+              <option></option>
+              <option>Michelin</option>
+              <option>Hankook</option>
+              <option>Pirelli</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row bottom-row">
+          <div class="season-row">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value="Été"
+                id="Été"
+              />
+              <label class="form-check-label" for="Été">
+                <img src="../images/ete.svg" alt="Été" />
+
+                Été
+              </label>
+            </div>
+
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value="Hiver"
+                id="Hiver"
+              />
+              <label class="form-check-label" for="Hiver">
+                <img src="../images/hiver.svg" alt="Hiver" /> Hiver
+              </label>
+            </div>
+
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value="4saisons "
+                id="4saisons"
+              />
+              <label class="form-check-label" for="4saisons ">
+                <img src="../images/quatre-saisons.svg" alt="4 saisons" /> 4
+                saisons</label
+              >
+            </div>
+          </div>
+          <div class="column brandTypes">
+            <select
+              class="form-select select2 brandTypes"
+              name="brandTypes"
+              data-dropdown-class="custom-dropdown-brandTypes"
+              data-placeholder="Types de marques"
+            >
+              <option></option>
+              <option>Michelin</option>
+              <option>Hankook</option>
+              <option>Pirelli</option>
+            </select>
+          </div>
+          <button class="search-btn">
+            Rechercher
+            <img src="../images/right-arrow-white.svg" class="right-arrow" />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div class="breadcrumb">
+      <a href="">Accueil</a>
+      <img src="../images/chevron-right-small.svg" />
+      <a href="">Pneus</a>
+      <img src="../images/chevron-right-small.svg" />
+      <span class="breadcrumb-current">Marques</span>
+    </div>
+
+    <section class="brand-section">
+      <h2 class="section-title">NOS MARQUES PNEUS</h2>
+      <h3 class="section-subtitle">marques premium</h3>
+      <div class="brand-grid">
+        <a class="brand-card" href="#">
+          <img src="../images/bridgestone.svg" alt="Bridgestone" />
+          <p>Bridgestone</p>
+        </a>
+        <a class="brand-card" href="#">
+          <img src="../images/goodyear.svg" alt="Goodyear" />
+          <p>Goodyear</p>
+        </a>
+        <a class="brand-card" href="#">
+          <img src="../images/dunlop.svg" alt="Dunlop" />
+          <p>Dunlop</p>
+        </a>
+        <a class="brand-card" href="#">
+          <img src="../images/kleber.svg" alt="Kleber" />
+          <p>Kleber</p>
+        </a>
+        <a class="brand-card" href="#">
+          <img src="../images/firestone.svg" alt="Firestone" />
+          <p>Firestone</p>
+        </a>
+        <a class="brand-card" href="#">
+          <img src="../images/kumho.svg" alt="Kumho Tire" />
+          <p>Kumho tire</p>
+        </a>
+      </div>
+      <h3 class="section-subtitle">marques quality</h3>
+      <div class="brand-grid">
+        <a class="brand-card" href="#">
+          <img src="../images/michelin.svg" alt="Michelin" />
+          <p>Michelin</p>
+        </a>
+        <a class="brand-card" href="#">
+          <img src="../images/pirelli.svg" alt="Pirelli" />
+          <p>Pirelli</p>
+        </a>
+        <a class="brand-card" href="#">
+          <img src="../images/continental.svg" alt="Continental" />
+          <p>Continental</p>
+        </a>
+        <a class="brand-card" href="#">
+          <img src="../images/hankook.svg" alt="Hankook" />
+          <p>Hankook</p>
+        </a>
+        <a class="brand-card" href="#">
+          <img src="../images/bridgestone.svg" alt="Bridgestone" />
+          <p>Bridgestone</p>
+        </a>
+        <a class="brand-card" href="#">
+          <img src="../images/goodyear.svg" alt="Goodyear" />
+          <p>Goodyear</p>
+        </a>
+        <a class="brand-card" href="#">
+          <img src="../images/dunlop.svg" alt="Dunlop" />
+          <p>Dunlop</p>
+        </a>
+        <a class="brand-card" href="#">
+          <img src="../images/kleber.svg" alt="Kleber" />
+          <p>Kleber</p>
+        </a>
+        <a class="brand-card" href="#">
+          <img src="../images/firestone.svg" alt="Firestone" />
+          <p>Firestone</p>
+        </a>
+        <a class="brand-card" href="#">
+          <img src="../images/kumho.svg" alt="Kumho Tire" />
+          <p>Kumho tire</p>
+        </a>
+        <a class="brand-card" href="#">
+          <img src="../images/uniroyal.svg" alt="Uniroyal" />
+          <p>Uniroyal</p>
+        </a>
+        <a class="brand-card" href="#">
+          <img src="../images/maxxis.svg" alt="Maxxis" />
+          <p>Maxxis</p>
+        </a>
+      </div>
+      <h3 class="section-subtitle">marques budget</h3>
+      <div class="brand-grid budget">
+        <a class="brand-card" href="#">
+          <p>Michelin</p>
+        </a>
+        <a class="brand-card" href="#">
+          <p>Pirelli</p>
+        </a>
+        <a class="brand-card" href="#">
+          <p>Continental</p>
+        </a>
+        <a class="brand-card" href="#">
+          <p>Hankook</p>
+        </a>
+        <a class="brand-card" href="#">
+          <p>Bridgestone</p>
+        </a>
+        <a class="brand-card" href="#">
+          <p>Goodyear</p>
+        </a>
+        <a class="brand-card" href="#">
+          <p>Dunlop</p>
+        </a>
+        <a class="brand-card" href="#">
+          <p>Kleber</p>
+        </a>
+        <a class="brand-card" href="#">
+          <p>Firestone</p>
+        </a>
+        <a class="brand-card" href="#">
+          <p>Kumho tire</p>
+        </a>
+        <a class="brand-card" href="#">
+          <p>Uniroyal</p>
+        </a>
+        <a class="brand-card" href="#">
+          <p>Maxxis</p>
+        </a>
+        <a class="brand-card" href="#">
+          <p>Michelin</p>
+        </a>
+        <a class="brand-card" href="#">
+          <p>Pirelli</p>
+        </a>
+        <a class="brand-card" href="#">
+          <p>Continental</p>
+        </a>
+        <a class="brand-card" href="#">
+          <p>Hankook</p>
+        </a>
+        <a class="brand-card" href="#">
+          <p>Bridgestone</p>
+        </a>
+        <a class="brand-card" href="#">
+          <p>Goodyear</p>
+        </a>
+        <a class="brand-card" href="#">
+          <p>Dunlop</p>
+        </a>
+        <a class="brand-card" href="#">
+          <p>Kleber</p>
+        </a>
+        <a class="brand-card" href="#">
+          <p>Firestone</p>
+        </a>
+        <a class="brand-card" href="#">
+          <p>Kumho tire</p>
+        </a>
+        <a class="brand-card" href="#">
+          <p>Uniroyal</p>
+        </a>
+        <a class="brand-card" href="#">
+          <p>Maxxis</p>
+        </a>
+      </div>
+
+      <div class="brand-btn-wrapper">
+        <a href="#" class="brand-button">Voir toutes les marques</a>
+      </div>
+    </section>
+
+    <section class="faq-section">
+      <div class="accordion" id="pneuAccordion">
+        <div class="accordion-item border-0">
+          <h2 class="accordion-header" id="headingOne">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              Pourquoi acheter vos pneus sur 07ZR ?
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse show"
+            aria-labelledby="headingOne"
+            data-bs-parent="#pneuAccordion"
+          >
+            <div class="accordion-body">
+              Les pneus HANKOOK kinergy 4s2 h750 205/55R16 94 H offrent une
+              performance exceptionnelle sur toutes les saisons. Leur conception
+              innovante et leur technologie de pointe garantissent une adhérence
+              optimale, une maniabilité précise et un confort de conduite
+              supérieur. Dotés d'une bande de roulement asymétrique, ces pneus
+              assurent une excellente traction sur les routes sèches en
+              maximisant la surface de contact avec la chaussée. De plus, ils
+              sont équipés d'un mélange spécial de gomme qui offre une
+              résistance à l'usure améliorée pour assurer une durabilité accrue.
+              Les rainures larges et profondes présentes sur les flancs des
+              pneus permettent d'évacuer efficacement l'eau et réduire le risque
+              d'aquaplaning, ce qui améliore considérablement la sécurité lors
+              des conditions météorologiques humides. La construction robuste
+              des pneus kinergy 4s2 h750 205/55R16 94 H assure également un
+              niveau élevé de stabilité à grande vitesse ainsi qu'une réponse
+              rapide aux changements de direction. Cela permet au conducteur
+              d'avoir un contrôle total du véhicule dans toutes les situations.
+              Enfin, grâce à leur faible résistance au roulement, ces pneus
+              contribuent à économiser du carburant en réduisant la consommation
+              d'énergie du véhicule. En conclusion, les pneus HANKOOK kinergy
+              4s2 h750 205/55R16 94 H offrent des performances remarquables en
+              termes d'adhérence, de maniabilité et de confort tout au long de
+              l'année. Ils constituent un choix idéal pour ceux qui recherchent
+              des performances fiables dans différentes conditions climatiques.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item border-0">
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              TITRE H2 TITRE H2 TITRE H2
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#pneuAccordion"
+          >
+            <div class="accordion-body">
+              Le contenu de la deuxième section va ici. Il sera affiché lorsque
+              l'utilisateur clique sur le second titre.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js "></script>
+    <script src="../js/tyres.js "></script>
+  </body>
+</html>

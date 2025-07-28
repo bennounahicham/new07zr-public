@@ -22,22 +22,23 @@ $(document).ready(function () {
   })
 
   $('.select2').each(function () {
-    const $select = $(this)
-    let dropdownClass = $select.data('dropdown-class') || ''
-    const placeholder = $select.data('placeholder') || ''
+    const $el = $(this)
 
-    if (
-      isMobile() &&
-      ($select.closest('.column').hasClass('load') ||
-        $select.closest('.column').hasClass('speed'))
-    ) {
-      dropdownClass = 'custom-dropdown-mobile'
+    // Always destroy before re-initializing
+    if ($el.hasClass('select2-hidden-accessible')) {
+      $el.select2('destroy')
     }
 
-    $(this).select2({
+    const isDimension = $el.hasClass('dimension')
+    const dropdownClass = isDimension
+      ? 'dimension-dropdown'
+      : $el.data('dropdown-class') || ''
+
+    $el.select2({
       width: '100%',
-      dropdownCssClass: dropdownClass || '',
-      placeholder: placeholder || '',
+      minimumResultsForSearch: 0,
+      dropdownCssClass: dropdownClass,
+      placeholder: $el.data('placeholder') || '',
     })
   })
 

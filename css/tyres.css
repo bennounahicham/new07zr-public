@@ -148,7 +148,7 @@ html {
     padding: 10px 16px;
     border: none;
     font-size: 16px;
-    width: 112px;
+    width: 114px;
     height: 48px;
 }
 
@@ -813,6 +813,7 @@ html {
     width: 85px;
     height: 89px;
     position: relative;
+    display: flex;
 }
 
 .product-image .brand-container {
@@ -1246,8 +1247,10 @@ html {
 
 .backToSearch,
 .backToSearch:hover {
+    position: relative;
     display: flex;
     width: fit-content;
+    min-width: 188px;
     height: 36px;
     padding: 0 16px;
     align-items: center;
@@ -1268,6 +1271,12 @@ html {
 
 .backToSearch .icon {
     margin-right: 10px;
+}
+
+.backToSearch.brand .icon {
+    margin-right: unset;
+    position: absolute;
+    left: 15px;
 }
 
 .product-info-container {
@@ -1295,18 +1304,20 @@ html {
 .product-info-image .brand-container {
     width: 192px;
     max-height: 25px;
+    display: flex;
 }
 
 .product-info-image .brand-container img,
 .product-info-image .img-container img {
     width: 100%;
     height: auto;
-    object-fit: fill;
+    object-fit: cover;
 }
 
 .product-info-image .img-container {
     width: 197px;
     max-height: 197px;
+    display: flex;
 }
 
 .product-card-desc.info {
@@ -1565,6 +1576,7 @@ html {
 .selected-products-section .product-info-image .img-container {
     width: 172px;
     max-height: 172px;
+    display: flex;
 }
 
 .selected-products-section .product-info-image .quality {
@@ -1817,6 +1829,120 @@ html {
     transform: translate(-50%, -50%);
     border: none;
     background-color: transparent;
+}
+
+.brand-section {
+    padding-top: 30px;
+}
+
+.brand-section .section-subtitle {
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #0A2463;
+    margin: 40px 0 30px;
+}
+
+.brand-section .brand-grid.budget .brand-card {
+    height: 109px;
+}
+
+.brand-section .brand-grid.budget .brand-card p {
+    margin: 0;
+}
+
+.dimension-search {
+    background-color: #fff;
+    padding: 20px 40px;
+    border-radius: 12px;
+    max-width: 1240px;
+    margin: 0px auto 30px;
+}
+
+.dimension-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    color: #395561;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #F2F4F5
+}
+
+.dimension-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    flex-wrap: wrap;
+}
+
+.dimension-search .form-group {
+    display: flex;
+    flex-direction: column;
+    width: 142px;
+}
+
+.dimension-search .form-group label {
+    margin-bottom: 3px;
+    font-size: 16px;
+    color: #0A2463;
+    font-weight: 300;
+    font-family: 'Outfit', sans-serif;
+}
+
+.dimension-search .button-group {
+    display: flex;
+    align-items: flex-end;
+    padding-top: 22px;
+}
+
+.dimension-search .select2-container {
+    width: 100% !important;
+    max-width: 142px;
+}
+
+.dimension-search .select2-selection {
+    border: 2px solid #a4b2c2 !important;
+    border-radius: 6px !important;
+    height: 48px !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 0 10px !important;
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+}
+
+.select2-dropdown.dimension-dropdown {
+    border: 2px solid #a4b2c2;
+    border-top: 0;
+    margin-top: -4px;
+    margin-left: 1px;
+    border-radius: 0 0 6px 6px;
+}
+
+.dimension-search .select2-selection__arrow {
+    top: 7px !important;
+    right: 10px !important;
+}
+
+.dimension-search .search-button {
+    width: 198px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #164FDA;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    gap: 15px;
+    cursor: pointer;
 }
 
 @media (min-width: 1280px) and (max-width: 1399px) {
@@ -2309,5 +2435,8 @@ html {
     }
     .video-wrapper {
         width: 95%;
+    }
+    .brand-section .section-subtitle {
+        font-size: 24px;
     }
 }
