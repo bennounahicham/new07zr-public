@@ -93,19 +93,9 @@ $(document).ready(function () {
 
   // Helper to extract clean label text from .filter-option
   function getFilterLabel($filterOption) {
-    if ($filterOption.find('span').length > 0) {
-      return $filterOption
-        .find('span')
-        .first()
-        .clone()
-        .children()
-        .remove()
-        .end()
-        .text()
-        .trim()
-    } else {
-      return $filterOption.clone().children().remove().end().text().trim()
-    }
+    return $filterOption.find('span').length > 0
+      ? $filterOption.find('span').first().text().trim()
+      : $filterOption.text().trim()
   }
 
   // Utility to update the filter pills display
@@ -114,93 +104,84 @@ $(document).ready(function () {
     $filterList.find('.filter').remove()
 
     const checked = $('.filter-bar input[type="checkbox"]:checked')
-    const $qtyInput = $('.filter-bar .qty-input')
-    const qty = parseInt($qtyInput.val(), 10)
-
+    const qty = parseInt($('.filter-bar .qty-input').val(), 10)
     let hasFilters = false
 
+    // Add checkbox filters
     checked.each(function () {
       hasFilters = true
       const $checkbox = $(this)
-      const $filterOption = $checkbox
-        .closest('.control--checkbox')
-        .find('.filter-option')
-      const label = getFilterLabel($filterOption)
+      const label = getFilterLabel(
+        $checkbox.closest('.control--checkbox').find('.filter-option')
+      )
       const filterGroup = $checkbox
         .closest('.filter')
         .find('.filter-type-name')
         .text()
         .trim()
 
-      const $pill = $(`
-      <div class="filter" data-label="${label}" data-group="${filterGroup}">
-        ${filterGroup}: <span>${label}</span>
-        <i class="fas fa-xmark icon" role="button"></i>
-      </div>
-    `)
+      const $pill = $(`<div class="filter" data-label="${label}">
+      ${filterGroup}: <span>${label}</span>
+      <i class="fas fa-xmark icon" role="button"></i>
+    </div>`)
+      $pill.data('checkbox', $checkbox)
       $filterList.append($pill)
     })
 
     if (qty > 1) {
       hasFilters = true
-      const $pill = $(`
-      <div class="filter" data-label="Quantité" data-group="Quantité">
-        Quantité: <span>${qty}</span>
-        <i class="fas fa-xmark icon" role="button"></i>
-      </div>
-    `)
-      $filterList.append($pill)
+      $filterList.append(`<div class="filter" data-label="Quantité">
+      Quantité: <span>${qty}</span>
+      <i class="fas fa-xmark icon" role="button"></i>
+    </div>`)
     }
 
     if (hasFilters) {
-      $filterList.removeClass('hidden')
-      const $deleteAll = $(`
-      <div class="filter delete-all">
-        Tout supprimer
-        <i class="fas fa-xmark icon" role="button"></i>
-      </div>
-    `)
-      $filterList.append($deleteAll)
+      $filterList.removeClass('hidden').append(`<div class="filter delete-all">
+      Tout supprimer <i class="fas fa-xmark icon" role="button"></i>
+    </div>`)
     } else {
       $filterList.addClass('hidden')
     }
   }
 
-  // Bind change event to all checkboxes in the filter bar
   $('.filter-bar').on('change', 'input[type="checkbox"]', function () {
     updateFilterList()
-    if (isMobile()) {
+    if (typeof isMobile === 'function' && isMobile()) {
       $('.mobile-filter-panel').removeClass('active')
     }
   })
 
-  // Handle individual filter pill removal
+  $('.filter-bar').on('change', 'input[type="checkbox"]', updateFilterList)
+
   $('.filter-list').on('click', '.fa-xmark', function () {
     const $pill = $(this).closest('.filter')
-    const label = $pill.data('label')
-    if (label === 'Quantité') {
+
+    if ($pill.hasClass('delete-all')) {
+      $('.filter-bar input[type="checkbox"]').prop('checked', false)
       $('.filter-bar .qty-input').val(1)
       updateFilterList()
       return
     }
-    // Uncheck the corresponding checkbox by matching label
-    $('.filter-bar .filter-option').each(function () {
-      const currentLabel = getFilterLabel($(this))
-      if (currentLabel === label) {
-        $(this)
-          .closest('label')
-          .find('input[type="checkbox"]')
-          .prop('checked', false)
-          .trigger('change')
-      }
-    })
-  })
 
-  // Clear all filters on "Tout supprimer"
-  $('.filter-list').on('click', '.delete-all', function () {
-    $('.filter-bar input[type="checkbox"]')
-      .prop('checked', false)
-      .trigger('change')
+    if ($pill.data('label') === 'Quantité') {
+      $('.filter-bar .qty-input').val(1)
+      updateFilterList()
+      return
+    }
+
+    const $checkbox =
+      $pill.data('checkbox') ||
+      $('.filter-bar input[type="checkbox"]:checked').filter(function () {
+        return (
+          getFilterLabel(
+            $(this).closest('.control--checkbox').find('.filter-option')
+          ) === $pill.data('label')
+        )
+      })
+
+    $checkbox.prop('checked', false)
+    updateFilterList()
   })
 
   window.handleSelect = function (event, value, displayText) {
@@ -233,15 +214,12 @@ $(document).ready(function () {
     }
   }
 
-  $('#toggleDevis').on('change', function () {
+  $('.toggle-devis').on('change', function () {
     const isChecked = $(this).is(':checked')
-    const $label = $('label[for="toggleDevis"]')
+    const id = $(this).attr('id')
+    const $label = $('label[for="' + id + '"]')
 
-    if (isChecked) {
-      $label.text('Retirer du devis')
-    } else {
-      $label.text('Ajouter au devis')
-    }
+    $label.text(isChecked ? 'Retirer du devis' : 'Ajouter au devis')
   })
 
   function isMobile() {

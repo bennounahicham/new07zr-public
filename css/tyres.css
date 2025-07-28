@@ -472,7 +472,8 @@ html {
 .accordion-button:not(.collapsed)::after {
     content: url('../images/minus-sign.svg');
     background-image: none;
-    margin-right: -7px;
+    margin-right: -20px;
+    margin-top: 15px;
 }
 
 .breadcrumb {
@@ -818,6 +819,14 @@ html {
     max-height: 40px;
     width: 127px;
     position: relative;
+    display: flex;
+}
+
+.product-image .brand-container img,
+.product-image .img-container img {
+    width: 100%;
+    height: auto;
+    object-fit: fill;
 }
 
 .product-card-desc {
@@ -1371,6 +1380,8 @@ html {
 
 .key-benefits {
     padding: 20px 0 30px;
+    width: 1240px;
+    margin: 0 auto;
 }
 
 .key-benefits-card {
@@ -1443,6 +1454,8 @@ html {
 
 .labeling-section {
     padding: 30px 0;
+    width: 1240px;
+    margin: 0 auto;
 }
 
 .labeling-card {
@@ -1507,12 +1520,16 @@ html {
     margin: 0;
 }
 
+.selected-products-section {
+    padding-bottom: 30px;
+}
+
 .selected-products-section .selected-products-wrapper {
     position: relative;
     width: 1240px;
     display: flex;
     justify-content: center;
-    margin: 0 auto 60px;
+    margin: 0 auto;
 }
 
 .selected-products-section .selected-products-swiper {
@@ -1709,6 +1726,16 @@ html {
     .mr-40 {
         margin-right: 40px;
     }
+    .key-benefits {
+        width: 980px;
+    }
+    .labeling-section {
+        width: 980px;
+    }
+    .faq-section.info {
+        width: 980px;
+        margin: 0 auto;
+    }
     .selected-products-section .selected-products-wrapper {
         width: 980px;
     }
@@ -1813,8 +1840,12 @@ html {
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
         max-width: 100%;
     }
+    .faq-section {
+        width: 95%;
+        margin: 0 auto;
+    }
     .faq-section .accordion {
-        max-width: 94%;
+        max-width: 100%;
         padding: 10px;
     }
     .accordion-button:not(.collapsed)::after {
@@ -1849,12 +1880,12 @@ html {
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
-        padding: 16px 10px 16px 0;
+        padding: 16px 10px;
         position: relative;
         margin-bottom: 15px;
     }
     .product-card .product-img-desc {
-        gap: 5px;
+        gap: 10px;
         width: 100%;
     }
     .product-card .product-image {
@@ -1871,6 +1902,10 @@ html {
     .product-card-img .img-container {
         width: 121px;
         height: 121px
+    }
+    .product-image .brand-container {
+        width: 103px;
+        max-height: 16px;
     }
     .product-card-img .brand-container {
         width: 120px;
@@ -1891,7 +1926,6 @@ html {
     }
     .w-194 {
         width: 100%;
-        padding: 0 0 0 10px;
     }
     .mobile-filter-button {
         display: flex;
@@ -1993,26 +2027,31 @@ html {
     .w-194.info {
         padding: 0 0 0 15px;
     }
+    .key-benefits {
+        width: 95%;
+    }
     .key-benefits-card {
         padding: 20px 30px;
+    }
+    .faq-section.info {
+        width: 95%;
+        margin: 0 auto;
     }
     .faq-section.info .accordion {
         padding: 20px 20px 20px 10px;
         max-width: 100%;
     }
     .faq-section.info .accordion-button::after {
-        margin-right: -25px !important;
         margin-left: 10% !important;
+    }
+    .labeling-section {
+        width: 95%;
     }
     .labeling-card {
         padding: 20px 30px;
     }
-    .selected-products-section {
-        padding-bottom: 30px;
-    }
     .selected-products-section .selected-products-wrapper {
         width: 325px;
-        margin: 0 auto;
     }
     .selected-products-section .selected-products-swiper {
         max-width: 325px;

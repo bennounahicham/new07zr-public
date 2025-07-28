@@ -1,99 +1,152 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Pneus - Recherche</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="../css/tyres.css" />
-</head>
+  </head>
 
-<body>
-    <section class="tyre-search-bar">
-        <div class="container">
-            <div class="form-row">
-                <div class="column">
-                    <label>Largeur</label>
-                    <select class="form-select select2" name="width" data-dropdown-class="custom-dropdown">
+  <body>
+    <div class="tyre-search-bar">
+      <div class="container">
+        <div class="form-row">
+          <div class="column">
+            <label>Largeur</label>
+            <select
+              class="form-select select2"
+              name="width"
+              data-dropdown-class="custom-dropdown"
+            >
               <option>205</option>
               <option>215</option>
               <option>225</option>
             </select>
-                </div>
+          </div>
 
-                <div class="column">
-                    <label>Hauteur</label>
-                    <select class="form-select select2" name="height" data-dropdown-class="custom-dropdown">
+          <div class="column">
+            <label>Hauteur</label>
+            <select
+              class="form-select select2"
+              name="height"
+              data-dropdown-class="custom-dropdown"
+            >
               <option>55</option>
               <option>60</option>
               <option>65</option>
             </select>
-                </div>
+          </div>
 
-                <div class="column">
-                    <label>Diamètre</label>
-                    <select class="form-select select2" name="diameter" data-dropdown-class="custom-dropdown">
+          <div class="column">
+            <label>Diamètre</label>
+            <select
+              class="form-select select2"
+              name="diameter"
+              data-dropdown-class="custom-dropdown"
+            >
               <option>16</option>
               <option>17</option>
               <option>18</option>
             </select>
-                </div>
+          </div>
 
-                <div class="column load">
-                    <label>Charge</label>
-                    <select class="form-select select2" name="charge" data-dropdown-class="custom-dropdown">
+          <div class="column load">
+            <label>Charge</label>
+            <select
+              class="form-select select2"
+              name="charge"
+              data-dropdown-class="custom-dropdown"
+            >
               <option>84</option>
               <option>87</option>
               <option>88</option>
             </select>
-                </div>
-                <div class="column speed">
-                    <label>Vitesse</label>
-                    <select class="form-select select2" name="vitesse" data-dropdown-class="custom-dropdown">
+          </div>
+          <div class="column speed">
+            <label>Vitesse</label>
+            <select
+              class="form-select select2"
+              name="vitesse"
+              data-dropdown-class="custom-dropdown"
+            >
               <option>H</option>
               <option>P</option>
               <option>Q</option>
             </select>
-                </div>
-                <div class="column brands">
-                    <select class="form-select select2 brands" name="brands" data-dropdown-class="custom-dropdown-brands" data-placeholder="Toutes les marques">
+          </div>
+          <div class="column brands">
+            <select
+              class="form-select select2 brands"
+              name="brands"
+              data-dropdown-class="custom-dropdown-brands"
+              data-placeholder="Toutes les marques"
+            >
               <option></option>
               <option>Michelin</option>
               <option>Hankook</option>
               <option>Pirelli</option>
             </select>
-                </div>
-            </div>
+          </div>
+        </div>
 
-            <div class="form-row bottom-row">
-                <div class="season-row">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="Été" id="Été" />
-                        <label class="form-check-label" for="Été">
+        <div class="form-row bottom-row">
+          <div class="season-row">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value="Été"
+                id="Été"
+              />
+              <label class="form-check-label" for="Été">
                 <img src="../images/ete.svg" alt="Été" />
 
                 Été
               </label>
-                    </div>
+            </div>
 
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="Hiver" id="Hiver" />
-                        <label class="form-check-label" for="Hiver">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value="Hiver"
+                id="Hiver"
+              />
+              <label class="form-check-label" for="Hiver">
                 <img src="../images/hiver.svg" alt="Hiver" /> Hiver
               </label>
-                    </div>
+            </div>
 
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="4saisons " id="4saisons" />
-                        <label class="form-check-label" for="4saisons ">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value="4saisons "
+                id="4saisons"
+              />
+              <label class="form-check-label" for="4saisons ">
                 <img src="../images/quatre-saisons.svg" alt="4 saisons" /> 4
                 saisons</label
               >
@@ -118,7 +171,7 @@
           </button>
         </div>
       </div>
-    </section>
+    </div>
 
     <div class="breadcrumbs-container">
       <div class="breadcrumb">
@@ -159,229 +212,223 @@
               (run flat) Mercedes
             </div>
             <div class="d-md-flex flex-column gap-2 d-none">
-                <div class="align-items-center gap-3 d-md-flex">
-              <img src="../images/quatre-saisons.svg" />
-              <img src="../images/icons/tourisme.svg" />
-              <div class="d-flex align-items-center gap-1">
-                <img alt="fueleff" src="../images/icons/fueleff.svg" />
-                <div class="arrow-label">A</div>
-              </div>
-              <div class="d-flex align-items-center gap-1">
-                <img alt="wetgrip" src="../images/icons/wetgrip.svg" />
-                <div class="arrow-label B">B</div>
-              </div>
-              <div class="d-flex align-items-center gap-1">
-                <img alt="extnoise" src="../images/icons/extnoise.svg" />
-                <div class="arrow-label C">C</div>
-              </div>
+              <div class="align-items-center gap-3 d-md-flex">
+                <img src="../images/quatre-saisons.svg" />
+                <img src="../images/icons/tourisme.svg" />
+                <div class="d-flex align-items-center gap-1">
+                  <img alt="fueleff" src="../images/icons/fueleff.svg" />
+                  <div class="arrow-label">A</div>
                 </div>
-                <div class="align-items-center gap-2 flex-wrap d-md-flex">
+                <div class="d-flex align-items-center gap-1">
+                  <img alt="wetgrip" src="../images/icons/wetgrip.svg" />
+                  <div class="arrow-label B">B</div>
+                </div>
+                <div class="d-flex align-items-center gap-1">
+                  <img alt="extnoise" src="../images/icons/extnoise.svg" />
+                  <div class="arrow-label C">C</div>
+                </div>
+              </div>
+              <div class="align-items-center gap-2 flex-wrap d-md-flex">
                 <span class="specificityTag">XL</span>
                 <span class="specificityTag">M+S</span>
                 <span class="specificityTag">protection jantes</span>
                 <span class="specificityTag">runflat</span>
                 <span class="specificityTag">cloutable</span>
-                </div>
-                <div class="specs">
+              </div>
+              <div class="specs">
+                <div class="row"><strong>Qualité :&nbsp;</strong>Quality</div>
                 <div class="row">
-                    <strong>Qualité :&nbsp;</strong>Quality
-                </div>
-                <div class="row">
-                    <strong>Profil :&nbsp;</strong>ECOWING ES31
+                  <strong>Profil :&nbsp;</strong>ECOWING ES31
                 </div>
                 <div class="row"><strong>Type :&nbsp;</strong>Neuf</div>
                 <div class="row">
-                    <strong>OE Constructeurs :&nbsp;</strong>-
+                  <strong>OE Constructeurs :&nbsp;</strong>-
                 </div>
+                <div class="row"><strong>EAN :&nbsp;</strong>8808956252106</div>
+                <div class="row"><strong>IPC Manuf :&nbsp;</strong>2232243</div>
                 <div class="row">
-                    <strong>EAN :&nbsp;</strong>8808956252106
+                  <strong>Sculpture :&nbsp;</strong>ECOWING ES31
                 </div>
-                <div class="row">
-                    <strong>IPC Manuf :&nbsp;</strong>2232243
-                </div>
-                <div class="row">
-                    <strong>Sculpture :&nbsp;</strong>ECOWING ES31
-                </div>
-                <div class="row">
-                    <strong>Largeur :&nbsp;</strong>205
-                </div>
+                <div class="row"><strong>Largeur :&nbsp;</strong>205</div>
                 <div class="row"><strong>Hauteur :&nbsp;</strong>55</div>
                 <div class="row"><strong>Radial :&nbsp;</strong>R</div>
+                <div class="row"><strong>Diamètre :&nbsp;</strong>16</div>
                 <div class="row">
-                    <strong>Diamètre :&nbsp;</strong>16
-                </div>
-                <div class="row">
-                    <strong>Indice de charge :&nbsp;</strong>91
+                  <strong>Indice de charge :&nbsp;</strong>91
                 </div>
                 <div class="row">
-                    <strong>Indice de vitesse :&nbsp;</strong>V
+                  <strong>Indice de vitesse :&nbsp;</strong>V
+                </div>
+                <div class="row"><strong>Chambre à air :&nbsp;</strong>TL</div>
+                <div class="row">
+                  <strong>Consommation de carburant :&nbsp;</strong>B
                 </div>
                 <div class="row">
-                    <strong>Chambre à air :&nbsp;</strong>TL
+                  <strong>Adhérence sur sol mouillé :&nbsp;</strong>B
                 </div>
                 <div class="row">
-                    <strong>Consommation de carburant :&nbsp;</strong>B
+                  <strong>Bruit de roulement externe :&nbsp;</strong>B
                 </div>
+                <div class="row"><strong>Loi Montagne :&nbsp;</strong>Non</div>
                 <div class="row">
-                    <strong>Adhérence sur sol mouillé :&nbsp;</strong>B
+                  <strong>Protection de jante :&nbsp;</strong>no
                 </div>
-                <div class="row">
-                    <strong>Bruit de roulement externe :&nbsp;</strong>B
-                </div>
-                <div class="row">
-                    <strong>Loi Montagne :&nbsp;</strong>Non
-                </div>
-                <div class="row">
-                    <strong>Protection de jante :&nbsp;</strong>no
-                </div>
-                <div class="row">
-                    <strong>Étanchéité :&nbsp;</strong>no
-                </div>
-                </div>
+                <div class="row"><strong>Étanchéité :&nbsp;</strong>no</div>
+              </div>
             </div>
           </div>
         </div>
-       
         <div class="d-md-none flex-column gap-2 d-flex ps-3">
-                <div class="d-flex align-items-center gap-3 d-md-flex">
-              <img src="../images/quatre-saisons.svg" />
-              <img src="../images/icons/tourisme.svg" />
-              <div class="d-flex align-items-center gap-1">
-                <img alt="fueleff" src="../images/icons/fueleff.svg" />
-                <div class="arrow-label">A</div>
-              </div>
-              <div class="d-flex align-items-center gap-1">
-                <img alt="wetgrip" src="../images/icons/wetgrip.svg" />
-                <div class="arrow-label B">B</div>
-              </div>
-              <div class="d-flex align-items-center gap-1">
-                <img alt="extnoise" src="../images/icons/extnoise.svg" />
-                <div class="arrow-label C">C</div>
-              </div>
-                </div>
-                <div class="d-flex align-items-center gap-2 flex-wrap d-md-flex">
-                <span class="specificityTag">XL</span>
-                <span class="specificityTag">M+S</span>
-                <span class="specificityTag">protection jantes</span>
-                <span class="specificityTag">runflat</span>
-                <span class="specificityTag">cloutable</span>
-                </div>
-                <div class="specs">
-                <div class="row">
-                    <strong>Qualité :&nbsp;</strong>Quality
-                </div>
-                <div class="row">
-                    <strong>Profil :&nbsp;</strong>ECOWING ES31
-                </div>
-                <div class="row"><strong>Type :&nbsp;</strong>Neuf</div>
-                <div class="row">
-                    <strong>OE Constructeurs :&nbsp;</strong>-
-                </div>
-                <div class="row">
-                    <strong>EAN :&nbsp;</strong>8808956252106
-                </div>
-                <div class="row">
-                    <strong>IPC Manuf :&nbsp;</strong>2232243
-                </div>
-                <div class="row">
-                    <strong>Sculpture :&nbsp;</strong>ECOWING ES31
-                </div>
-                <div class="row">
-                    <strong>Largeur :&nbsp;</strong>205
-                </div>
-                <div class="row"><strong>Hauteur :&nbsp;</strong>55</div>
-                <div class="row"><strong>Radial :&nbsp;</strong>R</div>
-                <div class="row">
-                    <strong>Diamètre :&nbsp;</strong>16
-                </div>
-                <div class="row">
-                    <strong>Indice de charge :&nbsp;</strong>91
-                </div>
-                <div class="row">
-                    <strong>Indice de vitesse :&nbsp;</strong>V
-                </div>
-                <div class="row">
-                    <strong>Chambre à air :&nbsp;</strong>TL
-                </div>
-                <div class="row">
-                    <strong>Consommation de carburant :&nbsp;</strong>B
-                </div>
-                <div class="row">
-                    <strong>Adhérence sur sol mouillé :&nbsp;</strong>B
-                </div>
-                <div class="row">
-                    <strong>Bruit de roulement externe :&nbsp;</strong>B
-                </div>
-                <div class="row">
-                    <strong>Loi Montagne :&nbsp;</strong>Non
-                </div>
-                <div class="row">
-                    <strong>Protection de jante :&nbsp;</strong>no
-                </div>
-                <div class="row">
-                    <strong>Étanchéité :&nbsp;</strong>no
-                </div>
-                </div>
+          <div class="d-flex align-items-center gap-3 d-md-flex">
+            <img src="../images/quatre-saisons.svg" />
+            <img src="../images/icons/tourisme.svg" />
+            <div class="d-flex align-items-center gap-1">
+              <img alt="fueleff" src="../images/icons/fueleff.svg" />
+              <div class="arrow-label">A</div>
             </div>
-       
-      <div class="w-194 info">
-        <div class="d-flex align-items-center gap-1 mr-40">
-          <img src="../images/icons/truck-blue.svg" />Livraison GRATUITE
+            <div class="d-flex align-items-center gap-1">
+              <img alt="wetgrip" src="../images/icons/wetgrip.svg" />
+              <div class="arrow-label B">B</div>
+            </div>
+            <div class="d-flex align-items-center gap-1">
+              <img alt="extnoise" src="../images/icons/extnoise.svg" />
+              <div class="arrow-label C">C</div>
+            </div>
+          </div>
+          <div class="d-flex align-items-center gap-2 flex-wrap d-md-flex">
+            <span class="specificityTag">XL</span>
+            <span class="specificityTag">M+S</span>
+            <span class="specificityTag">protection jantes</span>
+            <span class="specificityTag">runflat</span>
+            <span class="specificityTag">cloutable</span>
+          </div>
+          <div class="specs">
+            <div class="row"><strong>Qualité :&nbsp;</strong>Quality</div>
+            <div class="row"><strong>Profil :&nbsp;</strong>ECOWING ES31</div>
+            <div class="row"><strong>Type :&nbsp;</strong>Neuf</div>
+            <div class="row"><strong>OE Constructeurs :&nbsp;</strong>-</div>
+            <div class="row"><strong>EAN :&nbsp;</strong>8808956252106</div>
+            <div class="row"><strong>IPC Manuf :&nbsp;</strong>2232243</div>
+            <div class="row">
+              <strong>Sculpture :&nbsp;</strong>ECOWING ES31
+            </div>
+            <div class="row"><strong>Largeur :&nbsp;</strong>205</div>
+            <div class="row"><strong>Hauteur :&nbsp;</strong>55</div>
+            <div class="row"><strong>Radial :&nbsp;</strong>R</div>
+            <div class="row"><strong>Diamètre :&nbsp;</strong>16</div>
+            <div class="row"><strong>Indice de charge :&nbsp;</strong>91</div>
+            <div class="row"><strong>Indice de vitesse :&nbsp;</strong>V</div>
+            <div class="row"><strong>Chambre à air :&nbsp;</strong>TL</div>
+            <div class="row">
+              <strong>Consommation de carburant :&nbsp;</strong>B
+            </div>
+            <div class="row">
+              <strong>Adhérence sur sol mouillé :&nbsp;</strong>B
+            </div>
+            <div class="row">
+              <strong>Bruit de roulement externe :&nbsp;</strong>B
+            </div>
+            <div class="row"><strong>Loi Montagne :&nbsp;</strong>Non</div>
+            <div class="row">
+              <strong>Protection de jante :&nbsp;</strong>no
+            </div>
+            <div class="row"><strong>Étanchéité :&nbsp;</strong>no</div>
+          </div>
         </div>
-        <div class="d-flex align-items-center gap-1">
-          <img src="../images/icons/secure-transaction.svg" />Transaction
-          Sécurisée
+        <div class="w-194 info">
+          <div class="d-flex align-items-center gap-1 mr-40">
+            <img src="../images/icons/truck-blue.svg" />Livraison GRATUITE
+          </div>
+          <div class="d-flex align-items-center gap-1">
+            <img src="../images/icons/secure-transaction.svg" />Transaction
+            Sécurisée
+          </div>
+          <div class="connect-text">
+            Connectez vous <br class="d-none d-md-block" />pour voir les prix
+          </div>
+          <button class="btn">Je m'inscris</button>
+          <button class="btn">Se connecter</button>
         </div>
-        <div class="connect-text">
-          Connectez vous <br class="d-none d-md-block" />pour voir les prix
-        </div>
-        <button class="btn">Je m'inscris</button>
-        <button class="btn">Se connecter</button>
       </div>
     </div>
 
-<section class="key-benefits">
-    <div class="key-benefits-card">
-  <h2 class="key-benefits-title">Les points forts du pneu GOODYEAR EAGLE F1 ASYMMETRIC 5 MOE SCT</h2>
-  <div class="key-benefits-list">
-    <div class="benefit-item">
-      <img src="../images/icons/fuel.svg" alt="" class="benefit-icon" />
-      <p>Pneu à faible coût, permettant de réduire la consommation de carburant.</p>
+    <div class="key-benefits">
+      <div class="key-benefits-card">
+        <h2 class="key-benefits-title">
+          Les points forts du pneu GOODYEAR EAGLE F1 ASYMMETRIC 5 MOE SCT
+        </h2>
+        <div class="key-benefits-list">
+          <div class="benefit-item">
+            <img src="../images/icons/fuel.svg" alt="" class="benefit-icon" />
+            <p>
+              Pneu à faible coût, permettant de réduire la consommation de
+              carburant.
+            </p>
+          </div>
+          <div class="benefit-item">
+            <img
+              src="../images/icons/speaker.svg"
+              alt=""
+              class="benefit-icon"
+            />
+            <p>
+              Pneu offrant une bonne résistance à l'usure et une longue durée de
+              vie kilométrique.
+            </p>
+          </div>
+          <div class="benefit-item">
+            <img src="../images/icons/rain.svg" alt="" class="benefit-icon" />
+            <p>Pneu se distinguant par son excellent niveau de performance.</p>
+          </div>
+          <div class="benefit-item">
+            <img
+              src="../images/icons/speaker.svg"
+              alt=""
+              class="benefit-icon"
+            />
+            <p>Pneu avec une bande de roulement au profil asymétrique.</p>
+          </div>
+          <div class="benefit-item">
+            <img
+              src="../images/icons/speaker.svg"
+              alt=""
+              class="benefit-icon"
+            />
+            <p>Pneu conçu pour les berlines et les monospaces.</p>
+          </div>
+          <div class="benefit-item">
+            <img
+              src="../images/icons/speaker.svg"
+              alt=""
+              class="benefit-icon"
+            />
+            <p>Pneu conçu pour les voitures urbaines.</p>
+          </div>
+          <div class="benefit-item">
+            <img
+              src="../images/icons/speaker.svg"
+              alt=""
+              class="benefit-icon"
+            />
+            <p>En toute sécurité neuf comme usé.</p>
+          </div>
+          <div class="benefit-item">
+            <img
+              src="../images/icons/speaker.svg"
+              alt=""
+              class="benefit-icon"
+            />
+            <p>Excellente longévité.</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="benefit-item">
-      <img src="../images/icons/speaker.svg" alt="" class="benefit-icon" />
-      <p>Pneu offrant une bonne résistance à l'usure et une longue durée de vie kilométrique.</p>
-    </div>
-    <div class="benefit-item">
-      <img src="../images/icons/rain.svg" alt="" class="benefit-icon" />
-      <p>Pneu se distinguant par son excellent niveau de performance.</p>
-    </div>
-    <div class="benefit-item">
-      <img src="../images/icons/speaker.svg" alt="" class="benefit-icon" />
-      <p>Pneu avec une bande de roulement au profil asymétrique.</p>
-    </div>
-    <div class="benefit-item">
-      <img src="../images/icons/speaker.svg" alt="" class="benefit-icon" />
-      <p>Pneu conçu pour les berlines et les monospaces.</p>
-    </div>
-    <div class="benefit-item">
-      <img src="../images/icons/speaker.svg" alt="" class="benefit-icon" />
-      <p>Pneu conçu pour les voitures urbaines.</p>
-    </div>
-    <div class="benefit-item">
-      <img src="../images/icons/speaker.svg" alt="" class="benefit-icon" />
-      <p>En toute sécurité neuf comme usé.</p>
-    </div>
-    <div class="benefit-item">
-      <img src="../images/icons/speaker.svg" alt="" class="benefit-icon" />
-      <p>Excellente longévité.</p>
-    </div>
-  </div>
-</div>
-</section>
-<section class="faq-section info">
+
+    <div class="faq-section info">
       <div class="accordion" id="pneuAccordion">
-        <h2 class="title">Description du pneu MICHELIN - 205/55 R16 91H TL PRIMACY 4+</h2>
+        <h2 class="title">
+          Description du pneu MICHELIN - 205/55 R16 91H TL PRIMACY 4+
+        </h2>
         <div class="accordion-item border-0">
           <h2 class="accordion-header" id="headingOne">
             <button
@@ -392,7 +439,8 @@
               aria-expanded="true"
               aria-controls="collapseOne"
             >
-La performance des pneus MICHELIN - 205/55 R16 91H TL PRIMACY 4+            </button>
+              La performance des pneus MICHELIN - 205/55 R16 91H TL PRIMACY 4+
+            </button>
           </h2>
           <div
             id="collapseOne"
@@ -401,12 +449,30 @@ La performance des pneus MICHELIN - 205/55 R16 91H TL PRIMACY 4+            </bu
             data-bs-parent="#pneuAccordion"
           >
             <div class="accordion-body">
-             Les pneus HANKOOK kinergy 4s2 h750 205/55R16 94 H offrent une performance exceptionnelle sur toutes les saisons. Leur conception innovante et leur technologie de pointe garantissent une adhérence optimale, une maniabilité précise et un confort de conduite supérieur.
-Dotés d'une bande de roulement asymétrique, ces pneus assurent une excellente traction sur les routes sèches en maximisant la surface de contact avec la chaussée. De plus, ils sont équipés d'un mélange spécial de gomme qui offre une résistance à l'usure améliorée pour assurer une durabilité accrue.
-Les rainures larges et profondes présentes sur les flancs des pneus permettent d'évacuer efficacement l'eau et réduire le risque d'aquaplaning, ce qui améliore considérablement la sécurité lors des conditions météorologiques humides.
-La construction robuste des pneus kinergy 4s2 h750 205/55R16 94 H assure également un niveau élevé de stabilité à grande vitesse ainsi qu'une réponse rapide aux changements de direction. Cela permet au conducteur d'avoir un contrôle total du véhicule dans toutes les situations.
-Enfin, grâce à leur faible résistance au roulement, ces pneus contribuent à économiser du carburant en réduisant la consommation d'énergie du véhicule.
-En conclusion, les pneus HANKOOK kinergy 4s2 h750 205/55R16 94 H offrent des performances remarquables en termes d'adhérence, de maniabilité et de confort tout au long de l'année. Ils constituent un choix idéal pour ceux qui recherchent des performances fiables dans différentes conditions climatiques.
+              Les pneus HANKOOK kinergy 4s2 h750 205/55R16 94 H offrent une
+              performance exceptionnelle sur toutes les saisons. Leur conception
+              innovante et leur technologie de pointe garantissent une adhérence
+              optimale, une maniabilité précise et un confort de conduite
+              supérieur. Dotés d'une bande de roulement asymétrique, ces pneus
+              assurent une excellente traction sur les routes sèches en
+              maximisant la surface de contact avec la chaussée. De plus, ils
+              sont équipés d'un mélange spécial de gomme qui offre une
+              résistance à l'usure améliorée pour assurer une durabilité accrue.
+              Les rainures larges et profondes présentes sur les flancs des
+              pneus permettent d'évacuer efficacement l'eau et réduire le risque
+              d'aquaplaning, ce qui améliore considérablement la sécurité lors
+              des conditions météorologiques humides. La construction robuste
+              des pneus kinergy 4s2 h750 205/55R16 94 H assure également un
+              niveau élevé de stabilité à grande vitesse ainsi qu'une réponse
+              rapide aux changements de direction. Cela permet au conducteur
+              d'avoir un contrôle total du véhicule dans toutes les situations.
+              Enfin, grâce à leur faible résistance au roulement, ces pneus
+              contribuent à économiser du carburant en réduisant la consommation
+              d'énergie du véhicule. En conclusion, les pneus HANKOOK kinergy
+              4s2 h750 205/55R16 94 H offrent des performances remarquables en
+              termes d'adhérence, de maniabilité et de confort tout au long de
+              l'année. Ils constituent un choix idéal pour ceux qui recherchent
+              des performances fiables dans différentes conditions climatiques.
             </div>
           </div>
         </div>
@@ -421,7 +487,8 @@ En conclusion, les pneus HANKOOK kinergy 4s2 h750 205/55R16 94 H offrent des per
               aria-expanded="false"
               aria-controls="collapseTwo"
             >
-La performance des pneus MICHELIN - 205/55 R16 91H TL PRIMACY 4+            </button>
+              La performance des pneus MICHELIN - 205/55 R16 91H TL PRIMACY 4+
+            </button>
           </h2>
           <div
             id="collapseTwo"
@@ -430,168 +497,207 @@ La performance des pneus MICHELIN - 205/55 R16 91H TL PRIMACY 4+            </bu
             data-bs-parent="#pneuAccordion"
           >
             <div class="accordion-body">
-              Les pneus HANKOOK kinergy 4s2 h750 205/55R16 94 H offrent une performance exceptionnelle sur toutes les saisons. Leur conception innovante et leur technologie de pointe garantissent une adhérence optimale, une maniabilité précise et un confort de conduite supérieur.
-Dotés d'une bande de roulement asymétrique, ces pneus assurent une excellente traction sur les routes sèches en maximisant la surface de contact avec la chaussée. De plus, ils sont équipés d'un mélange spécial de gomme qui offre une résistance à l'usure améliorée pour assurer une durabilité accrue.
-Les rainures larges et profondes présentes sur les flancs des pneus permettent d'évacuer efficacement l'eau et réduire le risque d'aquaplaning, ce qui améliore considérablement la sécurité lors des conditions météorologiques humides.
-La construction robuste des pneus kinergy 4s2 h750 205/55R16 94 H assure également un niveau élevé de stabilité à grande vitesse ainsi qu'une réponse rapide aux changements de direction. Cela permet au conducteur d'avoir un contrôle total du véhicule dans toutes les situations.
-Enfin, grâce à leur faible résistance au roulement, ces pneus contribuent à économiser du carburant en réduisant la consommation d'énergie du véhicule.
-En conclusion, les pneus HANKOOK kinergy 4s2 h750 205/55R16 94 H offrent des performances remarquables en termes d'adhérence, de maniabilité et de confort tout au long de l'année. Ils constituent un choix idéal pour ceux qui recherchent des performances fiables dans différentes conditions climatiques.
+              Les pneus HANKOOK kinergy 4s2 h750 205/55R16 94 H offrent une
+              performance exceptionnelle sur toutes les saisons. Leur conception
+              innovante et leur technologie de pointe garantissent une adhérence
+              optimale, une maniabilité précise et un confort de conduite
+              supérieur. Dotés d'une bande de roulement asymétrique, ces pneus
+              assurent une excellente traction sur les routes sèches en
+              maximisant la surface de contact avec la chaussée. De plus, ils
+              sont équipés d'un mélange spécial de gomme qui offre une
+              résistance à l'usure améliorée pour assurer une durabilité accrue.
+              Les rainures larges et profondes présentes sur les flancs des
+              pneus permettent d'évacuer efficacement l'eau et réduire le risque
+              d'aquaplaning, ce qui améliore considérablement la sécurité lors
+              des conditions météorologiques humides. La construction robuste
+              des pneus kinergy 4s2 h750 205/55R16 94 H assure également un
+              niveau élevé de stabilité à grande vitesse ainsi qu'une réponse
+              rapide aux changements de direction. Cela permet au conducteur
+              d'avoir un contrôle total du véhicule dans toutes les situations.
+              Enfin, grâce à leur faible résistance au roulement, ces pneus
+              contribuent à économiser du carburant en réduisant la consommation
+              d'énergie du véhicule. En conclusion, les pneus HANKOOK kinergy
+              4s2 h750 205/55R16 94 H offrent des performances remarquables en
+              termes d'adhérence, de maniabilité et de confort tout au long de
+              l'année. Ils constituent un choix idéal pour ceux qui recherchent
+              des performances fiables dans différentes conditions climatiques.
             </div>
           </div>
         </div>
       </div>
-    </section>
-
-    <section class="labeling-section">
-        <div class="labeling-card">
-  <h2 class="labeling-title">Etiquetage</h2>
-  <div class="labeling-grid">
-    <div class="labeling-item">
-      <div class="labeling-header">
-        <img src="../images/icons/fuel.svg" alt="" class="labeling-icon" />
-         <div class="arrow-label C">C</div>
-        <span class="labeling-label">Efficacité énergétique</span>
-      </div>
-      <p class="labeling-description">
-        La classe d’efficacité énergétique décrit la résistance au roulement : elle indique la part du pneu dans la consommation de carburant du véhicule ainsi que dans ses émissions de CO₂.
-      </p>
     </div>
 
-    <div class="labeling-item">
-      <div class="labeling-header">
-        <img src="../images/icons/rain.svg" alt="" class="labeling-icon" />
-         <div class="arrow-label B">B</div>
-        <span class="labeling-label">Adhérence sur sol mouillé :</span>
+    <div class="labeling-section">
+      <div class="labeling-card">
+        <h2 class="labeling-title">Etiquetage</h2>
+        <div class="labeling-grid">
+          <div class="labeling-item">
+            <div class="labeling-header">
+              <img
+                src="../images/icons/fuel.svg"
+                alt=""
+                class="labeling-icon"
+              />
+              <div class="arrow-label C">C</div>
+              <span class="labeling-label">Efficacité énergétique</span>
+            </div>
+            <p class="labeling-description">
+              La classe d’efficacité énergétique décrit la résistance au
+              roulement : elle indique la part du pneu dans la consommation de
+              carburant du véhicule ainsi que dans ses émissions de CO₂.
+            </p>
+          </div>
+
+          <div class="labeling-item">
+            <div class="labeling-header">
+              <img
+                src="../images/icons/rain.svg"
+                alt=""
+                class="labeling-icon"
+              />
+              <div class="arrow-label B">B</div>
+              <span class="labeling-label">Adhérence sur sol mouillé :</span>
+            </div>
+            <p class="labeling-description">
+              Le niveau d’adhérence sur sol mouillé indique la performance du
+              pneu sur sol mouillé. L’échelle signifie le comportement lors d’un
+              freinage sur sol mouillé. La différence entre la distance de
+              freinage la plus courte et la plus longue est de 18 mètres.
+            </p>
+          </div>
+
+          <div class="labeling-item">
+            <div class="labeling-header">
+              <img
+                src="../images/icons/speaker.svg"
+                alt=""
+                class="labeling-icon"
+              />
+              <div class="arrow-label">A</div>
+              <span class="labeling-label">Bruit de roulement : (70 db)</span>
+            </div>
+            <p class="labeling-description">
+              Il s’agit du bruit de roulement externe généré par le pneu, mesuré
+              en décibels. Les pneus à faible niveau sonore émettent un bruit
+              allant de 67 à 71 dB. Le niveau le plus élevé qualifie des ondes
+              sonores comprises entre 72 et 77 dB.
+            </p>
+          </div>
+        </div>
       </div>
-      <p class="labeling-description">
-        Le niveau d’adhérence sur sol mouillé indique la performance du pneu sur sol mouillé. L’échelle signifie le comportement lors d’un freinage sur sol mouillé. La différence entre la distance de freinage la plus courte et la plus longue est de 18 mètres.
-      </p>
     </div>
 
-    <div class="labeling-item">
-      <div class="labeling-header">
-        <img src="../images/icons/speaker.svg" alt="" class="labeling-icon" />
-         <div class="arrow-label">A</div>
-        <span class="labeling-label">Bruit de roulement : (70 db)</strong></span>
+    <div class="selected-products-section">
+      <h2 class="section-title">Sélection produits</h2>
+      <div class="selected-products-wrapper">
+        <div class="swiper selected-products-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide product-card">
+              <div class="product-info-image mx-auto">
+                <div class="brand-container text-center">
+                  <img src="../images/bridgestone.png" alt="Brand name" />
+                </div>
+                <div class="img-container">
+                  <img src="../images/tyre.png" alt="Product Image" />
+                </div>
+                <div class="quality premium">premium</div>
+              </div>
+              <h3 class="product-title">
+                205/55 R16 91V TL VENTUS PRIME4 K135
+              </h3>
+              <div class="icons">
+                <img src="../images/quatre-saisons.svg" alt="Snow" />
+                <img src="../images/icons/tourisme.svg" alt="Car" />
+              </div>
+              <a href="#" class="product-button">Consulter le produit</a>
+            </div>
+            <div class="swiper-slide product-card">
+              <div class="product-info-image mx-auto">
+                <div class="brand-container text-center">
+                  <img src="../images/bridgestone.png" alt="Brand name" />
+                </div>
+                <div class="img-container">
+                  <img src="../images/tyre.png" alt="Product Image" />
+                </div>
+                <div class="quality quality">quality</div>
+              </div>
+              <h3 class="product-title">
+                205/55 R16 91V TL VENTUS PRIME4 K135
+              </h3>
+              <div class="icons">
+                <img src="../images/quatre-saisons.svg" alt="Snow" />
+                <img src="../images/icons/tourisme.svg" alt="Car" />
+              </div>
+              <a href="#" class="product-button">Consulter le produit</a>
+            </div>
+
+            <div class="swiper-slide product-card">
+              <div class="product-info-image mx-auto">
+                <div class="brand-container text-center">
+                  <img src="../images/bridgestone.png" alt="Brand name" />
+                </div>
+                <div class="img-container">
+                  <img src="../images/tyre.png" alt="Product Image" />
+                </div>
+                <div class="quality budget">budget</div>
+              </div>
+              <h3 class="product-title">
+                205/55 R16 91V TL VENTUS PRIME4 K135
+              </h3>
+              <div class="icons">
+                <img src="../images/quatre-saisons.svg" alt="Snow" />
+                <img src="../images/icons/tourisme.svg" alt="Car" />
+              </div>
+              <a href="#" class="product-button">Consulter le produit</a>
+            </div>
+            <div class="swiper-slide product-card">
+              <div class="product-info-image mx-auto">
+                <div class="brand-container text-center">
+                  <img src="../images/bridgestone.png" alt="Brand name" />
+                </div>
+                <div class="img-container">
+                  <img src="../images/tyre.png" alt="Product Image" />
+                </div>
+                <div class="quality budgetPlus">budget +</div>
+              </div>
+              <h3 class="product-title">
+                205/55 R16 91V TL VENTUS PRIME4 K135
+              </h3>
+              <div class="icons">
+                <img src="../images/quatre-saisons.svg" alt="Snow" />
+                <img src="../images/icons/tourisme.svg" alt="Car" />
+              </div>
+              <a href="#" class="product-button">Consulter le produit</a>
+            </div>
+            <div class="swiper-slide product-card">
+              <div class="product-info-image mx-auto">
+                <div class="brand-container text-center">
+                  <img src="../images/bridgestone.png" alt="Brand name" />
+                </div>
+                <div class="img-container">
+                  <img src="../images/tyre.png" alt="Product Image" />
+                </div>
+                <div class="quality premium">premium</div>
+              </div>
+              <h3 class="product-title">
+                205/55 R16 91V TL VENTUS PRIME4 K135
+              </h3>
+              <div class="icons">
+                <img src="../images/quatre-saisons.svg" alt="Snow" />
+                <img src="../images/icons/tourisme.svg" alt="Car" />
+              </div>
+              <a href="#" class="product-button">Consulter le produit</a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-prev custom-prev testimonials">
+          <img src="../images/arrow-left-blue.svg" alt="Prev" />
+        </div>
+        <div class="swiper-button-next custom-next testimonials">
+          <img src="../images/arrow-left-blue.svg" alt="Next" />
+        </div>
       </div>
-      <p class="labeling-description">
-        Il s’agit du bruit de roulement externe généré par le pneu, mesuré en décibels. Les pneus à faible niveau sonore émettent un bruit allant de 67 à 71 dB. Le niveau le plus élevé qualifie des ondes sonores comprises entre 72 et 77 dB.
-      </p>
     </div>
-  </div>
-</div>
-
-
-    </section>
-
-    <section class="selected-products-section">
-  <h2 class="section-title">Sélection produits</h2>
-
-   <div class="selected-products-wrapper">
-    <div class="swiper selected-products-swiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide product-card">
-        <div class="product-info-image mx-auto">
-            <div class="brand-container text-center">
-              <img src="../images/bridgestone.png" alt="Brand name" />
-            </div>
-            <div class="img-container">
-              <img src="../images/tyre.png" alt="Product Image" />
-            </div>
-            <div class="quality premium">premium</div>
-          </div>
-        <h3 class="product-title">205/55 R16 91V TL VENTUS PRIME4 K135</h3>
-        <div class="icons">
-          <img src="../images/quatre-saisons.svg" alt="Snow" />
-          <img src="../images/icons/tourisme.svg" alt="Car" />
-        </div>
-        <a href="#" class="product-button">Consulter le produit</a>
-      </div>
- <div class="swiper-slide product-card">
-        <div class="product-info-image mx-auto">
-            <div class="brand-container text-center">
-              <img src="../images/bridgestone.png" alt="Brand name" />
-            </div>
-            <div class="img-container">
-              <img src="../images/tyre.png" alt="Product Image" />
-            </div>
-            <div class="quality quality">quality</div>
-          </div>
-        <h3 class="product-title">205/55 R16 91V TL VENTUS PRIME4 K135</h3>
-        <div class="icons">
-          <img src="../images/quatre-saisons.svg" alt="Snow" />
-          <img src="../images/icons/tourisme.svg" alt="Car" />
-        </div>
-        <a href="#" class="product-button">Consulter le produit</a>
-      </div>
-
-       <div class="swiper-slide product-card">
-        <div class="product-info-image mx-auto">
-            <div class="brand-container text-center">
-              <img src="../images/bridgestone.png" alt="Brand name" />
-            </div>
-            <div class="img-container">
-              <img src="../images/tyre.png" alt="Product Image" />
-            </div>
-            <div class="quality budget">budget</div>
-          </div>
-        <h3 class="product-title">205/55 R16 91V TL VENTUS PRIME4 K135</h3>
-        <div class="icons">
-          <img src="../images/quatre-saisons.svg" alt="Snow" />
-          <img src="../images/icons/tourisme.svg" alt="Car" />
-        </div>
-        <a href="#" class="product-button">Consulter le produit</a>
-      </div>
-       <div class="swiper-slide product-card">
-        <div class="product-info-image mx-auto">
-            <div class="brand-container text-center">
-              <img src="../images/bridgestone.png" alt="Brand name" />
-            </div>
-            <div class="img-container">
-              <img src="../images/tyre.png" alt="Product Image" />
-            </div>
-            <div class="quality budgetPlus">budget +</div>
-          </div>
-        <h3 class="product-title">205/55 R16 91V TL VENTUS PRIME4 K135</h3>
-        <div class="icons">
-          <img src="../images/quatre-saisons.svg" alt="Snow" />
-          <img src="../images/icons/tourisme.svg" alt="Car" />
-        </div>
-        <a href="#" class="product-button">Consulter le produit</a>
-      </div>
-   <div class="swiper-slide product-card">
-        <div class="product-info-image mx-auto">
-            <div class="brand-container text-center">
-              <img src="../images/bridgestone.png" alt="Brand name" />
-            </div>
-            <div class="img-container">
-              <img src="../images/tyre.png" alt="Product Image" />
-            </div>
-            <div class="quality premium">premium</div>
-          </div>
-        <h3 class="product-title">205/55 R16 91V TL VENTUS PRIME4 K135</h3>
-        <div class="icons">
-          <img src="../images/quatre-saisons.svg" alt="Snow" />
-          <img src="../images/icons/tourisme.svg" alt="Car" />
-        </div>
-        <a href="#" class="product-button">Consulter le produit</a>
-      </div>
-  
-    </div>
-
-     
-  </div>
-  <div class="swiper-button-prev custom-prev testimonials">
-                <img src="../images/arrow-left-blue.svg" alt="Prev" />
-            </div>
-            <div class="swiper-button-next custom-next testimonials">
-                <img src="../images/arrow-left-blue.svg" alt="Next" />
-            </div>
-   </div>
-  
-</section>
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
