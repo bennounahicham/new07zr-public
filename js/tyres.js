@@ -293,4 +293,43 @@ $(document).ready(function () {
   $('.mobile-filter-close').on('click', function () {
     $('.mobile-filter-panel').removeClass('active')
   })
+
+  const tyreSwiper = new Swiper('.tyre-swiper', {
+    loop: true,
+    slidesPerView: 2,
+    spaceBetween: 10,
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+      1024: {
+        slidesPerView: 5,
+        spaceBetween: 15,
+      },
+      1240: {
+        slidesPerView: 5,
+        spaceBetween: 15,
+      },
+      1280: {
+        slidesPerView: 6,
+      },
+    },
+    navigation: {
+      nextEl: '.custom-next',
+      prevEl: '.custom-prev',
+    },
+  })
+
+  function loadVideo(container) {
+    const video = document.createElement('video')
+    video.src = 'path/to/video.mp4'
+    video.controls = true
+    video.autoplay = true
+    video.playsInline = true
+    video.style.width = '100%'
+    video.style.borderRadius = '10px'
+
+    container.replaceWith(video)
+  }
 })

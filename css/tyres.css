@@ -1627,7 +1627,7 @@ html {
 
 .swiper-button-next.custom-next {
     right: -60px;
-    transform: rotate(180deg) translateY(-50%);
+    transform: translateY(-50%) rotate(180deg);
 }
 
 .swiper-button-prev.custom-prev img,
@@ -1640,6 +1640,192 @@ html {
 .swiper-button-prev:after,
 .swiper-button-next:after {
     content: '';
+}
+
+.brand-card-section {
+    width: 1240px;
+    height: 70px;
+    border-radius: 8px;
+    padding: 0 10px;
+    background-color: #FBFBFB;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 30px auto 0;
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    text-transform: uppercase;
+    color: #0A2463;
+}
+
+.brand-card-section .brand-container {
+    width: 250px;
+    height: 30px;
+    display: flex;
+}
+
+.brand-card-section .brand-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.tyre-slider-section {
+    padding: 0 0 30px;
+    text-align: center;
+}
+
+.tyre-slider-section .slider-title {
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    text-transform: uppercase;
+    color: #0A2463;
+    margin-bottom: 20px;
+}
+
+.tyre-slider-section .tyre-swiper-wrapper {
+    position: relative;
+    width: 1240px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.tyre-slider-section .tyre-swiper {
+    max-width: 1240px;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.tyre-slider-section .swiper-wrapper {
+    display: flex;
+}
+
+.tyre-swiper .swiper-slide {
+    background: #FBFBFB;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 190px;
+    width: 190px;
+    flex-shrink: 0;
+}
+
+.tyre-swiper .swiper-slide img {
+    height: 28px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 38px;
+}
+
+.tyre-swiper .swiper-slide p {
+    margin: 0;
+    color: #0A2463;
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+}
+
+.tyre-profile-section {
+    text-align: center;
+}
+
+.tyre-profile-section .section-subtitle {
+    font-size: 25px;
+    font-weight: 700;
+    color: #0a2463;
+    font-family: "Outfit", sans-serif;
+    margin-bottom: 15px;
+}
+
+.tyre-profile-section .profile-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 1240px;
+    margin: 0 auto 15px auto;
+}
+
+.tyre-profile-section .profile-grid ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    min-width: 155px;
+}
+
+.tyre-profile-section .profile-grid li {
+    font-family: "Outfit", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #0a2463;
+}
+
+.tyre-profile-section .see-more-btn {
+    background-color: #164FDA;
+    width: 312px;
+    height: 48px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+
+.video-section {
+    background-color: #e6e8ec;
+    padding: 20px 0 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.video-wrapper {
+    width: 1240px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.video-poster {
+    position: relative;
+    cursor: pointer;
+}
+
+.video-poster img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    background-color: transparent;
+}
+
+@media (min-width: 1280px) and (max-width: 1399px) {
+    .swiper-button-prev.custom-prev {
+        left: -20px;
+    }
+    .swiper-button-next.custom-next {
+        right: -20px;
+    }
 }
 
 @media (min-width: 1025px) and (max-width: 1279px) {
@@ -1714,7 +1900,7 @@ html {
         flex-wrap: wrap;
         row-gap: 20px;
     }
-    .w-194 {
+    .w-194.info {
         flex-direction: row;
         width: 100%;
     }
@@ -1751,6 +1937,22 @@ html {
     }
     .selected-products-section .product-card {
         max-width: 310px;
+    }
+    .brand-card-section {
+        width: 1000px;
+        font-size: 24px;
+    }
+    .tyre-slider-section .tyre-swiper-wrapper {
+        width: 960px;
+    }
+    .tyre-slider-section .tyre-swiper {
+        max-width: 960px;
+    }
+    .tyre-profile-section .profile-grid {
+        width: 980px;
+    }
+    .video-wrapper {
+        width: 980px;
     }
 }
 
@@ -2065,5 +2267,47 @@ html {
     .swiper-button-next.custom-next {
         right: -20px;
         transform: translateY(-50%) rotate(180deg);
+    }
+    .brand-card-section {
+        flex-direction: column;
+        gap: 10px;
+        height: auto;
+        padding: 10px;
+        width: 95%;
+        font-size: 20px;
+        text-align: center;
+    }
+    .tyre-slider-section .tyre-swiper-wrapper {
+        width: 95%;
+    }
+    .tyre-slider-section .tyre-swiper {
+        max-width: 95%;
+    }
+    .tyre-slider-section .swiper-button-prev.custom-prev {
+        left: -5px;
+    }
+    .tyre-slider-section .swiper-button-next.custom-next {
+        right: -5px;
+    }
+    .tyre-slider-section .slider-title {
+        font-size: 28px;
+        width: 95%;
+    }
+    .tyre-profile-section .secttion-title,
+    .tyre-profile-section .secttion-subtitle {
+        width: 95%;
+    }
+    .tyre-profile-section .profile-grid {
+        width: 85%;
+        row-gap: 15px;
+    }
+    .tyre-profile-section .profile-grid ul {
+        min-width: 100px;
+    }
+    .tyre-profile-section .see-more-btn {
+        width: 90%;
+    }
+    .video-wrapper {
+        width: 95%;
     }
 }
