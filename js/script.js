@@ -1151,21 +1151,65 @@ $(document).ready(function() {
         const $cards = $('#spareparts-categories .cat-cards .card');
 
         if (searchValue === '') {
+            // Afficher toutes les cartes et tous les éléments
             $cards.show();
+            $cards.find('.subcategory, .secsubcategorys a').show();
             return;
         }
 
         $cards.each(function() {
             const $card = $(this);
             const categoryName = $card.find('.card-header span').text().toLowerCase();
-            const subcategoriesText = $card.find('.subcategory .title').map(function() {
-                return $(this).text().toLowerCase();
-            }).get().join(' ');
+            let cardHasMatch = false;
 
-            const hasMatch = categoryName.includes(searchValue) ||
-                           subcategoriesText.includes(searchValue);
+            // Niveau 1 : Vérifier si le nom de la catégorie parente correspond
+            if (categoryName.includes(searchValue)) {
+                cardHasMatch = true;
+                // Afficher toutes les sous-catégories si la catégorie parente correspond
+                $card.find('.subcategory, .secsubcategorys a').show();
+            } else {
+                // Vérifier chaque sous-catégorie
+                $card.find('.subcategory').each(function() {
+                    const $subcategory = $(this);
+                    const subcategoryText = $subcategory.find('.title').clone().children().remove().end().text().toLowerCase().trim();
+                    let subcategoryHasMatch = false;
 
-            if (hasMatch) {
+                    // Niveau 2 : Vérifier si la sous-catégorie correspond
+                    if (subcategoryText.includes(searchValue)) {
+                        subcategoryHasMatch = true;
+                        cardHasMatch = true;
+                        $subcategory.show();
+                        // Afficher toutes les sous-sous-catégories si la sous-catégorie correspond
+                        $subcategory.find('.secsubcategorys a').show();
+                    } else {
+                        // Niveau 3 : Vérifier les sous-sous-catégories
+                        let hasMatchingSubSubcategory = false;
+
+                        $subcategory.find('.secsubcategorys a').each(function() {
+                            const $secSubcategory = $(this);
+                            const secSubcategoryText = $secSubcategory.text().toLowerCase().trim();
+
+                            if (secSubcategoryText.includes(searchValue)) {
+                                hasMatchingSubSubcategory = true;
+                                cardHasMatch = true;
+                                $secSubcategory.show();
+                            } else {
+                                $secSubcategory.hide();
+                            }
+                        });
+
+                        // Afficher la sous-catégorie seulement si elle a des sous-sous-catégories correspondantes
+                        if (hasMatchingSubSubcategory) {
+                            $subcategory.show();
+                        } else {
+                            $subcategory.hide();
+                        }
+                    }
+                });
+            }
+
+            // Afficher ou masquer la carte selon le résultat
+            if (cardHasMatch) {
                 $card.show();
             } else {
                 $card.hide();
