@@ -37,13 +37,12 @@ html {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding-top: 1.5%;
 }
 
 .hero-section .hero-text {
     color: #fff;
     font-family: 'Inter', sans-serif;
-    width: 1480px;
+    width: 1240px;
     margin: 0 auto;
 }
 
@@ -132,7 +131,7 @@ html {
 }
 
 .approved-section .approved-container {
-    max-width: 1400px;
+    max-width: 1240px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -148,7 +147,7 @@ html {
 }
 
 .approved-section .logo-container {
-    max-width: 1270px;
+    max-width: 1240px;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -212,7 +211,7 @@ html {
 }
 
 .services-section .service-card {
-    width: 340px;
+    width: 285px;
     background: transparent;
     cursor: pointer;
     transition: transform 0.3s ease;
@@ -223,7 +222,7 @@ html {
 }
 
 .services-section .video-container {
-    width: 340px;
+    width: 285px;
     height: 220px;
     border-radius: 10px;
     position: relative;
@@ -261,7 +260,7 @@ html {
     background: white;
     color: #0A2463;
     border-radius: 12px;
-    max-width: 1462px;
+    max-width: 1240px;
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -296,7 +295,7 @@ html {
 }
 
 .services-section .service-detail-content {
-    padding: 10px 80px 24px 24px;
+    padding: 5px 80px 24px 24px;
     flex: 2;
     text-align: left;
     color: #0A2463;
@@ -322,7 +321,7 @@ html {
 .services-section .service-detail-content p {
     font-family: Inter;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 120%;
 }
 
@@ -386,14 +385,14 @@ html {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 32px;
     margin-bottom: 60px;
 }
 
 .catalogue-section .catalogue-card {
     background: white;
     border-radius: 10px;
-    width: 472px;
+    width: 392px;
     border: 1px solid #E2E8F0;
     text-align: left;
     font-family: Roboto;
@@ -461,7 +460,7 @@ html {
 }
 
 .catalogue-section .catalogue-brands img {
-    height: 80px;
+    height: 70px;
     object-fit: contain;
 }
 
@@ -486,7 +485,7 @@ html {
 .catalogue-section .stats {
     display: flex;
     justify-content: space-between;
-    max-width: 1480px;
+    max-width: 1240px;
     margin: 0 auto;
     z-index: 2;
     position: relative;
@@ -537,7 +536,7 @@ html {
 .customer-service-section .service-swiper-wrapper,
 .testimonial-section .service-swiper-wrapper {
     position: relative;
-    width: 1480px;
+    width: 1240px;
     display: flex;
     justify-content: center;
     margin: 0 auto 60px;
@@ -545,7 +544,7 @@ html {
 
 .customer-service-section .service-swiper,
 .testimonial-section .testimonial-swiper {
-    max-width: 1480px;
+    max-width: 1240px;
     position: relative;
     margin: 0 auto;
 }
@@ -553,7 +552,7 @@ html {
 .customer-service-section .swiper-slide {
     border-radius: 16px;
     overflow: hidden;
-    width: 470px;
+    width: 392px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -561,7 +560,7 @@ html {
 }
 
 .customer-service-section .swiper-slide img {
-    max-width: 466px;
+    max-width: 388px;
     height: auto;
     border-radius: 10px;
     border: 4px solid white
@@ -583,8 +582,9 @@ html {
     font-size: 25px;
     line-height: 120%;
     text-align: justify;
-    max-width: 470px;
+    max-width: 392px;
     box-shadow: 0px 4px 34px 0px #8792C04D;
+    flex-grow: 1;
 }
 
 .customer-service-section .slide-text span {
@@ -626,7 +626,7 @@ html {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    max-width: 1480px;
+    max-width: 1240px;
     margin: 0 auto;
 }
 
@@ -634,7 +634,7 @@ html {
     background: #fff;
     border-radius: 24px;
     overflow: hidden;
-    width: 470px;
+    width: 392px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
@@ -650,7 +650,7 @@ html {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 266px;
+    width: 100%;
     height: 78px;
     transform: translate(-50%, -50%);
     z-index: 1;
@@ -724,12 +724,12 @@ html {
     justify-content: space-between;
     align-items: flex-start;
     margin: 0 auto 60px;
-    width: 1480px;
+    width: 1240px;
 }
 
 .pricing-section .pricing-left {
     flex: 1;
-    max-width: 400px;
+    max-width: 386px;
 }
 
 .pricing-section .pricing-left h2 {
@@ -750,7 +750,6 @@ html {
     letter-spacing: -0.5px;
     color: #0A2463;
     margin-bottom: 25px;
-    width: 390px;
 }
 
 .pricing-section .cta-button {
@@ -783,14 +782,10 @@ html {
     background: white;
     border: 1px solid #E2E8F0;
     border-radius: 10px;
-    padding: 24px 0 20px;
-    width: 300px;
+    padding: 24px 20px 20px;
+    width: 256px;
     box-shadow: 0px 4px 6px -1px #0000001A;
     position: relative;
-}
-
-.pricing-section .pricing-card.popular {
-    width: 350px;
 }
 
 .pricing-section .pricing-card .badge {
@@ -816,15 +811,14 @@ html {
     color: #0A2463;
     text-transform: uppercase;
     font-weight: 800;
-    font-size: 30px;
+    font-size: 25px;
     line-height: 36px;
-    margin-bottom: 12px;
-    padding-left: 35px;
-    padding-right: 35px;
+    margin: 0 auto 12px;
+    width: 200px
 }
 
 .pricing-section .pricing-card.popular h4 {
-    font-size: 41px;
+    font-size: 33px;
     margin-top: 20px;
 }
 
@@ -834,13 +828,12 @@ html {
     font-weight: 400;
     font-size: 15px;
     line-height: 120%;
-    margin-bottom: 30px;
-    padding-left: 35px;
-    padding-right: 35px;
+    margin: 0 auto 30px;
+    width: 200px;
 }
 
 .pricing-section .pricing-card.popular p {
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .pricing-section .price {
@@ -867,7 +860,7 @@ html {
 }
 
 .pricing-section .popular .price strong {
-    font-size: 39px;
+    font-size: 35px;
 }
 
 .pricing-section .price small {
@@ -877,7 +870,6 @@ html {
     line-height: 130%;
     letter-spacing: 0px;
     text-align: center;
-    margin-top: -5px;
     color: #0A2463;
 }
 
@@ -890,7 +882,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 268px;
+    width: 100%;
     height: 48px;
     gap: 18px;
     font-family: Inter;
@@ -898,11 +890,6 @@ html {
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.5px;
-    margin-left: 16px;
-}
-
-.pricing-section .popular .card-btn {
-    width: 318px;
 }
 
 .pricing-section .card-btn:hover {
@@ -912,6 +899,10 @@ html {
 
 .pricing-section .card-btn:hover img {
     filter: brightness(0) invert(1);
+}
+
+.pricing-section .club-banner {
+    max-width: 1240px;
 }
 
 
@@ -933,7 +924,7 @@ html {
 }
 
 .testimonial-section .testimonial-swiper {
-    max-width: 1480px;
+    max-width: 1240px;
     margin: 0 auto;
     position: relative;
 }
@@ -942,7 +933,7 @@ html {
     background: white;
     border-radius: 12px;
     padding: 30px;
-    width: 471px;
+    width: 392px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -1002,6 +993,14 @@ html {
     border-radius: 50%;
 }
 
+.swiper-button-prev.custom-prev.testimonials {
+    left: -50px;
+}
+
+.swiper-button-next.custom-next.testimonials {
+    right: -50px;
+}
+
 
 /* FAQ Section */
 
@@ -1046,160 +1045,12 @@ html {
     background-color: #e0e7ff;
 }
 
-@media (min-width: 1280px) and (max-width: 1599px) {
-    .hero-section .hero-text {
-        width: 1200px;
+@media (min-width: 1280px) and (max-width: 1399px) {
+    .swiper-button-prev.custom-prev.testimonials {
+        left: -15px;
     }
-    .hero-section .hero-text h1 {
-        font-size: 60px;
-    }
-    .hero-section .hero-text h1 span {
-        font-size: 28px;
-    }
-    .services-section .services-header h2 {
-        font-size: 38px;
-    }
-    .services-section .services-wrapper {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-    .services-section .services-grid {
-        gap: unset;
-        justify-content: space-between;
-    }
-    .services-section .service-card {
-        width: 275px;
-    }
-    .services-section .video-container {
-        width: 275px;
-        height: 180px;
-    }
-    .services-section .service-detail-content h3 {
-        font-size: 25px;
-        line-height: 30px;
-    }
-    .services-section .service-detail-content {
-        max-height: 180px;
-    }
-    .services-section .service-detail-content p {
-        -webkit-line-clamp: 5;
-        font-size: 20px;
-    }
-    .catalogue-section .catalogue-header h2 {
-        font-size: 38px;
-    }
-    .catalogue-section .catalogue-header p {
-        font-size: 18px;
-    }
-    .catalogue-section .catalogue-card {
-        width: 380px;
-    }
-    .catalogue-section .catalogue-brands img {
-        height: 68px;
-    }
-    .catalogue-section .stats {
-        max-width: 1200px;
-    }
-    .catalogue-section .catalogue-stats h2 {
-        font-size: 38px;
-    }
-    .customer-service-section .service-swiper-wrapper,
-    .testimonial-section .service-swiper-wrapper {
-        width: 1200px;
-    }
-    .customer-service-section .service-swiper,
-    .testimonial-section .testimonial-swiper {
-        max-width: 1200px;
-    }
-    .customer-service-section .swiper-slide img {
-        max-width: 375px;
-    }
-    .customer-service-section .customer-service-cards-videos {
-        max-width: 1200px;
-    }
-    .customer-service-section .video-card {
-        width: 375px;
-    }
-    .customer-service-section h2 {
-        font-size: 40px;
-    }
-    .customer-service-section .slide-text {
-        padding: 25px;
-        font-size: 20px;
-        max-width: unset;
-    }
-    .customer-service-section .video-card p {
-        font-size: 20px;
-    }
-    .pricing-section .pricing-content {
-        width: 1200px;
-    }
-    .pricing-section .pricing-left {
-        max-width: 300px;
-    }
-    .pricing-section .pricing-left h2 {
-        font-size: 48px;
-    }
-    .pricing-section .pricing-left p {
-        width: 100%;
-        font-size: 21px;
-    }
-    .pricing-section .pricing-cards {
-        gap: 15px;
-    }
-    .pricing-section .cta-button {
-        width: 300px;
-    }
-    .pricing-section .pricing-card {
-        width: 250px;
-        padding: 20px 15px;
-    }
-    .pricing-section .pricing-card h4,
-    .pricing-section .pricing-card p {
-        padding-left: unset;
-        padding-right: unset;
-    }
-    .pricing-section .pricing-card p {
-        margin-bottom: 20px;
-    }
-    .pricing-section .pricing-card h4 {
-        font-size: 25px;
-    }
-    .pricing-section .pricing-card.popular h4 {
-        font-size: 35px;
-        margin-top: 15px;
-    }
-    .pricing-section .price {
-        margin-bottom: 30px;
-    }
-    .pricing-section .pricing-card.popular {
-        width: 300px;
-    }
-    .pricing-section .card-btn {
-        width: 100%;
-        margin-left: unset;
-    }
-    .pricing-section .popular .card-btn {
-        width: 100%;
-    }
-    .pricing-section .club-banner {
-        max-width: 1200px;
-    }
-    .testimonial-section .testimonial-text {
-        font-size: 18px;
-    }
-    .testimonial-section .user-info strong {
-        font-size: 20px;
-        line-height: 25px;
-    }
-    .testimonial-section .location {
-        font-size: 16px;
-    }
-    .faq-header {
-        padding: 35px 20px;
-    }
-    .faq-header h2 {
-        font-size: 40px;
+    .swiper-button-next.custom-next.testimonials {
+        right: -15px;
     }
 }
 
@@ -1220,7 +1071,7 @@ html {
         font-size: 35px;
     }
     .services-section .services-wrapper {
-        max-width: 1000px;
+        max-width: 980px;
         margin: 0 auto;
     }
     .services-section .services-grid {
@@ -1278,11 +1129,11 @@ html {
     }
     .customer-service-section .service-swiper-wrapper,
     .testimonial-section .service-swiper-wrapper {
-        width: 1000px;
+        width: 980px;
     }
     .customer-service-section .service-swiper,
     .testimonial-section .testimonial-swiper {
-        max-width: 1000px;
+        max-width: 980px;
     }
     .customer-service-section .swiper-slide img {
         max-width: 310px;
@@ -1371,6 +1222,12 @@ html {
     .testimonial-section .user-logo {
         width: 80px;
         height: 80px;
+    }
+    .swiper-button-prev.custom-prev.testimonials {
+        left: -15px;
+    }
+    .swiper-button-next.custom-next.testimonials {
+        right: -15px;
     }
     .faq-header {
         padding: 35px 20px;
@@ -1476,6 +1333,12 @@ html {
     .customer-service-section .swiper-slide img {
         max-width: 100%;
     }
+    .swiper-button-prev.custom-prev.testimonials {
+        left: -15px;
+    }
+    .swiper-button-next.custom-next.testimonials {
+        right: -15px;
+    }
     .customer-service-section h2 {
         font-size: 35px;
         line-height: 110%;
@@ -1498,6 +1361,9 @@ html {
     }
     .pricing-section {
         padding: 45px 20px;
+    }
+    .pricing-section::before {
+        display: none;
     }
     .pricing-section .pricing-content {
         width: 95%;

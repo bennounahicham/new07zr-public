@@ -2002,7 +2002,7 @@ html {
     font-family: Outfit;
     font-weight: 700;
     font-size: 24px;
-    margin-bottom: -7px;
+    line-height: 115%;
     color: #0A2463;
 }
 
@@ -2011,6 +2011,7 @@ html {
     font-weight: 500;
     font-size: 20px;
     margin-bottom: 5px;
+    line-height: 115%;
     color: #0A2463
 }
 
@@ -2462,7 +2463,7 @@ html {
         width: 95%;
     }
     .key-benefits-card {
-        padding: 20px 30px;
+        padding: 20px;
     }
     .faq-section.info {
         width: 95%;
@@ -2541,5 +2542,12 @@ html {
     }
     .brand-section .section-subtitle {
         font-size: 24px;
+    }
+    .dimension-search {
+        padding: 20px;
+        max-width: 95%;
+    }
+    .tyre-list-section {
+        width: 95%;
     }
 }
