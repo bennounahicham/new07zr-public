@@ -859,6 +859,10 @@ html {
     text-transform: uppercase;
 }
 
+.product-card-desc img{
+    height: 24px;
+}
+
 .filter-by,
 .filter-by:hover,
 .filter-by:focus,
