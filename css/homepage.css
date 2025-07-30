@@ -307,6 +307,7 @@ html {
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 7;
+    line-clamp: 7;
     -webkit-box-orient: vertical;
 }
 
@@ -1085,6 +1086,7 @@ html {
     }
     .services-section .service-detail-content p {
         -webkit-line-clamp: 5;
+        line-clamp: 5;
         font-size: 20px;
     }
     .services-section .service-card p {
