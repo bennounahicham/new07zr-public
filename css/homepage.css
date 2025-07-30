@@ -1045,16 +1045,7 @@ html {
     background-color: #e0e7ff;
 }
 
-@media (min-width: 1280px) and (max-width: 1399px) {
-    .swiper-button-prev.custom-prev.testimonials {
-        left: -15px;
-    }
-    .swiper-button-next.custom-next.testimonials {
-        right: -15px;
-    }
-}
-
-@media (min-width: 1025px) and (max-width: 1279px) {
+@media (min-width: 1025px) and (max-width: 1366px) {
     .hero-section .hero-text {
         width: 1000px;
     }
@@ -1234,6 +1225,156 @@ html {
     }
     .faq-header h2 {
         font-size: 40px;
+    }
+}
+
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+    .hero-section .hero-text {
+        width: 700px;
+    }
+    .hero-section .hero-text h1 {
+        font-size: 50px;
+    }
+    .hero-section .hero-text h1 span {
+        font-size: 28px;
+    }
+    .hero-section .hero-text p {
+        font-size: 22px;
+        margin-bottom: 30px;
+        margin-top: 20px;
+    }
+    .approved-section .approved-container {
+        max-width: 700px;
+    }
+    .approved-section .approved-container {
+        max-width: 700px;
+    }
+    .services-section .services-grid {
+        padding: 0 40px;
+    }
+    .services-section .services-header h2 {
+        font-size: 35px;
+        padding: 0 20px;
+    }
+    .services-section .services-header h2 br {
+        display: none;
+    }
+    .catalogue-section .catalogue-header h2 {
+        font-size: 30px;
+    }
+    .catalogue-section .catalogue-header p {
+        line-height: 120%;
+    }
+    .catalogue-section .catalogue-cards {
+        justify-content: center;
+        padding: 0px 15px;
+        gap: 15px;
+    }
+    .catalogue-section .catalogue-card {
+        width: 230px;
+    }
+    .catalogue-section .catalogue-card .card-header {
+        padding: 15px;
+    }
+    .catalogue-section .catalogue-card h3 {
+        font-size: 20px !important;
+    }
+    .catalogue-section .catalogue-card ul {
+        padding: 5px 10px;
+        font-size: 16px;
+    }
+    .catalogue-section .catalogue-card li {
+        margin-bottom: 10px;
+    }
+    .catalogue-section .catalogue-brands {
+        gap: 15px;
+        height: 100px
+    }
+    .catalogue-section .catalogue-brands img {
+        height: 40px;
+    }
+    .catalogue-section .catalogue-stats h2 {
+        font-size: 35px;
+    }
+    .catalogue-section .stats {
+        max-width: 700px;
+    }
+    .catalogue-section .stat h3 {
+        font-size: 40px;
+    }
+    .catalogue-section .stat p {
+        font-size: 20px;
+    }
+    .customer-service-section h2 {
+        font-size: 35px;
+    }
+    .customer-service-section .service-swiper-wrapper,
+    .testimonial-section .service-swiper-wrapper {
+        width: 700px;
+    }
+    .customer-service-section .customer-service-cards-videos {
+        max-width: 700px;
+    }
+    .customer-service-section .video-card {
+        width: 220px;
+    }
+    .customer-service-section .video-wrapper {
+        height: 150px;
+    }
+    .customer-service-section .video-wrapper .play-button img {
+        width: 50px;
+        height: 50px;
+    }
+    .customer-service-section .video-card p {
+        padding: 10px;
+        font-size: 19px;
+    }
+    .pricing-section::before {
+        content: "";
+    }
+    .pricing-section .pricing-content {
+        width: 700px;
+        gap: 20px
+    }
+    .pricing-section .pricing-left {
+        max-width: 100%;
+    }
+    .pricing-section .pricing-cards {
+        align-items: unset;
+    }
+    .pricing-section .pricing-card {
+        flex-grow: 1;
+    }
+    .pricing-section .pricing-card.popular {
+        order: 0;
+        width: 100%;
+    }
+    .pricing-section .pricing-card:first-child {
+        order: 1;
+    }
+    .pricing-section .pricing-card:last-child {
+        order: 2;
+    }
+    .pricing-section .pricing-card p {
+        width: 100%;
+    }
+    .pricing-section .pricing-card {
+        width: 48%;
+    }
+    .pricing-section .club-banner {
+        max-width: 700px;
+    }
+    .swiper-button-prev.custom-prev.testimonials {
+        left: -15px;
+    }
+    .swiper-button-next.custom-next.testimonials {
+        right: -15px;
+    }
+    .faq-header {
+        padding: 30px 20px;
+    }
+    .faq-header h2 {
+        font-size: 35px;
     }
 }
 

@@ -109,14 +109,17 @@ $(document).ready(function () {
       prevEl: '.swiper-button-prev',
     },
     breakpoints: {
-      768: {
+      600: {
         slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
       },
       1024: {
         slidesPerView: 3,
         spaceBetween: 20,
       },
-      1024: {
+      1280: {
         slidesPerView: 3,
       },
     },
