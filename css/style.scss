@@ -4038,3 +4038,74 @@ svg {
 
 @import "./homepage.css";
 @import "./tyres.css";
+
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+
+    .pagination {
+        .page-item {
+            margin: 0 2px;
+
+            .page-link {
+                color: #0A2463;
+                background-color: transparent;
+                border: 1px solid #e4e5e8;
+                border-radius: 4px;
+                padding: 8px 12px;
+                font-family: var(--font-outfit);
+                font-size: 14px;
+                font-weight: 500;
+                text-decoration: none;
+                transition: all 0.3s ease;
+                margin: 0;
+
+                &:hover {
+                    background-color: #f8f9fa;
+                    border-color: #164FDA;
+                    color: #164FDA;
+                }
+
+                &:focus {
+                    box-shadow: 0 0 0 0.2rem rgba(22, 79, 218, 0.25);
+                    border-color: #164FDA;
+                }
+            }
+
+            &.active .page-link {
+                background-color: #164FDA;
+                border-color: #164FDA;
+                color: white;
+
+                &:hover {
+                    background-color: #0f3ec7;
+                    border-color: #0f3ec7;
+                }
+            }
+
+            &.disabled .page-link {
+                color: #6c757d;
+                pointer-events: none;
+                background-color: #fff;
+                border-color: #dee2e6;
+                opacity: 0.6;
+            }
+        }
+    }
+}
+
+// Responsive pagination
+@media only screen and (max-width: 600px) {
+    .pagination-container {
+        margin: 20px 0;
+
+        .pagination {
+            .page-item .page-link {
+                padding: 6px 8px;
+                font-size: 12px;
+            }
+        }
+    }
+}
