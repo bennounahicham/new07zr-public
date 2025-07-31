@@ -1,152 +1,100 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Pneus - Produit</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="../css/tyres.css" />
-  </head>
+</head>
 
-  <body>
+<body>
     <div class="tyre-search-bar">
-      <div class="container">
-        <div class="form-row">
-          <div class="column">
-            <label>Largeur</label>
-            <select
-              class="form-select select2"
-              name="width"
-              data-dropdown-class="custom-dropdown"
-            >
+        <div class="container">
+            <div class="form-row">
+                <div class="column">
+                    <label>Largeur</label>
+                    <select class="form-select select2" name="width" data-dropdown-class="custom-dropdown">
               <option>205</option>
               <option>215</option>
               <option>225</option>
             </select>
-          </div>
+                </div>
 
-          <div class="column">
-            <label>Hauteur</label>
-            <select
-              class="form-select select2"
-              name="height"
-              data-dropdown-class="custom-dropdown"
-            >
+                <div class="column">
+                    <label>Hauteur</label>
+                    <select class="form-select select2" name="height" data-dropdown-class="custom-dropdown">
               <option>55</option>
               <option>60</option>
               <option>65</option>
             </select>
-          </div>
+                </div>
 
-          <div class="column">
-            <label>Diamètre</label>
-            <select
-              class="form-select select2"
-              name="diameter"
-              data-dropdown-class="custom-dropdown"
-            >
+                <div class="column">
+                    <label>Diamètre</label>
+                    <select class="form-select select2" name="diameter" data-dropdown-class="custom-dropdown">
               <option>16</option>
               <option>17</option>
               <option>18</option>
             </select>
-          </div>
+                </div>
 
-          <div class="column load">
-            <label>Charge</label>
-            <select
-              class="form-select select2"
-              name="charge"
-              data-dropdown-class="custom-dropdown"
-            >
+                <div class="column load">
+                    <label>Charge</label>
+                    <select class="form-select select2" name="charge" data-dropdown-class="custom-dropdown">
               <option>84</option>
               <option>87</option>
               <option>88</option>
             </select>
-          </div>
-          <div class="column speed">
-            <label>Vitesse</label>
-            <select
-              class="form-select select2"
-              name="vitesse"
-              data-dropdown-class="custom-dropdown"
-            >
+                </div>
+                <div class="column speed">
+                    <label>Vitesse</label>
+                    <select class="form-select select2" name="vitesse" data-dropdown-class="custom-dropdown">
               <option>H</option>
               <option>P</option>
               <option>Q</option>
             </select>
-          </div>
-          <div class="column brands">
-            <select
-              class="form-select select2 brands"
-              name="brands"
-              data-dropdown-class="custom-dropdown-brands"
-              data-placeholder="Toutes les marques"
-            >
+                </div>
+                <div class="column brands">
+                    <select class="form-select select2 brands" name="brands" data-dropdown-class="custom-dropdown-brands" data-placeholder="Toutes les marques">
               <option></option>
               <option>Michelin</option>
               <option>Hankook</option>
               <option>Pirelli</option>
             </select>
-          </div>
-        </div>
+                </div>
+            </div>
 
-        <div class="form-row bottom-row">
-          <div class="season-row">
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value="Été"
-                id="Été"
-              />
-              <label class="form-check-label" for="Été">
+            <div class="form-row bottom-row">
+                <div class="season-row">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Été" id="Été" />
+                        <label class="form-check-label" for="Été">
                 <img src="../images/ete.svg" alt="Été" />
 
                 Été
               </label>
-            </div>
+                    </div>
 
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value="Hiver"
-                id="Hiver"
-              />
-              <label class="form-check-label" for="Hiver">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Hiver" id="Hiver" />
+                        <label class="form-check-label" for="Hiver">
                 <img src="../images/hiver.svg" alt="Hiver" /> Hiver
               </label>
-            </div>
+                    </div>
 
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value="4saisons "
-                id="4saisons"
-              />
-              <label class="form-check-label" for="4saisons ">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="4saisons " id="4saisons" />
+                        <label class="form-check-label" for="4saisons ">
                 <img src="../images/quatre-saisons.svg" alt="4 saisons" /> 4
                 saisons</label
               >
@@ -200,8 +148,16 @@
             <div class="brand-container text-center">
               <img src="../images/bridgestone.png" alt="Brand name" />
             </div>
-            <div class="img-container">
+            <div class="img-container position-relative">
               <img src="../images/tyre.png" alt="Product Image" />
+              <a
+                href="../images/tyre.png"
+                class="zoom-overlay"
+                id="zoomTrigger"
+                data-lightbox="product-gallery"
+              >
+                <img src="../images/icons/loupe.svg" alt="Zoom" />
+              </a>
             </div>
             <div class="quality premium">premium</div>
           </div>
@@ -703,7 +659,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/js/lightbox.min.js"></script>
     <script src="../js/tyres.js"></script>
   </body>
 </html>

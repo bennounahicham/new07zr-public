@@ -2272,6 +2272,10 @@ html {
     opacity: 1;
 }
 
+.img-container:hover .zoom-overlay {
+    opacity: 1;
+}
+
 .compatibility-container {
     background: #fff;
     padding: 20px 30px;
@@ -2333,7 +2337,7 @@ html {
 }
 
 .compatibility-container .model-list {
-    max-height: 210px;
+    max-height: 200px;
     overflow-y: auto;
     padding-right: 8px;
     display: flex;
@@ -2353,7 +2357,6 @@ html {
 .model-list::-webkit-scrollbar-track {
     background: #D9D9D9;
     border-radius: 10px;
-    /* Rounded corners on track */
 }
 
 .model {

@@ -431,4 +431,46 @@ $(document).ready(function() {
                 .replace('.png', '-large.png')
         }
     })
+
+    const modelData = {
+        citroen: [
+            'C4 I (LC_) - 1.6 HDi - 66 kw - 90 cv',
+            'C4 I (LC_) - 1.6 HDi - 80 kw - 109 cv',
+            'C4 II (NC_) - 1.2 THP 130 (NCHNYM, NCHNYT) - 96 kw - 130 cv',
+            'C4 I (LC_) - 1.6 HDi - 66 kw - 90 cv',
+            'C4 I (LC_) - 1.6 HDi - 80 kw - 109 cv',
+            'C4 II (NC_) - 1.2 THP 130 (NCHNYM, NCHNYT) - 96 kw - 130 cv',
+        ],
+        peugeot: [
+            '308 I - 1.6 HDi - 80 kw - 109 cv',
+            '308 II - 1.2 PureTech - 96 kw - 130 cv',
+            '208 I - 1.4 HDi - 50 kw - 68 cv',
+            '308 I - 1.6 HDi - 80 kw - 109 cv',
+            '308 II - 1.2 PureTech - 96 kw - 130 cv',
+            '208 I - 1.4 HDi - 50 kw - 68 cv',
+        ],
+    }
+    $('.compatibility-container').each(function() {
+        const $block = $(this)
+        const $buttons = $block.find('.brand-btn')
+        const $modelList = $block.find('.model-list')
+
+        $buttons.on('click', function() {
+            const brand = $(this).data('brand')
+
+            $buttons.removeClass('selected')
+            $(this).addClass('selected')
+
+            const models = modelData[brand] || []
+            $modelList.empty()
+
+            $.each(models, function(index, model) {
+                const highlight = index % 2 === 1 ? 'highlighted' : ''
+                $modelList.append(`<div class="model ${highlight}">${model}</div>`)
+            })
+        })
+
+        // Trigger initial load on first selected
+        $block.find('.brand-btn.selected').trigger('click')
+    })
 })
