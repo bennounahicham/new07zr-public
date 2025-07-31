@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Pièces Détachées - Recherche par référence</title>
+    <title>Pièces Détachées - Recherche par famille de pièces</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
@@ -22,7 +22,9 @@
         <img src="../images/chevron-right-small.svg" />
         <a href="">Pièces détachées</a>
         <img src="../images/chevron-right-small.svg" />
-        <span class="breadcrumb-current">Recherche</span>
+        <a href="">Filtration</a>
+        <img src="../images/chevron-right-small.svg" />
+        <span class="breadcrumb-current">Boitier filtre à huile</span>
     </div>
 
     <div class="results-container">
@@ -416,40 +418,32 @@
             </div>
         </div>
         <div class="product-list">
-            <div class="product-filter">
-                <div class="total-number">
-                    <strong>879</strong> article(s) trouvé(s) pour la référence :
-                    <strong>"3X55FT"</strong>
-                </div>
-                <div class="d-flex">
-                    <div class="dropdown">
-                        <button class="btn filter-by dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Trier par
-                <i class="fas fa-filter icon"></i>
-              </button>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a class="dropdown-item" href="#" onclick="handleSelect(event, 'price', 'Prix: Le moins cher')">
-                    Prix: Le moins cher
-                    <i
-                      class="fas fa-check check-icon"
-                      style="display: none"
-                    ></i>
-                  </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#" onclick="handleSelect(event, 'speed', 'Délai: Le plus rapide')">
-                    Délai: Le plus rapide
-                    <i
-                      class="fas fa-check check-icon"
-                      style="display: none"
-                    ></i>
-                  </a>
-                            </li>
-                        </ul>
+            <div class="filter-wrapper">
+                <h2>Boîtier filtre à huile :</h2>
+
+                <div class="filter-slider">
+                    <div class="swiper filter-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><button>Filtre à huile</button></div>
+                            <div class="swiper-slide"><button>Filtre à air</button></div>
+                            <div class="swiper-slide"><button>Kit de filtre</button></div>
+                            <div class="swiper-slide">
+                                <button>Se Filtre à carburant</button>
+                            </div>
+                            <div class="swiper-slide">
+                                <button>Filtre d’habitacle</button>
+                            </div>
+                            <div class="swiper-slide"><button>Filtre à huile</button></div>
+                            <div class="swiper-slide"><button>Filtre à air</button></div>
+                            <div class="swiper-slide"><button>Kit de filtre</button></div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next custom-next">
+                        <i class="fas fa-chevron-right"></i>
                     </div>
                 </div>
             </div>
+
             <div class="filter-list hidden">
                 <span class="title">Filtres de recherche :</span>
             </div>
@@ -982,6 +976,106 @@
         <nav id="pagination" class="pagination-container">
           <ul class="pagination justify-content-center"></ul>
         </nav>
+      </div>
+    </div>
+
+    <div class="faq-section info pb-5">
+      <div class="accordion" id="pneuAccordion">
+        <div class="accordion-item border-0">
+          <h2 class="accordion-header" id="headingOne">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              La performance des pneus MICHELIN - 205/55 R16 91H TL PRIMACY 4+
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse show"
+            aria-labelledby="headingOne"
+            data-bs-parent="#pneuAccordion"
+          >
+            <div class="accordion-body">
+              Les pneus HANKOOK kinergy 4s2 h750 205/55R16 94 H offrent une
+              performance exceptionnelle sur toutes les saisons. Leur conception
+              innovante et leur technologie de pointe garantissent une adhérence
+              optimale, une maniabilité précise et un confort de conduite
+              supérieur. Dotés d'une bande de roulement asymétrique, ces pneus
+              assurent une excellente traction sur les routes sèches en
+              maximisant la surface de contact avec la chaussée. De plus, ils
+              sont équipés d'un mélange spécial de gomme qui offre une
+              résistance à l'usure améliorée pour assurer une durabilité accrue.
+              Les rainures larges et profondes présentes sur les flancs des
+              pneus permettent d'évacuer efficacement l'eau et réduire le risque
+              d'aquaplaning, ce qui améliore considérablement la sécurité lors
+              des conditions météorologiques humides. La construction robuste
+              des pneus kinergy 4s2 h750 205/55R16 94 H assure également un
+              niveau élevé de stabilité à grande vitesse ainsi qu'une réponse
+              rapide aux changements de direction. Cela permet au conducteur
+              d'avoir un contrôle total du véhicule dans toutes les situations.
+              Enfin, grâce à leur faible résistance au roulement, ces pneus
+              contribuent à économiser du carburant en réduisant la consommation
+              d'énergie du véhicule. En conclusion, les pneus HANKOOK kinergy
+              4s2 h750 205/55R16 94 H offrent des performances remarquables en
+              termes d'adhérence, de maniabilité et de confort tout au long de
+              l'année. Ils constituent un choix idéal pour ceux qui recherchent
+              des performances fiables dans différentes conditions climatiques.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item border-0">
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              La performance des pneus MICHELIN - 205/55 R16 91H TL PRIMACY 4+
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#pneuAccordion"
+          >
+            <div class="accordion-body">
+              Les pneus HANKOOK kinergy 4s2 h750 205/55R16 94 H offrent une
+              performance exceptionnelle sur toutes les saisons. Leur conception
+              innovante et leur technologie de pointe garantissent une adhérence
+              optimale, une maniabilité précise et un confort de conduite
+              supérieur. Dotés d'une bande de roulement asymétrique, ces pneus
+              assurent une excellente traction sur les routes sèches en
+              maximisant la surface de contact avec la chaussée. De plus, ils
+              sont équipés d'un mélange spécial de gomme qui offre une
+              résistance à l'usure améliorée pour assurer une durabilité accrue.
+              Les rainures larges et profondes présentes sur les flancs des
+              pneus permettent d'évacuer efficacement l'eau et réduire le risque
+              d'aquaplaning, ce qui améliore considérablement la sécurité lors
+              des conditions météorologiques humides. La construction robuste
+              des pneus kinergy 4s2 h750 205/55R16 94 H assure également un
+              niveau élevé de stabilité à grande vitesse ainsi qu'une réponse
+              rapide aux changements de direction. Cela permet au conducteur
+              d'avoir un contrôle total du véhicule dans toutes les situations.
+              Enfin, grâce à leur faible résistance au roulement, ces pneus
+              contribuent à économiser du carburant en réduisant la consommation
+              d'énergie du véhicule. En conclusion, les pneus HANKOOK kinergy
+              4s2 h750 205/55R16 94 H offrent des performances remarquables en
+              termes d'adhérence, de maniabilité et de confort tout au long de
+              l'année. Ils constituent un choix idéal pour ceux qui recherchent
+              des performances fiables dans différentes conditions climatiques.
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
