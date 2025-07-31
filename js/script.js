@@ -1516,23 +1516,6 @@ $(document).ready(function () {
     }
   }
 
-  // Example usage:
-  $(function () {
-    const totalPages = 23
-    let currentPage = 1
-
-    renderPagination(currentPage, totalPages)
-
-    $('#pagination').on('click', '.page-link', function (e) {
-      e.preventDefault()
-      const page = parseInt($(this).data('page'))
-      if (!isNaN(page)) {
-        currentPage = page
-        renderPagination(currentPage, totalPages)
-        // Trigger actual page change logic here (e.g., load content)
-      }
-    })
-  })
 
   $('.mobile-filter-button').on('click', function () {
     $('.mobile-filter-panel').addClass('active')
