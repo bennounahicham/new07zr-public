@@ -391,4 +391,44 @@ $(document).ready(function() {
         slidesOffsetAfter: 60,
         watchOverflow: true,
     })
+
+    const thumbSwiper = new Swiper('.thumb-swiper', {
+        freeMode: true,
+        spaceBetween: 10,
+        slidesPerView: 3,
+        watchSlidesProgress: true,
+        navigation: {
+            nextEl: '.thumb-next',
+            prevEl: '.thumb-prev',
+        },
+    })
+
+    const mainSwiper = new Swiper('.main-swiper', {
+        spaceBetween: 10,
+        thumbs: {
+            swiper: thumbSwiper,
+        },
+        on: {
+            slideChange: function() {
+                const activeSlide = this.slides[this.activeIndex]
+                const activeImg = activeSlide.querySelector('img')
+                const zoomTrigger = document.getElementById('zoomTrigger')
+                if (zoomTrigger && activeImg) {
+                    zoomTrigger.href = activeImg.src
+                        .replace('.jpg', '-large.jpg')
+                        .replace('.png', '-large.png')
+                }
+            },
+        },
+    })
+
+    // Set initial zoom link
+    document.addEventListener('DOMContentLoaded', () => {
+        const firstImg = document.querySelector('.main-swiper .swiper-slide img')
+        if (firstImg) {
+            document.getElementById('zoomTrigger').href = firstImg.src
+                .replace('.jpg', '-large.jpg')
+                .replace('.png', '-large.png')
+        }
+    })
 })
