@@ -2375,6 +2375,399 @@ html {
     font-weight: 600;
 }
 
+.hero-section-static {
+    height: 318px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section-static.histoire {
+    background: url('../images/truck-bg.jpg') center 100%/cover no-repeat;
+}
+
+.hero-section-static.espace-fournisseurs {
+    background: url('../images/espace-frs.jpg') center 100%/cover no-repeat;
+}
+
+.hero-section-static h1 {
+    color: #fff;
+    letter-spacing: 1px;
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.intro-block {
+    padding: 20px 0px;
+}
+
+.intro-block .container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0
+}
+
+.intro-block h2 {
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 130%;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    color: #092A7C;
+}
+
+.intro-block p {
+    font-family: "Outfit", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 130%;
+    color: #0A2463;
+}
+
+.info-split {
+    background: linear-gradient(97.63deg, #0A2463 47.86%, #247BA0 100%);
+    position: relative
+}
+
+.split-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    margin: 0 auto;
+    align-items: center;
+    max-width: 1240px;
+    padding: 0;
+}
+
+.split-content .text-column {
+    width: 400px;
+    color: white;
+    padding: 45px 0 25px;
+}
+
+.split-content .text-column h3 {
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 130%;
+    margin-bottom: 30px;
+}
+
+.split-content .text-column p {
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 130%;
+    margin-bottom: 0
+}
+
+.split-content .text-column hr {
+    margin: 45px 0;
+    opacity: 1
+}
+
+.info-split .ipad-float {
+    position: absolute;
+    bottom: 0px;
+    right: 15px;
+    z-index: 1;
+}
+
+.supplier-section {
+    padding: 40px 0 20px;
+}
+
+.supplier-section .intro-text {
+    max-width: 1240px;
+    font-family: "Outfit", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 130%;
+    margin: 0 auto 30px;
+    color: #0A2463;
+}
+
+.supplier-section .supplier-content {
+    background: linear-gradient(97.63deg, #0A2463 47.86%, #247BA0 100%);
+    padding: 45px 0 100px;
+    position: relative
+}
+
+.supplier-section .supplier-content .img {
+    position: absolute;
+    bottom: 0;
+    right: -9%;
+    width: 590px;
+}
+
+.supplier-section .supplier-content .container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.supplier-section .supplier-content .container h2 {
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 130%;
+    color: white;
+    width: 394px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid white;
+    margin-bottom: 30px;
+}
+
+.supplier-section .supplier-cards {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.supplier-section .card {
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 15px;
+    border-radius: 4px;
+    width: 300px;
+    position: relative;
+    font-family: "Outfit", sans-serif;
+    color: white;
+}
+
+.supplier-section .card p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    margin: 0;
+}
+
+.supplier-section .card-header {
+    font-family: "Outfit", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 110%;
+    margin-bottom: 5px;
+    color: white;
+    padding: 0;
+    position: relative;
+    border-bottom: 0;
+}
+
+.supplier-section .card-tag {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top-right-radius: 4px;
+    border-top: 50px solid #FB3640;
+    /* triangle height and color */
+    border-left: 100px solid transparent;
+    /* triangle width */
+    z-index: 2;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 0;
+    padding: 0;
+}
+
+.card-tag-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 50px;
+    z-index: 2;
+}
+
+.card-tag-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 53px solid white;
+    border-left: 105px solid transparent;
+    border-top-right-radius: 4px;
+    z-index: 1;
+}
+
+.supplier-section .card-tag::after {
+    content: attr(data-tag);
+    position: absolute;
+    top: -45px;
+    right: 15px;
+    font-size: 14px;
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 130%;
+    z-index: 3;
+}
+
+.contact-section {
+    padding: 40px 0 20px;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 130%;
+    margin-bottom: 10px;
+    color: #0A2463;
+    width: 400px;
+    border-bottom: 1px solid #0A2463;
+    margin: 0 auto 15px;
+    padding-bottom: 15px;
+}
+
+.contact-section p {
+    font-family: "Outfit", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: #0A2463;
+}
+
+.contact-section .contact-form {
+    max-width: 960px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.contact-section .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 17px;
+    justify-content: center;
+}
+
+.contact-section .form-row input,
+.contact-form textarea,
+.contact-section .form-row select {
+    padding: 10px;
+    height: 48px;
+    border: 1px solid #0A2463;
+    background-color: transparent;
+    border-radius: 4px;
+    font-family: "Outfit", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 130%;
+    color: #0A2463
+}
+
+.contact-section .select2-container--default .select2-selection--single {
+    background-color: transparent;
+    border: 1px solid #0A2463;
+}
+
+.contact-section .form-row::placeholder,
+.contact-section .select2-container--default .select2-selection--single .select2-selection__placeholder {
+    color: #727690;
+    font-family: "Outfit", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.contact-section .form-row input,
+.contact-section .form-row select {
+    width: 245px;
+}
+
+.contact-section .form-row input.email {
+    width: 100%;
+}
+
+.contact-form textarea {
+    height: 176px;
+    width: 406px;
+    resize: vertical;
+}
+
+.contact-section .form-consent {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between
+}
+
+.contact-section .form-consent div {
+    width: 615px;
+    display: flex;
+}
+
+.contact-section .form-switch .form-check-input {
+    width: 60px;
+    height: 32px;
+    border-radius: 30px;
+}
+
+.contact-section .form-switch .form-check-input::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    border-radius: 30px;
+    height: 24px;
+    width: 24px;
+    background-color: white;
+    transition: transform 0.3s ease-in-out;
+}
+
+.contact-section .form-switch .form-check-input:checked::before {
+    transform: translateX(1.7rem);
+}
+
+.contact-section .form-switch .form-check-label {
+    font-family: "Outfit", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    color: #0A2463;
+    letter-spacing: 0;
+    text-align: left;
+}
+
+.contact-section .submit-btn {
+    position: relative;
+    background: #164FDA;
+    width: 312px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F2F2F4;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: Lato;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.contact-section .submit-btn i {
+    position: absolute;
+    right: 32px
+}
+
 @media (min-width: 1280px) and (max-width: 1399px) {
     .swiper-button-prev.custom-prev {
         left: -20px;
@@ -2524,6 +2917,41 @@ html {
     }
     .tyre-list-container .tyre-details {
         width: 400px;
+    }
+    .intro-block .container {
+        max-width: 980px;
+    }
+    .split-content {
+        max-width: 980px;
+    }
+    .info-split .ipad-float {
+        right: -13%;
+        width: 70%;
+    }
+    .supplier-section .intro-text {
+        max-width: 980px;
+    }
+    .supplier-section .supplier-content .container {
+        max-width: 980px;
+    }
+    .supplier-section .card {
+        width: 220px;
+    }
+    .card-tag-wrapper::before {
+        border-left: 74px solid transparent;
+    }
+    .supplier-section {
+        overflow: hidden;
+    }
+    .supplier-section .card-tag {
+        border-left: 70px solid transparent;
+    }
+    .supplier-section .card-header {
+        width: 85%;
+    }
+    .supplier-section .supplier-content .img {
+        right: -15%;
+        width: 530px;
     }
 }
 
@@ -2911,5 +3339,76 @@ html {
     }
     .tyre-list-container .tyre-cta {
         min-width: 100%;
+    }
+    .hero-section-static {
+        height: 200px;
+    }
+    .hero-section-static h1 {
+        font-size: 35px;
+    }
+    .intro-block .container {
+        max-width: 90%;
+    }
+    .info-split {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .split-content {
+        max-width: 90%;
+    }
+    .info-split .ipad-float {
+        position: relative;
+        right: 0;
+    }
+    .supplier-section .intro-text {
+        max-width: 90%;
+    }
+    .supplier-section .supplier-content {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 30px 0 0px;
+    }
+    .supplier-section .supplier-content .img {
+        right: 0;
+        width: 100%;
+        position: relative;
+    }
+    .supplier-section .supplier-content .container {
+        max-width: 90%;
+    }
+    .supplier-section .supplier-content .container h2 {
+        width: 100%;
+    }
+    .supplier-section .card {
+        width: 100%;
+    }
+    .contact-section {
+        padding: 20px 20px 80px;
+    }
+    .contact-section h2 {
+        width: 100%;
+    }
+    .contact-section .form-row {
+        gap: 15px;
+    }
+    .contact-section .form-row input,
+    .contact-section .form-row select {
+        width: 100% !important;
+    }
+    .contact-form textarea {
+        width: 100%;
+        max-width: 330px;
+        margin: 0 auto;
+    }
+    .contact-section .form-consent {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .contact-section .form-consent div {
+        width: 100%;
+        margin-top: 5px;
+    }
+    .contact-section .submit-btn {
+        width: 100%;
     }
 }

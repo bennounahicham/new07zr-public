@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Espace fournisseurs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="../css/tyres.css" />
+</head>
+
+<body>
+    <section class="hero-section-static espace-fournisseurs">
+        <h1>espace fournisseurs</h1>
+    </section>
+
+    <div class="breadcrumb">
+        <a href="">Accueil</a>
+        <img src="../images/chevron-right-small.svg" />
+        <span class="breadcrumb-current">Espace fournisseurs</span>
+    </div>
+
+    <section class="supplier-section">
+        <div class="supplier-header">
+            <p class="intro-text">
+                Vous êtes un grossiste, distributeur, fournisseur, importateur de pneus, pièces détachées, jantes ou chaînes ? Vous souhaiter présenter et vendre vos produits à plus de 32 000 spécialistes de l’après-vente automobile (garages, ateliers, carrosseries…)
+                présents dans 7 pays européens (France, Espagne, Italie, Allemagne, Autriche, Portugal et Pologne) ? Rejoignez 07ZR !
+            </p>
+        </div>
+
+        <div class="supplier-content">
+            <img src="../images/ipad-07zr.png" class="img" alt="Tablet showing 07ZR interface" />
+            <div class="container">
+                <h2>POURQUOI DEVENIR FOURNISSEUR DE 07ZR ?</h2>
+                <div class="supplier-cards">
+                    <div class="card">
+                        <div class="card-tag-wrapper">
+                            <div class="card-tag" data-tag="1"></div>
+                        </div>
+
+                        <div class="card-header">
+                            Votre One-stop shop <br />automobile
+                        </div>
+                        <p>
+                            Une plateforme unique pour vendre à plus de 12 000 clients professionnels en France et 32 000 dans 7 pays en Europe (garages et centres auto)
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-tag-wrapper">
+                            <div class="card-tag" data-tag="2"></div>
+                        </div>
+                        <div class="card-header">
+                            Croissance soutenue pour <br />le e-commerce
+                            <span class="tag">2</span>
+                        </div>
+                        <p>
+                            Aujourd’hui, les professionnels de l’aftermarket automobile réalisent 10% de leurs approvisionnements en ligne. Un chiffre en croissance constante depuis 10 ans !
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-tag-wrapper">
+                            <div class="card-tag" data-tag="3"></div>
+                        </div>
+                        <div class="card-header">
+                            Votre One-stop shop <br /> automobile <span class="tag">3</span>
+                        </div>
+                        <p>
+                            Publiez vos offres en toute liberté, avec les niveaux de prix et les délais de livraison que vous souhaitez afficher
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-section">
+        <h2>CONTACTEZ-NOUS !</h2>
+        <p>
+            Vous souhaitez vendre sur 07ZR.com ? Contactez-nous pour en discuter !
+        </p>
+
+        <form class="contact-form">
+            <div class="d-flex flex-column flex-md-row justify-content-between">
+                <div>
+                    <div class="form-row">
+                        <input type="text" placeholder="Raison sociale *" required />
+                        <input type="text" placeholder="Téléphone*" required />
+                    </div>
+                    <div class="form-row">
+                        <input class="email" type="email" placeholder="Email*" required />
+                    </div>
+                    <div class="form-row">
+                        <input type="text" placeholder="Nom & Prénom*" required />
+                        <select class="select2" id="supplierType" required>
+                <option value="">Fournisseur de .. *</option>
+                <option value="pneus">Pneus</option>
+                <option value="pieces">Pièces détachées</option>
+                <option value="jantes">Jantes</option>
+                <option value="chaines">Chaînes</option>
+              </select>
+                    </div>
+                </div>
+                <textarea placeholder="Votre message*" rows="4"></textarea>
+            </div>
+
+            <div class="form-consent">
+                <div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+                        <label class="form-check-label" for="flexSwitchCheckDefault">
+                En cochant cette case et en soumettant ce formulaire, j’accepte
+                que mes données personnelles soient utilisées pour me
+                recontacter dans le cadre de la demande indiquée.</label
+              >
+            </div>
+          </div>
+          <button type="submit" class="submit-btn">
+            envoyer
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.marquee@1.6.0/jquery.marquee.min.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="../js/tyres.js "></script>
+  </body>
+</html>

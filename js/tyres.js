@@ -473,4 +473,9 @@ $(document).ready(function() {
         // Trigger initial load on first selected
         $block.find('.brand-btn.selected').trigger('click')
     })
+
+    $('#supplierType').select2({
+        placeholder: 'Fournisseur de .. *',
+        minimumResultsForSearch: Infinity,
+    })
 })
