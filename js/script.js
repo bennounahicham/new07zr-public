@@ -1451,7 +1451,7 @@ $(document).ready(function () {
 	}
 
 	// Utility to update the filter pills display
-	function updateFilterList() {
+	function updateFilterList(refresh = true) {
 		const $filterList = $(".filter-list");
 		$filterList.find(".filter").remove();
 
@@ -1527,10 +1527,11 @@ $(document).ready(function () {
 
         let filterGroups = {};
 
-        updateResults(true);
+        if(refresh)
+            updateResults(true);
 	}
 
-    updateFilterList();
+    updateFilterList(false);
 
     function updateResults(include_filters = false, reload = false)
     {
