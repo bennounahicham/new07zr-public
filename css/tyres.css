@@ -2391,6 +2391,10 @@ html {
     background: url('../images/espace-frs.jpg') center 100%/cover no-repeat;
 }
 
+.hero-section-static.contact {
+    background: url('../images/contact.jpg') center 100%/cover no-repeat;
+}
+
 .hero-section-static h1 {
     color: #fff;
     letter-spacing: 1px;
@@ -2620,6 +2624,12 @@ html {
 .contact-section {
     padding: 40px 0 20px;
     text-align: center;
+    background: #EEEFF1;
+}
+
+.contact-section.contact {
+    margin-top: 30px;
+    padding: 40px 0
 }
 
 .contact-section h2 {
@@ -2633,6 +2643,21 @@ html {
     border-bottom: 1px solid #0A2463;
     margin: 0 auto 15px;
     padding-bottom: 15px;
+}
+
+.contact-section h2.contact-title {
+    width: unset;
+    border-bottom: 0;
+    padding-bottom: 0px;
+    margin-bottom: 20px;
+}
+
+.contact-section hr {
+    width: 400px;
+    margin: 0 auto;
+    opacity: 1;
+    color: #0A2463;
+    margin-bottom: 20px;
 }
 
 .contact-section p {
@@ -2766,6 +2791,77 @@ html {
 .contact-section .submit-btn i {
     position: absolute;
     right: 32px
+}
+
+.help-contact {
+    background: linear-gradient(97.63deg, #0A2463 47.86%, #247BA0 100%);
+    padding: 35px 0;
+}
+
+.help-contact .container {
+    max-width: 930px;
+    padding: 0;
+}
+
+.help-contact .support-icon {
+    width: 85px;
+    height: auto;
+}
+
+.help-contact .support-text {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.help-contact .icon-square {
+    width: 52px;
+    height: 42px;
+}
+
+.help-contact .text-red {
+    color: #FB3640;
+    margin-bottom: 3px;
+}
+
+.help-contact .text-red,
+.help-contact .text-white {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+}
+
+.help-contact .text-white-50 {
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 100%;
+    opacity: 1 !important;
+    margin-top: 4px;
+    display: block;
+    color: white !important
+}
+
+.help-contact .hours .text-red {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+}
+
+.help-contact .hours .text-white {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 100%;
+}
+
+.help-contact .help-underline {
+    height: 3px;
+    width: 52px;
+    background-color: #164FDA;
+    margin-top: 5px;
 }
 
 @media (min-width: 1280px) and (max-width: 1399px) {
