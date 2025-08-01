@@ -1619,10 +1619,12 @@ $(document).ready(function () {
             dataType: "html",
             success: function (data) {
                 $('#products_container').html(data);
+                updateFilterList(false);
                 $('#products_container').removeClass('loading');
             },
             error: function (xhr, status, error) {
                 console.error("Erreur lors de la récupération des résultats:", error);
+                updateFilterList(false);
                 $('#products_container').removeClass('loading');
             }
         });
@@ -1648,7 +1650,7 @@ $(document).ready(function () {
 		updateFilterList();
 	});
 
-	$(".filter-list").on("click", ".fa-xmark", function () {
+	$("#products_container").on("click", ".filter-list .fa-xmark", function () {
 		console.log(
 			"Filter pill clicked to remove:",
 			$(this).closest(".filter").data("label")
