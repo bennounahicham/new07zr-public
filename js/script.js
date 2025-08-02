@@ -1754,4 +1754,26 @@ $(function () {
 	$("button.toggle").click(function () {
 		$(this).toggleClass("active");
 	});
+
+    const swiper = new Swiper('.selected-products-swiper', {
+        loop: false,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        breakpoints: {
+            768: {
+                slidesPerView: 1,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 35,
+            },
+            1280: {
+                slidesPerView: 4,
+            },
+        },
+        navigation: {
+            nextEl: '.custom-next',
+            prevEl: '.custom-prev',
+        },
+    })
 });
