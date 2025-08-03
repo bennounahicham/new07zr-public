@@ -435,7 +435,7 @@ html {
 }
 
 .accordion-body {
-    font-family: Poppins;
+    font-family: Outfit;
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
@@ -447,7 +447,7 @@ html {
     background-color: transparent;
     border-radius: 0;
     box-shadow: none;
-    font-family: Poppins;
+    font-family: Outfit;
     font-weight: 600;
     font-size: 20px;
     line-height: 20px;
@@ -1450,7 +1450,7 @@ html {
 }
 
 .key-benefits-title {
-    font-family: Poppins;
+    font-family: Outfit;
     font-weight: 600;
     font-size: 20px;
     line-height: 26px;
@@ -1499,7 +1499,7 @@ html {
 }
 
 .faq-section.info .title {
-    font-family: Poppins;
+    font-family: Outfit;
     font-weight: 600;
     font-size: 20px;
     line-height: 26px;
@@ -1524,7 +1524,7 @@ html {
 }
 
 .labeling-title {
-    font-family: Poppins;
+    font-family: Outfit;
     font-weight: 600;
     font-size: 20px;
     line-height: 26px;
@@ -1562,7 +1562,7 @@ html {
 }
 
 .labeling-label {
-    font-family: Poppins;
+    font-family: Outfit;
     font-weight: 600;
     font-size: 16px;
     line-height: 22px;
@@ -1571,7 +1571,7 @@ html {
 
 .labeling-description {
     color: #2a3e52;
-    font-family: Poppins;
+    font-family: Outfit;
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
@@ -1686,7 +1686,7 @@ html {
 
 .swiper-button-next.custom-next {
     right: -60px;
-    transform: translateY(-50%) rotate(180deg);
+    transform: translateY(-50%) rotate(180deg) !important;
 }
 
 .swiper-button-prev.custom-prev img,
@@ -1909,7 +1909,7 @@ html {
 }
 
 .dimension-title {
-    font-family: "Poppins", sans-serif;
+    font-family: "Outfit", sans-serif;
     font-weight: 600;
     font-size: 20px;
     line-height: 26px;
@@ -2005,7 +2005,7 @@ html {
 }
 
 .tyre-list-container .tyre-profile-title {
-    font-family: "Poppins", sans-serif;
+    font-family: "Outfit", sans-serif;
     font-weight: 600;
     font-size: 20px;
     line-height: 26px;
@@ -2285,7 +2285,7 @@ html {
 }
 
 .compatibility-container h2 {
-    font-family: Poppins;
+    font-family: Outfit;
     font-weight: 600;
     font-size: 20px;
     line-height: 26px;
@@ -3688,6 +3688,7 @@ html {
     .contact-section .submit-btn {
         width: 100%;
     }
+<<<<<<< HEAD
     .contact-section.contact {
         max-width: 90%;
         margin: 30px auto;
@@ -3711,3 +3712,6 @@ html {
         height: 28px
     }
 }
+=======
+}
+>>>>>>> c9d611ef886ce4bc0d1d4b6e8dafe3290924f217
