@@ -478,4 +478,21 @@ $(document).ready(function() {
         placeholder: 'Fournisseur de .. *',
         minimumResultsForSearch: Infinity,
     })
+
+    new Swiper('.testimonials-swiper', {
+        slidesPerView: 2,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+        },
+    })
 })

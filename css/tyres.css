@@ -2395,6 +2395,23 @@ html {
     background: url('../images/contact.jpg') center 100%/cover no-repeat;
 }
 
+.hero-section-static.cgv {
+    background: url('../images/cgv.png') center 100%/cover no-repeat;
+}
+
+.hero-section-static.testimonials {
+    height: 451px;
+    background: url(../images/testimonials.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+.hero-section-static.testimonials .container {
+    max-width: 1240px;
+    padding: 0;
+}
+
 .hero-section-static h1 {
     color: #fff;
     letter-spacing: 1px;
@@ -2404,6 +2421,22 @@ html {
     line-height: 100%;
     text-align: center;
     text-transform: uppercase;
+}
+
+.hero-section-static.testimonials h1 {
+    font-weight: 900;
+    font-size: 35px;
+    text-align: left;
+}
+
+.hero-section-static.testimonials p {
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 115%;
+    color: white;
+    width: 498px;
+    margin-top: 15px;
 }
 
 .intro-block {
@@ -2862,6 +2895,154 @@ html {
     width: 52px;
     background-color: #164FDA;
     margin-top: 5px;
+}
+
+.cgv-section {
+    width: 1240px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.cgv-section h2 {
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 130%;
+    color: #0A2463;
+}
+
+.cgv-section h3 {
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 130%;
+    color: #0A2463;
+    margin: 20px 0;
+}
+
+.cgv-section p {
+    font-family: "Outfit", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 130%;
+    color: #0A2463;
+}
+
+.testimonials.breadcrumb {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.testimonials .col-lg-4 {
+    width: 40%;
+}
+
+.testimonials .col-lg-8 {
+    width: 60%;
+}
+
+.testimonial-slider-wrapper {
+    position: relative;
+    padding: 0 30px;
+}
+
+.testimonials .testimonial-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    height: 100%;
+    color: #00174f;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.testimonials .testimonial-card h5 {
+    font-family: Inter;
+    font-weight: 800;
+    font-size: 22px;
+    line-height: 36px;
+    color: #0A2463;
+}
+
+.testimonials .testimonial-card .text-primary {
+    font-family: Inter !important;
+    font-weight: 600 !important;
+    font-size: 18px !important;
+    line-height: 20px !important;
+    letter-spacing: -0.2px !important;
+    color: #0052B4 !important;
+}
+
+.testimonials .testimonial-card small {
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: -0.2px;
+    color: #677198;
+}
+
+.testimonials .testimonial-card p {
+    font-family: Inter !important;
+    font-weight: 400 !important;
+    font-size: 16px !important;
+    color: #0A2463 !important;
+    width: unset !important;
+}
+
+.testimonials .testimonial-card .stars {
+    font-size: 1.2rem;
+    color: #ffc107;
+}
+
+.testimonials .swiper-button-next,
+.testimonials .swiper-button-prev {
+    background: #164FDA;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    top: 60%;
+    transform: translateY(-50%);
+    color: white;
+    z-index: 10;
+}
+
+.swiper-button-next i,
+.swiper-button-prev i {
+    font-size: 16px;
+}
+
+.testimonials .swiper-button-prev {
+    left: -20px;
+}
+
+.testimonials .swiper-button-next {
+    right: -20px;
+}
+
+.avis-section {
+    width: 1240px;
+    margin: 0 auto;
+    padding: 40px 0
+}
+
+.avis-section h2 {
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #0A2463
+}
+
+.avis-section p.text {
+    font-family: "Outfit", sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 120%;
+    text-align: center;
+    color: #0A2463;
+    margin-bottom: 30px;
+    margin-top: 15px;
 }
 
 @media (min-width: 1280px) and (max-width: 1399px) {
@@ -3506,5 +3687,27 @@ html {
     }
     .contact-section .submit-btn {
         width: 100%;
+    }
+    .contact-section.contact {
+        max-width: 90%;
+        margin: 30px auto;
+        padding: 20px;
+    }
+    .contact-section hr {
+        width: 100%;
+    }
+    .contact-section .contact-form {
+        max-width: 100%;
+        padding-top: 10px;
+    }
+    .help-contact .container {
+        max-width: 90%;
+    }
+    .help-contact .support-icon {
+        width: 55px;
+    }
+    .help-contact .icon-square {
+        width: 35px;
+        height: 28px
     }
 }
