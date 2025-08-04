@@ -3053,14 +3053,14 @@ html {
     padding: 50px 20px;
 }
 
-.faq-header {
+.faq-wrapper .faq-header {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 30px;
 }
 
-.faq-header h2 {
+.faq-wrapper .faq-header h2 {
     color: #0A2463;
     font-family: Inter;
     font-weight: 900;
@@ -3070,11 +3070,11 @@ html {
     text-align: center;
 }
 
-.faq-header .highlight {
+.faq-wrapper .faq-header .highlight {
     color: #2563EB;
 }
 
-.faq-header .faq-toggle {
+.faq-wrapper .faq-header .faq-toggle {
     background-color: #F7F7FF;
     border: none;
     border-radius: 8px;
@@ -3089,11 +3089,11 @@ html {
     transition: background 0.3s ease;
 }
 
-.faq-header .faq-toggle:hover {
+.faq-wrapper .faq-header .faq-toggle:hover {
     background-color: #e0e7ff;
 }
 
-.faq-list {
+.faq-wrapper .faq-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(590px, 1fr));
     gap: 20px;
@@ -3101,7 +3101,7 @@ html {
     align-items: start;
 }
 
-.faq-item {
+.faq-wrapper .faq-item {
     background: white;
     border-radius: 16px;
     padding: 20px;
@@ -3111,7 +3111,7 @@ html {
     justify-content: space-between;
 }
 
-.faq-item .accordion-header button {
+.faq-wrapper .faq-item .accordion-header button {
     font-family: Inter;
     font-weight: 500;
     font-size: 22px;
@@ -3119,7 +3119,7 @@ html {
     color: #092A7C
 }
 
-.faq-item .accordion-body {
+.faq-wrapper .faq-item .accordion-body {
     font-family: Inter;
     font-weight: 400;
     font-size: 23px;
@@ -3127,21 +3127,80 @@ html {
     color: #092A7C
 }
 
-.faq-item .accordion-button:not(.collapsed)::after {
+.faq-wrapper .faq-item .accordion-button:not(.collapsed)::after {
     content: url(../images/icons/minus-square.svg);
     background-image: none;
 }
 
-.faq-item .accordion-button::after {
+.faq-wrapper .faq-item .accordion-button::after {
     width: 35px;
     height: 42px;
     margin-top: 0;
     margin-right: unset;
 }
 
-.faq-item .accordion-button::after {
+.faq-wrapper .faq-item .accordion-button::after {
     content: url(../images/icons/plus-square.svg);
     background-image: none;
+}
+
+.modal-dialog {
+    max-width: 900px;
+}
+
+.modal-content {
+    border-radius: 8px;
+}
+
+.modal-content h5 {
+    font-family: "Outfit", sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: #0A2463;
+    margin-top: 40px;
+    line-height: 120%;
+}
+
+.modal-content p {
+    font-family: "Outfit", sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 120%;
+    text-align: center;
+    color: #0A2463;
+    margin-top: 25px;
+}
+
+.modal-content a,
+.modal-content a:hover,
+.modal-content a:focus {
+    width: 191px;
+    height: 55px;
+    border: 0;
+    background-color: #0A2463;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0.5px;
+    margin: 0 auto;
+    border-radius: 4px
+}
+
+.modal-content a:last-child {
+    background-color: #164FDA
+}
+
+.modal-content .btn-close {
+    background: transparent url(../images/icons/close-btn-icon.svg) center / 1em auto no-repeat;
+    opacity: 1
 }
 
 @media (min-width: 1280px) and (max-width: 1399px) {
