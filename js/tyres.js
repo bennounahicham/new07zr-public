@@ -390,6 +390,21 @@ $(document).ready(function() {
         },
         slidesOffsetAfter: 60,
         watchOverflow: true,
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+                spaceBetween: 5,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            1025: {
+                spaceBetween: 10,
+            },
+            1280: {
+                spaceBetween: 20,
+            },
+        },
     })
 
     const thumbSwiper = new Swiper('.thumb-swiper', {
@@ -400,6 +415,14 @@ $(document).ready(function() {
         navigation: {
             nextEl: '.thumb-next',
             prevEl: '.thumb-prev',
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 2,
+            },
+            768: {
+                slidesPerView: 3,
+            },
         },
     })
 

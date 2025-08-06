@@ -2172,7 +2172,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: none;
+    transform: none !important;
 }
 
 .filter-wrapper .custom-next i {
@@ -3429,6 +3429,21 @@ html {
         grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
         gap: 15px;
     }
+    .specs.search {
+        width: 95%;
+    }
+    .filter-swiper {
+        width: 486px;
+    }
+    .filter-wrapper .swiper-button-next.custom-next {
+        right: 0;
+    }
+    .compatibility-container {
+        max-width: 980px;
+    }
+    .cgv-section {
+        width: 980px;
+    }
 }
 
 @media (max-width: 767px) {
@@ -3946,5 +3961,71 @@ html {
     }
     .faq-list {
         grid-template-columns: 1fr;
+    }
+    .cgv-section {
+        width: 90%;
+    }
+    .faq-wrapper .faq-header h2 {
+        font-size: 29px;
+    }
+    .faq-wrapper .faq-list {
+        grid-template-columns: 1fr;
+    }
+    .faq-wrapper .faq-item .accordion-header button {
+        font-size: 18px;
+        line-height: 21px;
+    }
+    .faq-wrapper .faq-item .accordion-body {
+        font-size: 16px;
+    }
+    .faq-wrapper .faq-item {
+        padding: 10px;
+    }
+    .thumb-swiper-wrapper .custom-arrow {
+        width: 15px;
+        height: 15px;
+    }
+    .thumb-swiper-wrapper .custom-arrow i {
+        font-size: 10px;
+    }
+    .thumb-swiper-wrapper {
+        padding: 0 20px;
+    }
+    .compatibility-container {
+        max-width: 90%;
+    }
+    .filter-wrapper {
+        flex-direction: column;
+        align-items: start;
+        gap: 10px
+    }
+    .filter-swiper {
+        width: unset;
+    }
+    .filter-swiper .swiper-wrapper {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .filter-wrapper .custom-next {
+        display: none;
+    }
+    .product-list .equivalent {
+        display: inline-block;
+        font-size: 15px;
+        height: auto;
+        padding: 10px;
+    }
+    .product-list .equivalent img {
+        transform: scale(.5);
+    }
+    .filter-by,
+    .filter-by:hover,
+    .filter-by:focus,
+    .btn-check:checked+.btn,
+    .btn.active,
+    .btn.show,
+    .btn:first-child:active,
+     :not(.btn-check)+.btn:active {
+        width: 120px;
     }
 }
