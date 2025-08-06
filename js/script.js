@@ -1558,8 +1558,13 @@ $(document).ready(function () {
         if(include_filters)
         {
             if($('.filter-bar').length) {
-                if(!baseSearchUrl) {
+                if($('.filter-bar').data("action") != '')
+                {
                     baseSearchUrl = $('.filter-bar').data("action");
+                }
+
+                if(!baseSearchUrl) {
+                    return;
                 }
                 $('.filter-bar')
                     .find("input[type='text'], input[type='checkbox']:checked, select, button.active")
@@ -1589,7 +1594,11 @@ $(document).ready(function () {
 			filters.push([name, values].join("-"));
 		});
 
-        let finalUrl = baseSearchUrl.replace(/\/$/, ""); // Enlever le slash final
+        let finalUrl = baseSearchUrl+"/"; // Enlever le slash final
+
+        if (finalUrl.endsWith("-/")) {
+            finalUrl = finalUrl.slice(0, -1);
+        }
 
 		if (filters.length > 0) {
 			finalUrl += filters.join("/");
@@ -1597,6 +1606,7 @@ $(document).ready(function () {
 			// redirect to parent URL if no filters
             finalUrl = finalUrl.replace(/\/[^/]+$/, "");
 		}
+
 
 		if(reload)
         {
