@@ -1785,5 +1785,32 @@ $(function () {
             nextEl: '.custom-next',
             prevEl: '.custom-prev',
         },
-    })
+    });
+
+    const tyreSwiper = new Swiper('.tyre-swiper', {
+        loop: true,
+        slidesPerView: 2,
+        spaceBetween: 10,
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+            },
+            1024: {
+                slidesPerView: 5,
+                spaceBetween: 15,
+            },
+            1240: {
+                slidesPerView: 5,
+                spaceBetween: 15,
+            },
+            1280: {
+                slidesPerView: 6,
+            },
+        },
+        navigation: {
+            nextEl: '.custom-next',
+            prevEl: '.custom-prev',
+        },
+    });
 });
