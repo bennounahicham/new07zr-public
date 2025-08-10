@@ -472,8 +472,9 @@ html {
 .accordion-button:not(.collapsed)::after {
     content: url('../images/minus-sign.svg');
     background-image: none;
-    margin-right: -20px;
-    margin-top: 15px;
+    /* margin-right: -20px;
+    margin-top: 15px; */
+    transform: none!important;
 }
 
 .breadcrumb {
