@@ -1264,21 +1264,27 @@ svg {
 
 .catalogue-section {
     background: #F1F5F9;
-    padding: 60px 0 30px;
+    padding: 10px 0 2px;
     text-align: center;
     position: relative;
-    &::before {
-        content: url('../images/ornament-left.svg');
-        position: absolute;
-        bottom: 0;
-        left: 0;
+    &.mt-catalque{
+        padding-top: 60px;
     }
-    &::after {
-        content: url('../images/ornament-right.png');
-        position: absolute;
-        bottom: 15px;
-        right: 10px;
+    &.catalog-after{
+        &::before {
+            content: url('../images/ornament-left.svg');
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        &::after {
+            content: url('../images/ornament-right.png');
+            position: absolute;
+            bottom: 15px;
+            right: 10px;
+        }
     }
+
     .catalogue-header {
         h2 {
             color: $color-dark-blue;
