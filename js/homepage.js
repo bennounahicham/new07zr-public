@@ -75,10 +75,11 @@ $(document).ready(function () {
   }
 
   $('.services-section:not(.no-js) .service-card').on('click', function () {
-    const key = $(this).data('service')
-    const label = $(this).find('p').text()
-    const videoSrc = serviceVideos[key]
-    const content = serviceContent[key]
+    const key = $(this).data('service');
+    const label = $(this).find('p').text();
+    const videoSrc = $(this).find('source').attr('src');
+    const title = $(this).find('h3').text();
+    const description = $(this).find('span').text();
 
     // Update video source dynamically
     $('#service-detail video source').attr('src', videoSrc)
@@ -86,8 +87,8 @@ $(document).ready(function () {
 
     // Update label and text
     $('#detail-label').text(label)
-    $('.service-detail-content h3').html(content.title)
-    $('.service-detail-content p').html(content.text)
+    $('.service-detail-content h3').text(title);
+    $('.service-detail-content p').text(description);
 
     // Toggle visibility
     $('.services-grid').addClass('hidden')
