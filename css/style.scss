@@ -1331,6 +1331,10 @@ svg {
             padding: 13px 20px;
             border-radius: 10px 10px 0 0;
             margin-bottom: 15px;
+            img{
+                max-width: 60px;
+                max-height: 45px;
+            }
         }
         h3 {
             font-family: $font-roboto;
