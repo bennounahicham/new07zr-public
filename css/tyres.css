@@ -1687,7 +1687,7 @@ html {
 
 .swiper-button-next.custom-next {
     right: -60px;
-    transform: translateY(-50%) rotate(180deg) !important;
+    /* transform: translateY(-50%) rotate(180deg) !important; */
 }
 
 .swiper-button-prev.custom-prev img,
