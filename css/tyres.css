@@ -1651,6 +1651,10 @@ html {
     display: flex;
     gap: 10px;
     margin-bottom: 20px;
+
+    img{
+        max-height: 20px;
+    }
 }
 
 .selected-products-section .product-button {
