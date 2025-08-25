@@ -373,6 +373,12 @@ html {
     transition: transform 0.2s ease;
 }
 
+@media (max-width: 600px) {
+    .brand-card {
+        width: unset;
+    }
+}
+
 .brand-card:hover {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
@@ -1887,6 +1893,12 @@ html {
     padding-top: 30px;
 }
 
+@media (max-width: 768px) {
+    .brand-section {
+        padding: 30px 15px 0;
+    }
+}
+
 .brand-section .section-subtitle {
     font-family: "Outfit", sans-serif;
     font-weight: 700;
@@ -3322,7 +3334,7 @@ html {
     }
     .swiper-button-next.custom-next {
         right: -20px;
-        transform: translateY(-50%) rotate(180deg);
+        /* transform: translateY(-50%) rotate(180deg); */
     }
     .selected-products-section .product-card {
         max-width: 310px;
@@ -3509,7 +3521,7 @@ html {
         line-height: 110%;
     }
     .category-search {
-        padding: 35px 0px;
+        padding: 35px 10px;
     }
     .category-search .container {
         max-width: 100%;
@@ -3534,7 +3546,7 @@ html {
         margin-bottom: 20px;
     }
     .brand-grid {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
         max-width: 100%;
     }
     .faq-section {
@@ -3545,9 +3557,9 @@ html {
         max-width: 100%;
         padding: 10px;
     }
-    .accordion-button:not(.collapsed)::after {
+    /* .accordion-button:not(.collapsed)::after {
         margin-right: -17px;
-    }
+    } */
     .results-container {
         width: 95%;
         display: block;
@@ -3761,7 +3773,7 @@ html {
     }
     .swiper-button-next.custom-next {
         right: -20px;
-        transform: translateY(-50%) rotate(180deg);
+        /* transform: translateY(-50%) rotate(180deg); */
     }
     .brand-card-section {
         flex-direction: column;
