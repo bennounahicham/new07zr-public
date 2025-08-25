@@ -80,13 +80,14 @@ $(document).ready(function () {
     const videoSrc = $(this).find('source').attr('src');
     const title = $(this).find('h3').text();
     const description = $(this).find('span').text();
+    const title_first = $(this).find('h5').text();
 
     // Update video source dynamically
     $('#service-detail video source').attr('src', videoSrc)
     $('#service-detail video')[0].load()
 
     // Update label and text
-    $('#detail-label').text(label)
+    $('#detail-label').text(title_first)
     $('.service-detail-content h3').text(title);
     $('.service-detail-content p').text(description);
 

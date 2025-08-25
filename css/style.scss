@@ -1519,6 +1519,10 @@ svg {
                     object-fit: contain;
                 }
             }
+            a{
+                list-style: none;
+                color: $color-dark-blue;
+            }
         }
     }
 

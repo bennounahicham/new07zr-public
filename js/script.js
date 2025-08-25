@@ -1177,6 +1177,10 @@ if (
 	});
 }
 
+$(window).bind("popstate", function () {
+    window.location = location.href;
+});
+
 // ===== DROPDOWN LANGUE HEADER =====
 $(function () {
 	var $langSelector = $(".language-selector");
@@ -1622,7 +1626,6 @@ $(document).ready(function () {
         {
             window.history.pushState({}, "", finalUrl);
             getResults(finalUrl);
-            // Update pagination URLs
         }
     }
 
@@ -1637,6 +1640,16 @@ $(document).ready(function () {
                 $('#products_container').html(data);
                 updateFilterList(false);
                 $('#products_container').removeClass('loading');
+
+                if($(".tecdoc_data").length)
+                {
+                    $(".tecdoc_data").each(function() {
+                        const $this = $(this);
+                        const result = $this.data("result");
+
+                        gettecDoc(result.tdRefrence, result.searchRef, result.tdBrandId, result.tdlang, result.id);
+                    });
+                }
             },
             error: function (xhr, status, error) {
                 console.error("Erreur lors de la récupération des résultats:", error);
@@ -1820,3 +1833,47 @@ $(function () {
         },
     });
 });
+
+function gettecDoc(tdRefrence, searchRef, tdBrandId, tdlang, product_id)
+{
+    if(tdRefrence != "")
+    {
+        // Get CSRF token from meta
+        const csrfToken = $('meta[name="csrf-token"]').attr('content');
+
+        $.post({
+            url: "/data",
+            data: {
+            brand: tdBrandId,
+            num: tdRefrence,
+            lang: tdlang,
+            searchRef: searchRef,
+            _token: csrfToken
+            },
+            success: function (result) {
+            if(result.success)
+                {
+                    let image = "/assets/images/default_piece.webp";
+                    if(typeof(result.response.Pictures) != "undefined")
+                    image = result.response.Pictures[0].Base64;
+
+                    let brand = "";
+                    if(typeof(result.response.LogoBrand) != "undefined")
+                    brand = result.response.LogoBrand[0].Base64;
+                    $("#product_" + product_id + " .img-container img").attr("src", image);
+                    $("#product_" + product_id + " .brand-container img").attr("src", brand);
+
+                    $.each(result.response.Attributs, function (key, val) {
+                        $("#product_" + product_id + " .techdoc").append(`<div class="row"><strong>${val.Attribute}&nbsp;</strong>${val.Value}</div>`);
+                    });
+
+                    if ($("#detailsItem" + product_id).html() != "")
+                        $("#detailsItem" + product_id)
+                            .closest(".product-item")
+                            .find(".link-more")
+                            .removeClass('d-none');
+                }
+            },
+        });
+    }
+}
