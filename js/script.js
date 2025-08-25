@@ -1,4 +1,46 @@
 $(document).ready(function () {
+
+	// ===== ANIMATION NUMBERS IN STATS SHOWCASE =====
+	function animateStatsNumbers() {
+		$('.catalogue-stats .stat h3').each(function () {
+			var $this = $(this);
+			var finalText = $this.text().trim();
+			var numberMatch = finalText.match(/[\d,.]+/g);
+			if (!numberMatch) return;
+			var numberStr = numberMatch[0];
+			var prefix = finalText.replace(numberStr, '').replace(/[\d,.]/g, '');
+			var suffix = finalText.slice(finalText.indexOf(numberStr) + numberStr.length);
+			var isPercent = finalText.includes('%');
+			var isK = /[kK]/.test(suffix);
+			var isPlus = finalText.trim().startsWith('+');
+			var isH = /[hH]/.test(suffix);
+			var cleanNumber = parseFloat(numberStr.replace(/[^\d.]/g, ''));
+			if (isNaN(cleanNumber)) return;
+			var duration = 1200;
+			$({ countNum: 0 }).animate({ countNum: cleanNumber }, {
+				duration: duration,
+				easing: 'swing',
+				step: function () {
+					var val = this.countNum;
+					var display = Math.floor(val);
+					if (numberStr.indexOf('.') !== -1) display = val.toFixed(1);
+					var out = '';
+					if (isPlus) out += '+';
+					out += display;
+					if (isK) out += 'K';
+					if (isPercent) out += '%';
+					if (isH) out += 'H';
+					$this.text(out);
+				},
+				complete: function () {
+					$this.text(finalText);
+				}
+			});
+		});
+	}
+	if ($('.catalogue-stats .stat h3').length) {
+		animateStatsNumbers();
+	}
 	// Configuration des endpoints (à adapter selon votre API)
 	const ENDPOINTS = {
 		width: "/api/tyre-widths.json",
