@@ -1365,7 +1365,7 @@ svg {
             margin-bottom: 5px;
 
             @media (max-width: 768px) {
-                line-height: 120% ;
+                line-height: 120%;
             }
         }
     }
@@ -1458,6 +1458,10 @@ svg {
         flex-wrap: wrap;
         gap: 32px;
         margin-bottom: 60px;
+
+        @media (max-width: 600px) {
+            margin-bottom: 25px;
+        }
     }
 
     .catalogue-card {
@@ -1520,7 +1524,8 @@ svg {
                     object-fit: contain;
                 }
             }
-            a{
+
+            a {
                 list-style: none;
                 color: $color-dark-blue;
             }
@@ -1535,6 +1540,8 @@ svg {
         gap: 45px;
         flex-wrap: wrap;
         margin-bottom: 30px;
+
+
 
         img {
             height: 70px;
@@ -2944,7 +2951,7 @@ svg {
     }
 
     .catalogue-section {
-        padding: 30px 0px;
+        padding: 20px 0px;
 
         .catalogue-cards {
             padding: 0 20px;
@@ -3031,15 +3038,25 @@ svg {
     }
 
     .testimonial-section {
+        padding: 50px 20px;
+
+        @media (max-width: 600px) {
+            padding: 20px 20px;
+        }
+
+
         .service-swiper-wrapper {
             width: 95%;
+
+            @media (max-width: 600px) {
+                margin-bottom: 20px;
+            }
         }
 
         .testimonial-swiper {
             max-width: 95%;
         }
 
-        padding: 50px 20px;
     }
 
     .swiper-button-prev.custom-prev.testimonials {
@@ -6155,3 +6172,25 @@ svg {
 }
 
 // ...existing code...
+
+
+// Responsive Pagination Styles
+@media (max-width: 767px) {
+    #pagination {
+        .pagination {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            row-gap: 7px;
+        }
+    }
+
+
+    .product-card {
+        .icons img{
+            max-height: 24px;
+        }
+    }
+}
+
+

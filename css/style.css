@@ -1277,6 +1277,11 @@ svg {
   gap: 32px;
   margin-bottom: 60px;
 }
+@media (max-width: 600px) {
+  .catalogue-section .catalogue-cards {
+    margin-bottom: 25px;
+  }
+}
 .catalogue-section .catalogue-card {
   background: white;
   border-radius: 10px;
@@ -2476,7 +2481,7 @@ svg {
     letter-spacing: 0;
   }
   .catalogue-section {
-    padding: 30px 0px;
+    padding: 20px 0px;
   }
   .catalogue-section .catalogue-cards {
     padding: 0 20px;
@@ -2543,9 +2548,23 @@ svg {
   .testimonial-section {
     padding: 50px 20px;
   }
+}
+@media only screen and (max-width: 767px) and (max-width: 600px) {
+  .testimonial-section {
+    padding: 20px 20px;
+  }
+}
+@media only screen and (max-width: 767px) {
   .testimonial-section .service-swiper-wrapper {
     width: 95%;
   }
+}
+@media only screen and (max-width: 767px) and (max-width: 600px) {
+  .testimonial-section .service-swiper-wrapper {
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 767px) {
   .testimonial-section .testimonial-swiper {
     max-width: 95%;
   }
@@ -5196,5 +5215,16 @@ svg {
   }
   100% {
     transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@media (max-width: 767px) {
+  #pagination .pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 7px;
+  }
+  .product-card .icons img {
+    max-height: 24px;
   }
 }/*# sourceMappingURL=style.css.map */

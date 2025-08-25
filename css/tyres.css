@@ -427,6 +427,12 @@ html {
     padding: 35px 0;
 }
 
+@media (max-width: 600px) {
+    .faq-section {
+        padding: 5px 0;
+    }
+}
+
 .faq-section .accordion {
     max-width: 1240px;
     background-color: #F2F2F4;
@@ -3773,7 +3779,7 @@ html {
     }
     .swiper-button-next.custom-next {
         right: -20px;
-        /* transform: translateY(-50%) rotate(180deg); */
+        transform: translateY(-50%) rotate(180deg);
     }
     .brand-card-section {
         flex-direction: column;
