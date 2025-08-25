@@ -38,7 +38,24 @@ $(document).ready(function () {
 			});
 		});
 	}
-	if ($('.catalogue-stats .stat h3').length) {
+	// Animate only when .catalogue-stats is in view
+	var statsAnimated = false;
+	function triggerStatsAnimationIfVisible(entries) {
+		entries.forEach(function(entry) {
+			if (entry.isIntersecting && !statsAnimated) {
+				statsAnimated = true;
+				animateStatsNumbers();
+			}
+		});
+	}
+	if ($('.catalogue-stats .stat h3').length && 'IntersectionObserver' in window) {
+		var observer = new IntersectionObserver(triggerStatsAnimationIfVisible, { threshold: 0.3 });
+		var statsBlock = document.querySelector('.catalogue-stats');
+		if (statsBlock) {
+			observer.observe(statsBlock);
+		}
+	} else if ($('.catalogue-stats .stat h3').length) {
+		// fallback: animate immediately
 		animateStatsNumbers();
 	}
 	// Configuration des endpoints (à adapter selon votre API)
