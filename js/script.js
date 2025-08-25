@@ -126,16 +126,22 @@ $(document).ready(function () {
 	// ===== MENU MOBILE =====
 	function toggleMobileMenu() {
 		$("#mobileMenu").toggleClass("show");
-		if ($("#mobileMenu").hasClass("show")) {
+		const isOpen = $("#mobileMenu").hasClass("show");
+		if (isOpen) {
 			$("body").css("overflow", "hidden");
+			$("#burgerMenuIcon").hide();
+			$("#closeMenuIcon").show();
 		} else {
 			$("body").css("overflow", "");
+			$("#burgerMenuIcon").show();
+			$("#closeMenuIcon").hide();
 		}
 	}
 
-	// Click event for hamburger icon
-	if ($(".d-md-none").length) {
-		$(".d-md-none").on("click", function () {
+	// Click event for hamburger/close icon
+	if ($("#burgerMenuIcon, #closeMenuIcon").length) {
+		$("#burgerMenuIcon, #closeMenuIcon").on("click", function (e) {
+			e.stopPropagation();
 			toggleMobileMenu();
 		});
 	}
