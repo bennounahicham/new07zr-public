@@ -804,6 +804,10 @@ html {
     margin-bottom: 10px;
 }
 
+.product-card .icons img{
+    max-height: 24px;
+}
+
 .product-card .product-img-desc {
     display: flex;
     gap: 30px;

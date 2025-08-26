@@ -5503,6 +5503,11 @@ svg {
 
 
 @media only screen and (max-width: 600px) {
+
+    .language-selector .language-menu li a img {
+        width: 20px;
+    }
+
     .header-top {
         gap: 0;
 
