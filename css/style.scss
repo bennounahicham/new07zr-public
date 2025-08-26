@@ -5503,12 +5503,7 @@ svg {
 
 
 @media only screen and (max-width: 600px) {
-
-    .language-selector .language-menu li a img {
-        width: 20px;
-    }
-
-    .header-top {
+    .language-selector .header-top {
         gap: 0;
 
         a {
@@ -5524,6 +5519,26 @@ svg {
 
         .language-selector {
             margin-left: 0;
+
+            .language-menu li a img {
+                width: 20px;
+            }
+        }
+    }
+
+    .product-card-desc {
+        .specs {
+            max-height: unset;
+
+            .row {
+                min-height: 32px;
+                padding-left: 11px;
+                height: unset;
+
+                strong {
+                    padding-left: 0;
+                }
+            }
         }
     }
 }
@@ -6192,10 +6207,8 @@ svg {
 
 
     .product-card {
-        .icons img{
+        .icons img {
             max-height: 24px;
         }
     }
 }
-
-
