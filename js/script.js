@@ -1936,3 +1936,21 @@ function gettecDoc(tdRefrence, searchRef, tdBrandId, tdlang, product_id)
         });
     }
 }
+
+$(document).on('click', '.service-card', function () {
+    if (window.innerWidth <= 767) {
+        setTimeout(function() {
+            var $section = $('.services-section').first();
+            if ($section.length) {
+                var sectionTop = $section.offset().top;
+                var scrollTop = $(window).scrollTop();
+                if (Math.abs(sectionTop - scrollTop) > 5) {
+                    window.scrollTo({
+                        top: sectionTop,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        }, 50);
+    }
+});

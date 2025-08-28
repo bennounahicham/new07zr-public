@@ -4672,9 +4672,6 @@ svg {
   .language-selector .header-top .language-selector .language-menu li a img {
     width: 20px;
   }
-  .product-card-desc .specs {
-    max-height: unset;
-  }
   .product-card-desc .specs .row {
     min-height: 32px;
     padding-left: 11px;

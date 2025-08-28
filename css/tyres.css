@@ -1707,7 +1707,6 @@ html {
 
 .swiper-button-next.custom-next {
     right: -60px;
-    /* transform: translateY(-50%) rotate(180deg) !important; */
 }
 
 .swiper-button-prev.custom-prev img,
@@ -2410,7 +2409,7 @@ html {
     align-items: center;
 }
 
-.hero-section-static.histoire {
+/* .hero-section-static.histoire {
     background: url('../images/truck-bg.jpg') center 100%/cover no-repeat;
 }
 
@@ -2424,7 +2423,7 @@ html {
 
 .hero-section-static.cgv {
     background: url('../images/cgv.png') center 100%/cover no-repeat;
-}
+} */
 
 .hero-section-static.testimonials {
     height: 451px;
@@ -3344,7 +3343,6 @@ html {
     }
     .swiper-button-next.custom-next {
         right: -20px;
-        /* transform: translateY(-50%) rotate(180deg); */
     }
     .selected-products-section .product-card {
         max-width: 310px;
@@ -3783,7 +3781,6 @@ html {
     }
     .swiper-button-next.custom-next {
         right: -20px;
-        transform: translateY(-50%) rotate(180deg);
     }
     .brand-card-section {
         flex-direction: column;
