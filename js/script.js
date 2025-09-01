@@ -1696,7 +1696,8 @@ $(document).ready(function () {
             method: "GET",
             dataType: "html",
             success: function (data) {
-                $('#products_container').html(data);
+                $('#results-container').replaceWith(data);
+
                 updateFilterList(false);
                 $('#products_container').removeClass('loading');
 
@@ -1725,8 +1726,7 @@ $(document).ready(function () {
 		updateResults(false, true);
 	});
 
-
-	$(".filter-bar").on("change", 'input[type="checkbox"]', function () {
+	$(document).on("change", ".filter-bar input[type='checkbox']", function () {
 		updateFilterList();
 		if (typeof isMobile === "function" && isMobile()) {
 			$(".mobile-filter-panel").removeClass("active");
@@ -1734,11 +1734,11 @@ $(document).ready(function () {
 	});
 
 	// Add Select2 change event listener
-	$(".filter-bar").on("change", ".select2", function () {
+	$(document).on("change", ".filter-bar .select2", function () {
 		updateFilterList();
 	});
 
-	$("#products_container").on("click", ".filter-list .fa-xmark", function () {
+	$(document).on("click", "#products_container .filter-list .fa-xmark", function () {
 		console.log(
 			"Filter pill clicked to remove:",
 			$(this).closest(".filter").data("label")
