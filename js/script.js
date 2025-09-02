@@ -16,7 +16,7 @@ $(document).ready(function () {
 			var isH = /[hH]/.test(suffix);
 			var cleanNumber = parseFloat(numberStr.replace(/[^\d.]/g, ''));
 			if (isNaN(cleanNumber)) return;
-			var duration = 1200;
+			var duration = 2200;
 			$({ countNum: 0 }).animate({ countNum: cleanNumber }, {
 				duration: duration,
 				easing: 'swing',
