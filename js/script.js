@@ -1954,3 +1954,41 @@ $(document).on('click', '.service-card', function () {
         }, 50);
     }
 });
+
+$(function () {
+    var $nav = $('.main-nav')
+    var $o7zr = $('#o7zr')
+    var $toggle = $o7zr.find('.submenu-toggle')
+    var $submenu = $o7zr.find('.submenu')
+    var $backBtn = $o7zr.find('.back-btn button')
+    var $collapse = $('#navbarSupportedContent')
+
+    function isMobile() {
+        return window.matchMedia('(max-width: 767px)').matches
+    }
+
+    $toggle.on('click', function (e) {
+        if (!isMobile()) return
+        e.preventDefault()
+        $submenu.addClass('active').attr('aria-hidden', 'false')
+        $nav.addClass('submenu-open')
+        $toggle.attr('aria-expanded', 'true')
+        $nav.children().not($o7zr).hide()
+    })
+
+    $backBtn.on('click', function (e) {
+        if (!isMobile()) return
+        e.preventDefault()
+        $submenu.removeClass('active').attr('aria-hidden', 'true')
+        $nav.removeClass('submenu-open')
+        $toggle.attr('aria-expanded', 'false')
+        $nav.children().show()
+    })
+
+    $collapse.on('hidden.bs.collapse', function () {
+        $submenu.removeClass('active').attr('aria-hidden', 'true')
+        $nav.removeClass('submenu-open')
+        $toggle.attr('aria-expanded', 'false')
+        $nav.children().show()
+    })
+})
