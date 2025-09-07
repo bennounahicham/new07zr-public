@@ -108,7 +108,7 @@ header .main-nav .submenu {
     margin: 0;
     padding: 8px 0;
     position: absolute;
-    top: 120%;
+    top: calc(100% + 8px);
     left: 0;
     background: #fff;
     border: 1px solid rgba(10, 36, 99, 0.1);
@@ -117,6 +117,22 @@ header .main-nav .submenu {
     min-width: 200px;
     display: none;
     z-index: 50;
+}
+
+header .main-nav .has-caret::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background: transparent;
+    z-index: 49;
+    display: none;
+}
+
+header .main-nav .has-caret:hover::before {
+    display: block;
 }
 
 header .main-nav .submenu li {
