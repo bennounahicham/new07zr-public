@@ -234,7 +234,7 @@ header .main-nav .submenu a:hover {
     header .main-nav .submenu.active {
         position: fixed;
         inset: 0;
-        top: 90px;
+        top: 62px;
         background: #fff;
         overflow-y: auto;
         z-index: 1050;
@@ -321,18 +321,7 @@ header .main-nav .submenu a:hover {
     header .main-nav .submenu a {
         padding: 10px 0;
     }
-}
-
-header .navbar-collapse.collapsing,
-    header .navbar-collapse.show,
-    header .main-nav .submenu.active {
-        position: fixed;
-        inset: 0;
-        top: 90px;
-        background: #fff;
-        overflow-y: auto;
-        z-index: 1050;
-        width: 100%;
-        margin: 0;
-        padding: 24px 30px;
+    body.menu-open {
+        overflow: hidden;
     }
+}
