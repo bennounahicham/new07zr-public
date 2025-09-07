@@ -903,7 +903,7 @@ html {
 .btn:first-child:active,
 :not(.btn-check)+.btn:active {
     display: flex;
-    width: 140px;
+    /* width: 140px; */
     height: 32px;
     padding: 0px 16px;
     align-items: center;
