@@ -217,16 +217,14 @@ header .main-nav .submenu a:hover {
     header .navbar-collapse.show,
     header .main-nav .submenu.active {
         position: fixed;
-        left: 0;
-        right: 0;
-        top: 100px;
-        bottom: 0;
+        inset: 0;
+        top: 90px;
         background: #fff;
         overflow-y: auto;
-        z-index: 1000;
-        width: 85%;
-        margin: 0 auto;
-        padding: 0;
+        z-index: 1050;
+        width: 100%;
+        margin: 0;
+        padding: 24px 30px;
     }
     header .main-nav {
         flex-direction: column;
