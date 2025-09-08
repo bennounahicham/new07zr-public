@@ -1990,5 +1990,10 @@ $(function () {
         $nav.removeClass('submenu-open')
         $toggle.attr('aria-expanded', 'false')
         $nav.children().show()
+        document.body.classList.remove('menu-open')
+    })
+
+    $collapse.on('shown.bs.collapse', function () {
+        document.body.classList.add('menu-open')
     })
 })
