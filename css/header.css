@@ -1,11 +1,15 @@
 header {
-    background: linear-gradient(180deg, #0A2463 19.23%, rgba(10, 36, 99, 0.00) 100%);
+    background: linear-gradient(90deg, #f0f0f0 0%, #ffffff 100%);
     font-family: 'DM Sans', sans-serif;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 99999;
-    width: 100%;
+
+    .home & {
+        background: linear-gradient(180deg, #0A2463 19.23%, rgba(10, 36, 99, 0.00) 100%);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 9999;
+    }
 }
 
 header .nav-wrap {
@@ -28,6 +32,10 @@ header .brand img {
     height: 54px;
     width: auto;
     display: block;
+
+    .home & {
+        content: url(../images/logo/logo_07zr.png);
+    }
 }
 
 header .main-nav {
@@ -40,7 +48,7 @@ header .main-nav {
 
 header .main-nav a,
 header .main-nav .nav-item {
-    color: #ffffff;
+    color: #0a2463;
     text-decoration: none;
     font-weight: 400;
     font-size: 18px;
@@ -49,6 +57,10 @@ header .main-nav .nav-item {
     align-items: center;
     gap: 6px;
     white-space: nowrap;
+
+    .home & {
+        color: #fff;
+    }
 }
 
 header .has-caret {
