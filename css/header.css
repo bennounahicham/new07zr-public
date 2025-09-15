@@ -1,6 +1,11 @@
 header {
-    background: linear-gradient(90deg, #f0f0f0 0%, #ffffff 100%);
+    background: linear-gradient(180deg, #0A2463 19.23%, rgba(10, 36, 99, 0.00) 100%);
     font-family: 'DM Sans', sans-serif;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    width: 100%;
 }
 
 header .nav-wrap {
@@ -35,7 +40,7 @@ header .main-nav {
 
 header .main-nav a,
 header .main-nav .nav-item {
-    color: #0a2463;
+    color: #ffffff;
     text-decoration: none;
     font-weight: 400;
     font-size: 18px;
