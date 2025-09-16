@@ -1957,10 +1957,10 @@ $(document).on('click', '.service-card', function () {
 
 $(function () {
     var $nav = $('.main-nav')
-    var $o7zr = $('#o7zr')
-    var $toggle = $o7zr.find('.submenu-toggle')
-    var $submenu = $o7zr.find('.submenu')
-    var $backBtn = $o7zr.find('.back-btn button')
+    var $o7zr = $('.nav-item.has-caret')
+    var $toggle = $('.has-caret .submenu-toggle')
+    var $submenu = $('.has-caret .submenu')
+    var $backBtn = $('.has-caret .back-btn button')
     var $collapse = $('#navbarSupportedContent')
 
     function isMobile() {
@@ -1970,6 +1970,9 @@ $(function () {
     $toggle.on('click', function (e) {
         if (!isMobile()) return
         e.preventDefault()
+
+        console.log('Toggle submenu');
+
         $submenu.addClass('active').attr('aria-hidden', 'false')
         $nav.addClass('submenu-open')
         $toggle.attr('aria-expanded', 'true')
@@ -1979,21 +1982,42 @@ $(function () {
     $backBtn.on('click', function (e) {
         if (!isMobile()) return
         e.preventDefault()
+        e.stopPropagation()
+        console.log($submenu);
+
         $submenu.removeClass('active').attr('aria-hidden', 'true')
         $nav.removeClass('submenu-open')
         $toggle.attr('aria-expanded', 'false')
         $nav.children().show()
     })
 
-    $collapse.on('hidden.bs.collapse', function () {
-        $submenu.removeClass('active').attr('aria-hidden', 'true')
-        $nav.removeClass('submenu-open')
-        $toggle.attr('aria-expanded', 'false')
-        $nav.children().show()
-        document.body.classList.remove('menu-open')
-    })
+        $collapse.on('hidden.bs.collapse', function () {
+            $submenu.removeClass('active').attr('aria-hidden', 'true')
+            $nav.removeClass('submenu-open')
+            $toggle.attr('aria-expanded', 'false')
+            $nav.children().show()
+            document.body.classList.remove('menu-open')
+        })
 
-    $collapse.on('shown.bs.collapse', function () {
-        document.body.classList.add('menu-open')
-    })
+        $collapse.on('show.bs.collapse', function () {
+            document.body.classList.add('menu-open')
+        })
 })
+
+$(function () {
+    // on scroll if scrollTop > 50px add class to header
+    $(window).on('scroll', function () {
+        if ($(window).scrollTop() > 50) {
+            $('header').addClass('scrolled')
+        } else {
+            $('header').removeClass('scrolled')
+        }
+    });
+
+    // on page load if scrollTop > 50px add class to header
+    if ($(window).scrollTop() > 50) {
+        $('header').addClass('scrolled')
+    } else {
+        $('header').removeClass('scrolled')
+    }
+});
