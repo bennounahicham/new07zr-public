@@ -2714,6 +2714,7 @@
         }
         .hero-section {
             height: unset;
+            min-height: 100vh;
             .hero-text {
                 width: 95%;
                 padding: 30px 15px 20px;
