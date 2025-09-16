@@ -997,6 +997,148 @@
             .home & {
                 padding-top: 60px;
             }
+
+            .bloc_bottom{
+                display: flex;
+                justify-content: space-between;
+                gap: 30px;
+
+                @media (max-width: 760px) {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .testemonies_zone{
+                    flex-grow: 1;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .testemonies{
+                        max-width: 500px;
+
+                        .slick-slide{
+                            display: flex;
+                            justify-content: center;
+                            opacity: 0.5;
+                            transition: opacity 0.5s ease-in-out;
+                        }
+
+                        .slick-active{
+                            opacity: 1;
+                            transition: opacity 0.5s ease-in-out;
+                        }
+
+
+                        .slick-prev,
+                        .slick-next {
+                            &::before {
+                                content: "";
+                            }
+                        }
+                        .slick-prev {
+                            left: 30px;
+                            top: 45%;
+
+                            @media (max-width: 760px) {
+                                left: 63px;
+                            }
+                        }
+                        .slick-next {
+                            right: 30px;
+                            top: 45%;
+
+                            @media (max-width: 760px) {
+                                right: 63px;
+                            }
+                        }
+                        .slick-arrow {
+                            display: flex !important;
+                            align-items: center !important;
+                            justify-content: center !important;
+                            width: 36px;
+                            height: 36px;
+                            svg {
+                                width: 36px;
+                                height: 36px;
+                            }
+                        }
+                        .arrow {
+                            border-radius: 50px;
+                            border: 2px solid var(--White, #FFF);
+                            background: var(--White, #FFF);
+                            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.10), 0 0 4px 0 rgba(0, 0, 0, 0.07);
+                        }
+
+                        .testemony{
+                            border-radius: 10px;
+                            border: 1px solid #EEE;
+                            background: #FFF;
+                            box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.25);
+                            max-width: 100%;
+                            min-width: 400px;
+                            padding: 30px 50px;
+                            margin: 0 150px;
+
+                            @media (max-width: 760px) {
+                                min-width: 90vw;
+                                padding: 30px 20px;
+                            }
+
+                            .text{
+                                color: #0A2463;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 1.2;
+                                text-align: left;
+                            }
+
+                            .author{
+                                display: flex;
+                                gap: 15px;
+                                margin: 15px 0 0;
+                                align-items: center;
+
+                                img{
+                                    width: 90px;
+                                    height: 90px;
+                                    border-radius: 50%;
+                                    object-fit: cover;
+
+                                    @media (max-width: 760px) {
+                                        width: 70px;
+                                        height: 70px;
+                                    }
+                                }
+
+                                .info{
+                                    color: #0A2463;
+                                    text-align: left;
+
+                                    .name{
+                                        color: #0A2463;
+                                        font-size: 18px;
+                                        font-style: normal;
+                                        font-weight: 700;
+                                        line-height: normal;
+                                    }
+
+                                    .addr{
+                                        margin: 5px 0 0;
+                                        color: #0052B4;
+                                        font-size: 16px;
+                                        font-style: normal;
+                                        font-weight: 600;
+                                        line-height: 1.2; /* 111.111% */
+                                        // letter-spacing: -0.36px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
         .hero-text {
             color: $color-white;
