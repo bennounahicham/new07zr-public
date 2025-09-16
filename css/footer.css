@@ -4,14 +4,14 @@
       background: #fb3640;
       border-top: unset !important;
   }
-  
+
   footer .footer-container {
       width: 100%;
       background: #0a2463;
       padding: 33px 0 40px;
       font-family: 'Inter', sans-serif;
   }
-  
+
   footer .row1,
   footer .row2,
   footer .row3 {
@@ -23,24 +23,24 @@
       padding-bottom: 30px;
       border-bottom: 1px solid #fff;
   }
-  
+
   footer .col1 {
       width: 330px;
       margin-right: 108px;
   }
-  
+
   footer .col1 .logo {
       width: 184px;
       height: 54px;
   }
-  
+
   footer .col1 .social-icons {
       display: flex;
       align-items: center;
       gap: 30px;
       margin: 25px 0 30px;
   }
-  
+
   footer .col1 .text {
       color: #fff;
       font-family: var(--font-outfit);
@@ -50,14 +50,14 @@
       line-height: 150%;
       margin-bottom: 32px;
   }
-  
+
   footer .col1 .icon {
       width: 24px;
       height: 24px;
       color: #fff;
       margin-right: 32px;
   }
-  
+
   footer .col1 .newsletter .heading {
       font-weight: 800;
       font-size: 12px;
@@ -67,7 +67,7 @@
       color: #fb3640;
       margin-bottom: 15px;
   }
-  
+
   footer .col1 .newsletter .input-wrapper {
       display: flex;
       align-items: center;
@@ -76,7 +76,7 @@
       overflow: hidden;
       width: 330px;
   }
-  
+
   footer .col1 .newsletter .input-wrapper input {
       flex: 1;
       border: none;
@@ -86,11 +86,11 @@
       font-size: 16px;
       line-height: 150%;
   }
-  
+
   footer .col1 .newsletter .input-wrapper input::placeholder {
       color: #949494;
   }
-  
+
   footer .col1 .newsletter .input-wrapper button {
       background-color: #164fda;
       color: white;
@@ -103,7 +103,7 @@
       width: 78px;
       font-size: 16px;
   }
-  
+
   footer .col2,
   footer .col3 {
       width: 200px;
@@ -116,51 +116,51 @@
       text-transform: uppercase;
       color: #fff;
   }
-  
+
   footer .col2.middle {
       width: 305px;
   }
-  
+
   footer .col2 .title,
   footer .col3 .title {
       color: #fb3640;
       margin-bottom: 20px;
   }
-  
+
   footer .col2 ul,
   footer .col3 ul {
       list-style: none;
       padding: 0;
       margin: 0;
   }
-  
+
   footer .col2 ul li:not(:last-child),
   footer .col3 ul li:not(:last-child) {
       margin-bottom: 18px;
   }
-  
+
   footer .col2 ul li a,
   footer .col3 ul li a {
       color: #fff !important;
       text-decoration: none !important;
   }
-  
+
   footer .row2 {
       padding-top: 48px;
       border-bottom: 1px solid #fff;
   }
-  
+
   footer .col3 {
       width: 233px;
   }
-  
+
   footer .row3 {
       padding-top: 33px;
       border-bottom: unset;
       padding-bottom: unset;
       align-items: center;
   }
-  
+
   footer .copyright {
       color: #fff;
       font-family: 'outfit', sans-serif;
@@ -169,11 +169,11 @@
       font-weight: 300;
       line-height: 130%;
   }
-  
+
   .footer .select2-container {
       width: 270px !important;
   }
-  
+
   .footer .select2-container--default .select2-selection--single {
       background-color: transparent;
       border: 1px solid #fff;
@@ -182,7 +182,7 @@
       display: flex;
       align-items: center;
   }
-  
+
   .footer .select2-container--default .select2-selection--single .select2-selection__rendered,
   .footer .country-label {
       color: #fff;
@@ -193,65 +193,74 @@
       font-size: 16px;
       line-height: 130%;
   }
-  
+
   .footer .country-label {
       color: black;
   }
-  
+
   .footer .select2-selection__rendered .country-label {
       color: white;
       padding-left: 0;
   }
-  
+
   .footer .country-option {
       display: flex;
       align-items: center;
       justify-content: space-between;
       width: 98%;
   }
-  
+
   .footer .country-flag {
       width: 30px;
       height: 16px;
   }
-  
+
   .footer .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
       background-color: #eee;
   }
-  
+
   .footer .select2-results__option {
       padding: 6px 30px 6px 0px;
   }
-  
+  .footer .select2-container--default .select2-selection--single .select2-selection__clear {
+      display: none !important;
+  }
   .footer .select2-container--default .select2-selection--single .select2-selection__rendered {
       width: 96%;
+      color: white !important;
+      font-size: 16px !important;
+      font-weight: 300 !important;
   }
-  
+  .footer .select2-container--default .select2-selection--single{
+    background-color: transparent !important;
+    border: 1px solid #fff !important;
+  }
+
   .footer .select2-container--default .select2-selection--single .select2-selection__arrow {
       height: 100%;
       right: 10px;
   }
-  
+
   .footer .select2-container--default .footer .select2-selection--single .footer .select2-selection__arrow b {
       border-color: #fff transparent transparent transparent;
   }
-  
+
   .footer .select2-container--default .select2-results>.select2-results__options {
       background-color: #fff;
       color: #000;
   }
-  
+
   .footer .select2-container--default,
   .footer .select2-selection--single,
   .footer .select2-selection__placeholder {
       color: #fff !important;
   }
-  
+
   .footer .select2-container--default .select2-selection--single .select2-selection__arrow b {
       border: none !important;
       display: none !important;
   }
-  
+
   .footer .select2-container--default .select2-selection--single .select2-selection__arrow {
       background: url('../images/chevron-down-footer.svg') no-repeat center center;
       background-size: 16px 16px;
@@ -262,11 +271,11 @@
       position: absolute;
       pointer-events: none;
   }
-  
+
   .footer .select2-container--open .select2-selection--single .select2-selection__arrow {
       transform: rotate(180deg);
   }
-  
+
   @media (min-width: 1025px) and (max-width: 1366px) {
       footer .row1,
       footer .row2,
@@ -288,7 +297,7 @@
           font-size: 10px;
       }
   }
-  
+
   @media (min-width: 1025px) {
       .footer .collapse {
           display: block !important;
@@ -299,7 +308,7 @@
           pointer-events: none;
       }
   }
-  
+
   @media (max-width: 1024px) {
       footer .footer-container {
           padding: 28px 20px;
