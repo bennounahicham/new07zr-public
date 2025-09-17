@@ -2004,6 +2004,15 @@ $(function () {
         })
 })
 
+document.addEventListener('DOMContentLoaded', () => {
+    const firstImg = document.querySelector('.main-swiper .swiper-slide img')
+    if (firstImg) {
+        document.getElementById('zoomTrigger').href = firstImg.src
+            .replace('.jpg', '-large.jpg')
+            .replace('.png', '-large.png')
+    }
+})
+
 $(function () {
     // on scroll if scrollTop > 50px add class to header
     $(window).on('scroll', function () {
